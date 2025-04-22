@@ -1,0 +1,23 @@
+<div class="speakers"> <!-- Consider adding more specific classes if needed -->
+    {% for speaker in speakers %}
+    <div class="speaker-profile"> <!-- Define styles for .speaker-profile -->
+        {% if speaker.image %}
+            {# Construct image path without pathto for static files #}
+            {% set image_path = speaker.image %}
+            {% if image_path and not image_path.startswith('/') and not image_path.startswith('http') %}
+                {# Assume relative path is within _static/images/speakers/ - ADJUST IF NEEDED #}
+                {% set image_src = '_static/images/speakers/' + image_path %}
+            {% else %}
+                {# Use absolute/external URL or root-relative path as is #}
+                {% set image_src = image_path %}
+            {% endif %}
+            <img src="{{ image_src }}" alt="{{ speaker.name }}" class="speaker-image"> <!-- Define styles for .speaker-image -->
+        {% endif %}
+        <div class="speaker-info"> <!-- Define styles for .speaker-info -->
+            <h2>{{ speaker.name }}</h2>
+            {# Output raw RST bio content - browser will render as plain text with line breaks preserved by CSS potentially #}
+            <div class="speaker-bio-rst" style="white-space: pre-wrap;">{{ speaker.bio_rst | e }}</div> <!-- Added class and basic style -->
+        </div>
+    </div>
+    {% endfor %}
+</div>
