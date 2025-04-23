@@ -1,0 +1,60 @@
+<div class="program-day"> <!-- Mimics original structure -->
+    <h3 class="program-title m2-txt3 m-b-10">
+        {{ timeline.title }}{% if timeline.date %} - {{ timeline.date }}{% endif %}
+    </h3>
+    {% if timeline.subtitle %}
+    <h5 class="program-title m2-txt4 p-b-20">{{ timeline.subtitle }}</h5>
+    {% endif %}
+
+    <div class="row">
+        <div class="col-12">
+            <!-- Timeline Area -->
+            <div class="apland-timeline-area"> <!-- Use original CSS class -->
+                {% for item in timeline.timeline_entries %}
+                <!-- Single Timeline Content -->
+                <div class="single-timeline-area">
+                    <div class="timeline-date wow fadeInLeft" data-wow-delay="0.1s" style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInLeft;">
+                        <!-- Date/Icon can go here if needed -->
+                    </div>
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="single-timeline-content d-flex wow fadeInLeft" data-wow-delay="0.3s" style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInLeft;">
+                                <div class="timeline-text">
+                                    <h6 class="timeline-text-title">{{ item.title }}</h6>
+                                    {% if item.time %}<p>{{ item.time }}</p>{% endif %}
+                                    {% if item.speaker %}
+                                    <div class="timeline-speaker-wrapper">
+                                        <div class="avatar-wrapper">
+                                            {% if item.image %}
+                                                {# Construct image path without pathto for static files #}
+                                                {% set image_path = item.image %}
+                                                {% if image_path and not image_path.startswith('/') and not image_path.startswith('http') %}
+                                                    {# Assume relative path is within _static/images/speakers/ #}
+                                                    {% set image_src = '_static/images/speakers/' + image_path %}
+                                                {% else %}
+                                                    {# Use absolute/external URL or root-relative path as is #}
+                                                    {% set image_src = image_path %}
+                                                {% endif %}
+                                                <img class="avatar" src="{{ image_src }}" alt="{{ item.speaker }}"/>
+                                            {% else %}
+                                                {# Placeholder image or default avatar - direct static path #}
+                                                <img class="avatar" src="_static/images/speakers/dipy-all.svg" alt="{{ item.speaker }}"/>
+                                            {% endif %}
+                                            <span class="avatar-name">{{ item.speaker }}</span>
+                                        </div>
+                                    </div>
+                                    {% endif %}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {% if loop.index == 3 %} {# Example: Add break after 3rd item #}
+                    {# <hr class="hr-text" data-content="Lunch Break" /> #}
+                {% endif %}
+
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</div>
