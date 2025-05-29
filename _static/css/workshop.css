@@ -59,7 +59,7 @@ html, body {
   /* min-width: 100%; */
 
   padding: 0 50px;
-  
+
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -138,7 +138,7 @@ html, body {
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
   background-color: #ebebeb;
   position: relative;
-  
+
   padding-top: 120px;
   margin-top: 60px;
 
@@ -159,7 +159,7 @@ html, body {
 .speaker-img img {
   width: 160px;
   height: 160px;
-  border-radius: 50%;
+  border-radius: 50% !important;
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 
@@ -364,7 +364,7 @@ html, body {
   .watermark {
     width: 85%;
   }
-  
+
   .watermark-logo {
     margin-top: -30%;
     width: 85%;
@@ -442,7 +442,7 @@ html, body {
   content: "\2022";
   color: #ff7f00;
   font-weight: bold;
-  display: inline-block; 
+  display: inline-block;
   width: 1em;
   margin-left: -1em;
   transition: all 0.5s ease-in-out;

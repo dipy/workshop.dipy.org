@@ -1,0 +1,40 @@
+<div class="pricing-list">
+    <div class="row">
+        {% for item in pricing_items %}
+        <div class="offset-lg-2 col-lg-4 col-sm-12 p-b-30">
+            <div class="payment-card">
+                <h4 class="payment-card-title m2-txt4">{{ item.name|title }}</h4>
+                <h4 class="payment-card-amount">
+                    {% if item.discount %}
+                    <s class="payment-strike-through">{{ item.currency }}{{ item.discount }}</s>
+                    {% endif %}
+                    <span>
+                        {{ item.currency }}{{ item.price }}
+                        {% if item.discount %}
+                        <sup>&ast;</sup>
+                        {% endif %}
+                    </span>
+                </h4>
+                <div class="payment-benefits">
+                    <p class="m2-txt3 p-b-10">What will be included?</p>
+                    <ul class="s2-text3">
+                        {% for feature in item.features %}
+                        <li>{{ feature }}</li>
+                        {% endfor %}
+                    </ul>
+                </div>
+                <div class="payment-purchase p-b-20 flex-c">
+                    <div>
+                        <button
+                            class="btn btn-lg btn-secondary register-btn"
+                            onclick="window.location.href='{{ item.registration_link }}'"
+                        >
+                            Register NOW
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>

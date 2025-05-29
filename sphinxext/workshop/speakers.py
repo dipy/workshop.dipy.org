@@ -18,9 +18,8 @@ class SpeakerItemDirective(SphinxDirective):
     option_spec = {
         'name': directives.unchanged_required,  # Make name required
         'image': directives.unchanged,  # Image path/URL
-        # Add other options like title, affiliation if needed
-        # 'title': directives.unchanged,
-        # 'affiliation': directives.unchanged,
+        'title': directives.unchanged,
+        'affiliation': directives.unchanged,
     }
 
     def run(self):
@@ -38,9 +37,8 @@ class SpeakerItemDirective(SphinxDirective):
             'name': self.options.get('name'),
             'image': self.options.get('image'),
             'bio_rst': bio_rst,  # Store raw RST content
-            # Add other options here
-            # 'title': self.options.get('title'),
-            # 'affiliation': self.options.get('affiliation'),
+            'title': self.options.get('title'),
+            'affiliation': self.options.get('affiliation'),
         }
 
         env.workshop_speakers.append(speaker_info)

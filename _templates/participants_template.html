@@ -1,0 +1,101 @@
+<div class="participants-section">
+    <div class="participants-carousel">
+        {# First set of items #}
+        {% for item in participant_items %}
+        {% if item.image %}
+        <div class="participant-card">
+            <a href="{{ item.url }}" target="_blank">
+                {% set image_path = item.image %}
+                {% if image_path and not image_path.startswith('/') and not image_path.startswith('http') %}
+                    {% set image_src = '_static/images/universities/' + image_path %}
+                {% else %}
+                    {% set image_src = image_path %}
+                {% endif %}
+                <img src="{{ image_src }}"
+                     alt="{{ item.name }}"
+                     class="participant-logo">
+                <h5>{{ item.name }}</h5>
+            </a>
+        </div>
+        {% endif %}
+        {% endfor %}
+
+        {# Duplicate set of items for seamless loop #}
+        {% for item in participant_items %}
+        {% if item.image %}
+        <div class="participant-card">
+            <a href="{{ item.url }}" target="_blank">
+                {% set image_path = item.image %}
+                {% if image_path and not image_path.startswith('/') and not image_path.startswith('http') %}
+                    {% set image_src = '_static/images/universities/' + image_path %}
+                {% else %}
+                    {% set image_src = image_path %}
+                {% endif %}
+                <img src="{{ image_src }}"
+                     alt="{{ item.name }}"
+                     class="participant-logo">
+                <h5>{{ item.name }}</h5>
+            </a>
+        </div>
+        {% endif %}
+        {% endfor %}
+    </div>
+</div>
+<style>
+.participants-section {
+    padding: 2rem 0;
+    overflow: hidden;
+    width: 100%;
+    position: relative;
+}
+
+.participants-carousel {
+    display: flex;
+    gap: 2rem;
+    animation: scroll 40s linear infinite;
+    width: max-content;
+    padding: 1rem 0;
+}
+
+.participant-card {
+    flex: 0 0 auto;
+    width: 200px;
+    text-align: center;
+    transition: transform 0.3s ease;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    padding: 1rem;
+}
+
+.participant-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.participant-logo {
+    width: 100%;
+    height: 120px;
+    object-fit: contain;
+    padding: 0.5rem;
+}
+
+.participant-card h5 {
+    margin: 0.5rem 0 0;
+    font-size: 1rem;
+    color: #333;
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+.participants-carousel:hover {
+    animation-play-state: paused;
+}
+</style>
