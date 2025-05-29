@@ -1,8 +1,12 @@
-#################
-Workshop Homepage
-#################
+####
+Home
+####
 
 .. workshop-home::
+
+#####
+About
+#####
 
 .. workshop-about::
 
@@ -285,19 +289,3 @@ Contact
 Contact us for more information by sending an email at dipy@python.org
 
 or joining our interactive chatroom at https://gitter.im/dipy/dipy
-
-
-.. Comment out or remove ToC tree and Indices/Tables section
-.. toctree::
-   :maxdepth: 2
-   :caption: Contents:
-   :hidden:
-
-
-.. Indices and tables
-.. ==================
-..
-.. * :ref:`genindex`
-.. * :ref:`modindex`
-.. * :ref:`search`
-
