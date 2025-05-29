@@ -17,28 +17,44 @@ author = 'DIPY Team'
 # -- General configuration ---------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration
 
-
 sys.path.append(os.path.abspath('sphinxext'))
 extensions = [
+    'sphinx_design',
+    'workshop',
     'jinja'
 ]
 
 templates_path = ['_templates']
 exclude_patterns = []
 
-
-
 # -- Options for HTML output -------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#options-for-html-output
 
-html_theme = 'alabaster'
+html_theme = 'pydata_sphinx_theme'
 html_static_path = ['_static']
 
 html_css_files = ['css/workshop.css']
+html_js_files = ['js/workshop.js', 'js/countdown.js', 'js/main.js']
+html_logo = "_static/images/dipy-logo.png"
 
 html_additional_pages = {
-    "index": "dw_2025.html",
     "2025": "dw_2025.html"
+}
+
+html_theme_options = {
+    "logo": {
+        "link": "https://dipy.org",
+    },
+    "navbar_start": ["navbar-logo"],
+    "navbar_center": ["navbar-nav"],
+    "navbar_end": [],
+    "navbar_persistent": [],
+    "primary_sidebar_end": [],
+    "secondary_sidebar_items": [],
+    "show_toc_level": 1,
+    "navigation_with_keys": False,
+    "show_prev_next": False,
+    "navbar_align": "content",
 }
 
 html_context = {
@@ -67,4 +83,3 @@ html_context = {
         }
     },
 }
-
