@@ -30,6 +30,18 @@ Speakers
       :title: Associate Professor
       :affiliation: University of Washington
 
+   .. workshop-speaker::
+      :name: Ariel Rokem
+      :image: rokem.jpg
+      :title: Associate Professor
+      :affiliation: University of Washington
+
+   .. workshop-speaker::
+      :name: Ariel Rokem
+      :image: rokem.jpg
+      :title: Associate Professor
+      :affiliation: University of Washington
+
 ---------------------
 Conference Management
 ---------------------
