@@ -1,13 +1,16 @@
 from sphinx.application import Sphinx
 
+from .about import AboutDirective
+
 # Import directive classes here (will be added later)
 from .home import HomeDirective
-from .about import AboutDirective
-from .speakers import SpeakersDirective, SpeakerItemDirective
+from .imgrid import ImgridDirective, ImgridItemDirective
+from .participants import ParticipantItemDirective, ParticipantsDirective
+from .pricing import PricingItemDirective, PricingListDirective
 from .schedule import ScheduleDirective
+from .speakers import SpeakerItemDirective, SpeakersDirective
 from .timeline import TimelineDirective, TimelineItemDirective
-from .pricing import PricingListDirective, PricingItemDirective
-from .participants import ParticipantsDirective, ParticipantItemDirective
+
 # etc.
 
 
@@ -21,10 +24,12 @@ def setup(app: Sphinx):
     app.add_directive("workshop-schedule", ScheduleDirective)
     app.add_directive("workshop-timeline", TimelineDirective)
     app.add_directive("workshop-timeline-item", TimelineItemDirective)
-    app.add_directive('pricing-list', PricingListDirective)
-    app.add_directive('pricing-item', PricingItemDirective)
-    app.add_directive('participants', ParticipantsDirective)
-    app.add_directive('participant-item', ParticipantItemDirective)
+    app.add_directive("pricing-list", PricingListDirective)
+    app.add_directive("pricing-item", PricingItemDirective)
+    app.add_directive("participants", ParticipantsDirective)
+    app.add_directive("participant-item", ParticipantItemDirective)
+    app.add_directive("imgrid", ImgridDirective)
+    app.add_directive("imgrid-item", ImgridItemDirective)
     # app.add_directive("workshop-registration", RegistrationDirective)
     # app.add_directive("workshop-contact", ContactDirective)
     # app.add_directive("workshop-why", WhyDirective)

@@ -120,18 +120,18 @@ Participants from
 Special Thanks
 ---------------------
 
+.. imgrid::
+   :template: _templates/imgrid_template.html
+   
+   .. imgrid-item:: 
+      :url: _static/images/universities/GRG.png
+      :alt: Garyfallidis Research Group (GRG)
+      :ref: https://grg.luddy.indiana.edu/
 
-.. grid::
-
-   .. grid-item-card:: 
-       :img-background: _static/images/universities/GRG.png
-       :img-alt: Garyfallidis Research Group (GRG)
-       :margin: 0
-
-   .. grid-item-card::
-       :img-background: _static/images/universities/ISE.jpeg
-       :img-alt: Intelligent Systems Engineering (IU)
-
+   .. imgrid-item:: 
+      :url: _static/images/universities/ISE.jpeg
+      :alt: Intelligent Systems Engineering (IU)
+      :ref: https://engineering.indiana.edu/index.html
 
 ########
 Schedule
