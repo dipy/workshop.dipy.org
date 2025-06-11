@@ -29,7 +29,7 @@ help:
 clean:
 	-rm -rf _build/*
 
-html:
+html: clean
 	#  Standard html build after examples have been prepared
 	$(SPHINXBUILD) -b html $(ALLSPHINXOPTS) _build/html
 	@echo
