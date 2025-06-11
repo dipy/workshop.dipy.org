@@ -7,6 +7,7 @@
 @import "./carousel.css";
 @import "./highlight-carousel.css";
 @import "./speaker.css";
+@import "./participants.css";
 
 
 html, body {
@@ -210,6 +211,14 @@ html, body {
 
 .venue-content {
   height: 90vh;
+}
+
+.heading-underline {
+  height: 10px;
+  width: 100px;
+  margin-top: 10px;
+
+  background-color: #ff7f00;
 }
 
 

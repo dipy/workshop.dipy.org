@@ -2,14 +2,6 @@
   padding-bottom: 40px;
 }
 
-.speaker-divider {
-  height: 10px;
-  width: 100px;
-  margin-top: 10px;
-
-  background-color: #ff7f00;
-}
-
 
 .speaker-card {
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;

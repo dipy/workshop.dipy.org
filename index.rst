@@ -114,7 +114,7 @@ Participants from
 
    .. participant-item::
       :name: University of California, Berkeley
-      :image: UCBERKELEY.png
+      :image: UCB.png
 
 ---------------------
 Special Thanks
@@ -123,14 +123,14 @@ Special Thanks
 
 .. grid::
 
-   .. grid-item-card::
-        :img-background: _static/images/universities/GRG.png
-        :img-alt: Garyfallidis Research Group (GRG)
-        :margin: 0
+   .. grid-item-card:: 
+       :img-background: _static/images/universities/GRG.png
+       :img-alt: Garyfallidis Research Group (GRG)
+       :margin: 0
 
    .. grid-item-card::
-        :img-background: _static/images/universities/ISE.jpeg
-        :img-alt: Intelligent Systems Engineering (IU)
+       :img-background: _static/images/universities/ISE.jpeg
+       :img-alt: Intelligent Systems Engineering (IU)
 
 
 ########
