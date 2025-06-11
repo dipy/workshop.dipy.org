@@ -1,0 +1,53 @@
+.speakers {
+  padding-bottom: 40px;
+}
+
+
+.speaker-card {
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  background-color: #ebebeb;
+  position: relative;
+
+  padding-top: 120px;
+
+  width: 100%;
+  margin: 60px 10px 0;
+
+  text-align: center;
+}
+
+.speaker-img {
+  position: absolute;
+
+  top: -40px;
+  left: calc(50% - 80px);
+}
+
+.speaker-img img {
+  width: 160px;
+  height: 160px;
+  border-radius: 50% !important;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.speaker-data {
+  padding: 16px;
+}
+
+.speaker-data h3 {
+  font-size: 20px;
+}
+
+.speaker-data p {
+  font-size: 14px;
+}
+
+
+@media only screen and (max-width: 600px) {
+  .speaker-card {
+    margin-top: 100px;
+    margin-left: 0px;
+    margin-right: 0px;
+    width: calc(100vw - 40px);
+  }
+}
