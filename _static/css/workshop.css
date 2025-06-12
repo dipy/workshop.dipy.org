@@ -2,13 +2,12 @@
 @import "./countdown.css";
 @import "./util.css";
 @import "./timeline.css";
-@import "./gallery.css";
-@import "./number-list.css";
 @import "./carousel.css";
 @import "./highlight-carousel.css";
 @import "./speaker.css";
 @import "./participants.css";
 @import "./imgrid.css";
+@import "./pricing.css";
 
 
 html, body {
@@ -194,32 +193,25 @@ html, body {
   min-height: 500px;
 }
 
-.payment-card {
-  border-radius: 10px;
-  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-  background-color: white;
-  min-height: 542px;
-  /* margin: 0 35px; */
+h1, h2 {
+  position: relative; /* Position the h1 element relatively to anchor the :after element */
+  display: inline-block; /* Makes the h1 element shrink-wrap to its content's width */
+  margin: 50px 0;
 }
 
-.payment-purchase {
+h1:after, h2:after {
+  content: ""; 
+  display: block;
+  height: 10px; 
+  width: 100px; /* Set your desired fixed width for the underline */
+  background-color: #ff7f00; /* Set the color of the underline */
   position: absolute;
-  bottom: 30px;
-  display: flex;
-  width: 100%;
-  width: calc(100% - 30px);
+  bottom: -15px;
+  left: 0;
 }
 
 .venue-content {
   height: 90vh;
-}
-
-.heading-underline {
-  height: 10px;
-  width: 100px !important;
-  margin-top: 10px;
-
-  background-color: #ff7f00;
 }
 
 
@@ -241,17 +233,13 @@ html, body {
   }
 
 
-  .payment, .contact, .content-section, .lodging, .highlights {
+.contact, .content-section, .lodging, .highlights {
     /* background-color: white; */
     /* box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px; */
     padding-top: 50px;
     padding-left: 10px;
     padding-right: 10px;
     padding-bottom: 0;
-  }
-
-  .payment-purchase {
-    width: 100%;
   }
 
 
@@ -384,10 +372,7 @@ html, body {
   font-size: 20px;
 } */
 
-.payment-benefits li {
-  line-height: 2;
-  /* transition: all 0.5s ease-in-out; */
-}
+
 
 .payment li::before, .lodging li::before {
   content: "\2022";

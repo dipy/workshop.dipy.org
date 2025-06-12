@@ -1,0 +1,18 @@
+.payment-card {
+  border-radius: 10px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  background-color: white;
+  min-height: 100%;
+}
+
+.payment-purchase {
+  position: absolute;
+  bottom: 30px;
+  display: flex;
+  width: 100%;
+  width: calc(100% - 30px);
+}
+
+.payment-benefits li {
+  line-height: 2;
+}

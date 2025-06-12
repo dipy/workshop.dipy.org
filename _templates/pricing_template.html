@@ -1,7 +1,12 @@
-<div class="pricing-list">
-    <div class="row">
+<div class="pricing-list m-t-100">
+    <div class="flex-col-c">
+        <h3 class="content-title l2-txt1 p-b-10 color-black txt-center">{{ title }}</h3>
+        <div class="speaker-divider m-b-10"></div>
+        <strong class="s2-txt2 fs-16 m-b-20"> {{ subtitle }} </strong>
+    </div>
+    <div class="dis-flex flex-sa flex-w">
         {% for item in pricing_items %}
-        <div class="offset-lg-2 col-lg-4 col-sm-12 p-b-30">
+        <div class="col-lg-5 col-sm-12 p-l-20">
             <div class="payment-card">
                 <h4 class="payment-card-title m2-txt4">{{ item.name|title }}</h4>
                 <h4 class="payment-card-amount">
@@ -9,8 +14,7 @@
                     <s class="payment-strike-through">{{ item.currency }}{{ item.discount }}</s>
                     {% endif %}
                     <span>
-                        {{ item.currency }}{{ item.price }}
-                        {% if item.discount %}
+                        {{ item.currency }}{{ item.price }} {% if item.discount %}
                         <sup>&ast;</sup>
                         {% endif %}
                     </span>

@@ -196,17 +196,13 @@ Registration
 ############
 Get the Early Birds 25% Discount before 3rd January 2025.
 
--------
-Student
--------
-
-Master's Degree Students, PhD Candidates, Postdocs should take this option.
-
 .. pricing-list::
    :template: _templates/pricing_template.html
+   :title: Student
+   :subtitle: Master's Degree Students, PhD Candidates, Postdocs should take this option.
 
    .. pricing-item::
-      :name: Student Basic
+      :name: Basic
       :currency: $
       :price: 300
       :discount: 400
@@ -219,7 +215,7 @@ Master's Degree Students, PhD Candidates, Postdocs should take this option.
       - Complete 5 days of workshop
 
    .. pricing-item::
-      :name: Student Premium
+      :name: Premium
       :currency: $
       :price: 600
       :discount: 800
@@ -234,14 +230,11 @@ Master's Degree Students, PhD Candidates, Postdocs should take this option.
       - Present your work.
       - LinkedIn verifiable certificate.
 
---------
-Academic
---------
-
-Faculty, Research Scientists, Any Academic Personnel should take this option.
 
 .. pricing-list::
    :template: _templates/pricing_template.html
+   :title: Academic
+   :subtitle: Faculty, Research Scientists, Any Academic Personnel should take this option.
 
    .. pricing-item::
       :name: Basic
@@ -272,14 +265,11 @@ Faculty, Research Scientists, Any Academic Personnel should take this option.
       - Present your work.
       - LinkedIn verifiable certificate.
 
---------------
-Non - Academic
---------------
-
-Industry Personnel, Medical Staff, Radiologists, Neurologists, etc. should take this option.
 
 .. pricing-list::
    :template: _templates/pricing_template.html
+   :title: Non - Academic
+   :subtitle: Industry Personnel, Medical Staff, Radiologists, Neurologists, etc. should take this option.
 
    .. pricing-item::
       :name: Basic

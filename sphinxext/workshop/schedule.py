@@ -19,13 +19,10 @@ class ScheduleDirective(SphinxDirective):
         content_node["classes"] += ["full-page-content", "program-content"]
 
         # Add divider and timezone note at the top of the content area
-        divider = nodes.container()
-        divider["classes"] += ["heading-underline", "m-b-10"]
         timezone_note = nodes.strong(
             text="All times mentioned are according to EST Time Zone.",
             classes=["s2-txt2", "fs-16"],
         )
-        content_node += divider
         content_node += timezone_note
 
         row = nodes.container()
