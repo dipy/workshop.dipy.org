@@ -174,6 +174,23 @@ Schedule
          :title: Tractography
          :speaker: Kaustav
 
+   .. workshop-timeline::
+      :title: Day 3
+      :subtitle: Segmentation theme
+      :date: 2025-03-17
+      :template: _templates/schedule_template.html
+
+      .. workshop-timeline-item::
+         :time: 09:00 - 09:45
+         :title: Assembly
+         :speaker: TBD
+         :image: dipy-all.svg
+
+      .. workshop-timeline-item::
+         :time: 10:00 - 10:45
+         :title: Tractography
+         :speaker: Kaustav
+
 ############
 Registration
 ############

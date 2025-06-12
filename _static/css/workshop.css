@@ -216,7 +216,7 @@ html, body {
 
 .heading-underline {
   height: 10px;
-  width: 100px;
+  width: 100px !important;
   margin-top: 10px;
 
   background-color: #ff7f00;
