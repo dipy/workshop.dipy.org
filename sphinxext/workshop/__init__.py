@@ -3,7 +3,7 @@ from sphinx.application import Sphinx
 from .about import AboutDirective
 
 # Import directive classes here (will be added later)
-from .home import HomeDirective
+from .home import HomeDirective, HomeSlideDirective
 from .imgrid import ImgridDirective, ImgridItemDirective
 from .participants import ParticipantItemDirective, ParticipantsDirective
 from .pricing import PricingItemDirective, PricingListDirective
@@ -18,6 +18,7 @@ def setup(app: Sphinx):
     """Register custom directives with Sphinx."""
     # Add directives here (will be uncommented later)
     app.add_directive("workshop-home", HomeDirective)
+    app.add_directive("workshop-home-slide", HomeSlideDirective)
     app.add_directive("workshop-about", AboutDirective)
     app.add_directive("workshop-speakers", SpeakersDirective)
     app.add_directive("workshop-speaker", SpeakerItemDirective)
