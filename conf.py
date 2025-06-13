@@ -30,7 +30,7 @@ html_theme = "pydata_sphinx_theme"
 html_static_path = ["_static"]
 
 html_css_files = ["css/workshop.css"]
-html_js_files = ["js/workshop.js", "js/countdown.js", "js/main.js"]
+html_js_files = ["js/workshop.js", "js/countdown.js"]
 html_logo = "_static/images/dipy-logo.png"
 
 html_additional_pages = {"2025": "dw_2025.html"}

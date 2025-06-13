@@ -1,8 +1,20 @@
-####
-Home
-####
-
 .. workshop-home::
+   :year: 2025
+   :codename: Online Edition
+   :reg_start_date: 2024-08-01 00:00
+   :start_date: 2025-03-17 09:00
+   :end_date: 2025-03-21 17:00
+   :location: Online
+   :team_location: Bloomington, IN
+
+   .. workshop-home-slide:: _static/images/dipy_odf_vs_2018-10-03.png
+      :alt: Dipy ODF vs 2018-10-03
+
+   .. workshop-home-slide:: _static/images/CST.png
+      :alt: CST
+
+   .. workshop-home-slide:: _static/images/msd_odfs.png
+      :alt: MCSd
 
 #####
 About
