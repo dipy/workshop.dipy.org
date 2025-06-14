@@ -22,11 +22,10 @@ html, body {
 
 
 .content-section {
-  min-height: calc(100vh - 200px);
+  min-height: calc(100vh - 100px);
   padding: 0 50px;
 
   display: flex;
-  justify-content: center;
   flex-direction:  column;
   position: relative;
   z-index: 6;
@@ -83,7 +82,7 @@ html, body {
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
   border-top: 10px solid #ff7f00;
   border-bottom: 10px solid #ff7f00;
-  padding: 50px;
+  padding: 50px !important;
   border-radius: 20px;
   margin: 0 auto;
 }
@@ -114,7 +113,7 @@ html, body {
 
 .watermark-wrapper {
   height: inherit;
-  width: 80%;
+  width: 80% !important;
   left: 10%;
   top: 0;
   margin: auto;
