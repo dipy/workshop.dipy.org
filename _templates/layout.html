@@ -95,6 +95,7 @@ function findAndCreateNavbar() {
         navLink.className = 'nav-link';
         navLink.href = `#${h1.id}`;
         navLink.textContent = h1.textContent.trim();
+        console.log(`Creating nav link for: ${h1.textContent.trim()}`);
         navLink.setAttribute('data-target', h1.id);
 
         // Add click handler

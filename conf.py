@@ -49,6 +49,9 @@ html_theme_options = {
     "navigation_with_keys": False,
     "show_prev_next": False,
     "navbar_align": "content",
+    "footer_start": [],
+    "footer_center": [],
+    "footer_end": [],
 }
 
 html_context = {

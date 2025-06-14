@@ -137,14 +137,17 @@ function createNavbarFromElements(h1Elements) {
 
         const navLink = document.createElement("a");
         navLink.className = "nav-link";
-        navLink.href = `#${h1.id}`;
+        navLink.href = `#${h1.id.includes("dipy") ? "home" : h1.id}`;
         // Remove leading/trailing # and whitespace
         let cleanText = h1.textContent
             .trim()
             .replace(/^#+\s*|\s*#+$/g, "")
             .trim();
-        navLink.textContent = cleanText;
-        navLink.setAttribute("data-target", h1.id);
+        navLink.textContent = cleanText.includes("DIPY") ? "Home" : cleanText;
+        navLink.setAttribute(
+            "data-target",
+            h1.id.includes("dipy") ? "home" : h1.id
+        );
 
         navItem.appendChild(navLink);
         navList.appendChild(navItem);
@@ -173,7 +176,7 @@ function createNavbarContainer() {
 
 function addSmoothScrollHandlers() {
     // Add click handlers to all navigation links
-    const navLinks = document.querySelectorAll(".navbar-nav .nav-link");
+    const navLinks = document.querySelectorAll(".nav-link");
 
     navLinks.forEach((link) => {
         link.addEventListener("click", function (e) {
@@ -185,7 +188,7 @@ function addSmoothScrollHandlers() {
             if (targetElement) {
                 // Calculate offset for fixed navbar
                 const navbarHeight =
-                    document.querySelector(".custom-navbar").offsetHeight || 80;
+                    document.querySelector(".navbar").offsetHeight || 80;
                 const offsetTop = targetElement.offsetTop - navbarHeight - 20;
 
                 window.scrollTo({
@@ -202,8 +205,8 @@ function addSmoothScrollHandlers() {
 
 function addScrollSpy() {
     // Add scroll spy to highlight current section
-    const navLinks = document.querySelectorAll(".navbar-nav .nav-link");
-    const sections = document.querySelectorAll("h1[id]");
+    const navLinks = document.querySelectorAll(".nav-link");
+    const sections = document.querySelectorAll("section[id]");
 
     if (sections.length === 0) return;
 
@@ -212,6 +215,7 @@ function addScrollSpy() {
     function updateActiveSection() {
         const scrollPos = window.scrollY + 200; // Offset for navbar
         let current = "";
+        let prev = "";
 
         sections.forEach((section) => {
             const sectionTop = section.offsetTop;
@@ -221,12 +225,28 @@ function addScrollSpy() {
                 : document.body.scrollHeight - sectionTop;
 
             if (
-                scrollPos >= sectionTop &&
-                scrollPos < sectionTop + sectionHeight
+                scrollPos >= sectionTop - 100 &&
+                scrollPos < sectionTop + sectionHeight - 100
             ) {
+                if (current) {
+                    prev = current;
+                }
                 current = section.id;
             }
         });
+
+        if (
+            ![
+                "home",
+                "about",
+                "speakers",
+                "schedule",
+                "registration",
+                "contact",
+            ].includes(current)
+        ) {
+            current = prev;
+        }
 
         // Update active nav link
         navLinks.forEach((link) => {
@@ -251,78 +271,7 @@ function addScrollSpy() {
 
 function updateActiveNavLink(activeLink) {
     // Remove active class from all links
-    const navLinks = document.querySelectorAll(".navbar-nav .nav-link");
-    navLinks.forEach((link) => link.classList.remove("active"));
-
-    // Add active class to clicked link
-    activeLink.classList.add("active");
-}
-
-function addSmoothScrollHandlers() {
-    // Add click handlers to all navigation links
-    const navLinks = document.querySelectorAll(".navbar-nav .nav-link");
-
-    navLinks.forEach((link) => {
-        link.addEventListener("click", function (e) {
-            e.preventDefault();
-
-            const targetId = this.getAttribute("data-target");
-            const targetElement = document.getElementById(targetId);
-
-            if (targetElement) {
-                // Calculate offset for fixed navbar
-                const navbarHeight =
-                    document.querySelector(".navbar").offsetHeight || 60;
-                const offsetTop = targetElement.offsetTop - navbarHeight - 20;
-
-                window.scrollTo({
-                    top: offsetTop,
-                    behavior: "smooth",
-                });
-
-                // Update active state
-                updateActiveNavLink(this);
-            }
-        });
-    });
-}
-
-function addScrollSpy() {
-    // Add scroll spy to highlight current section
-    const navLinks = document.querySelectorAll(".navbar-nav .nav-link");
-    const sections = document.querySelectorAll("h1[id]");
-
-    if (sections.length === 0) return;
-
-    window.addEventListener("scroll", function () {
-        let current = "";
-        const scrollPos = window.scrollY + 100; // Offset for navbar
-
-        sections.forEach((section) => {
-            const sectionTop = section.offsetTop;
-            const sectionHeight = section.offsetHeight;
-
-            if (
-                scrollPos >= sectionTop &&
-                scrollPos < sectionTop + sectionHeight
-            ) {
-                current = section.id;
-            }
-        });
-
-        // Update active nav link
-        navLinks.forEach((link) => {
-            link.classList.remove("active");
-            if (link.getAttribute("data-target") === current) {
-                link.classList.add("active");
-            }
-        });
-    });
-}
-
-function updateActiveNavLink(activeLink) {
-    // Remove active class from all links
-    const navLinks = document.querySelectorAll(".navbar-nav .nav-link");
+    const navLinks = document.querySelectorAll(".nav-link");
     navLinks.forEach((link) => link.classList.remove("active"));
 
     // Add active class to clicked link
