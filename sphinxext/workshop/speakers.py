@@ -1,9 +1,11 @@
-from docutils import nodes
-from sphinx.util.docutils import SphinxDirective
-from docutils.parsers.rst import directives
-from sphinx.util import logging
-from jinja2 import Environment, FileSystemLoader
 import os
+
+from docutils import nodes
+from docutils.parsers.rst import directives
+from jinja2 import Environment, FileSystemLoader
+from sphinx.util import logging
+from sphinx.util.docutils import SphinxDirective
+
 # from sphinx.writers.html5 import HTML5Translator # Potentially complex/unused
 # from docutils.io import StringOutput # Unused
 
@@ -16,17 +18,17 @@ class SpeakerItemDirective(SphinxDirective):
     optional_arguments = 0
     final_argument_whitespace = True
     option_spec = {
-        'name': directives.unchanged_required,  # Make name required
-        'image': directives.unchanged,  # Image path/URL
-        'title': directives.unchanged,
-        'affiliation': directives.unchanged,
+        "name": directives.unchanged_required,  # Make name required
+        "image": directives.unchanged,  # Image path/URL
+        "title": directives.unchanged,
+        "affiliation": directives.unchanged,
     }
 
     def run(self):
         env = self.env
 
         # Initialize the list of speakers in the environment if it doesn't exist
-        if not hasattr(env, 'workshop_speakers'):
+        if not hasattr(env, "workshop_speakers"):
             env.workshop_speakers = []
 
         # Store raw RST content instead of parsing nodes here
@@ -34,11 +36,11 @@ class SpeakerItemDirective(SphinxDirective):
         bio_rst = "\n".join(self.content)  # Join lines into a single string
 
         speaker_info = {
-            'name': self.options.get('name'),
-            'image': self.options.get('image'),
-            'bio_rst': bio_rst,  # Store raw RST content
-            'title': self.options.get('title'),
-            'affiliation': self.options.get('affiliation'),
+            "name": self.options.get("name"),
+            "image": self.options.get("image"),
+            "bio_rst": bio_rst,  # Store raw RST content
+            "title": self.options.get("title"),
+            "affiliation": self.options.get("affiliation"),
         }
 
         env.workshop_speakers.append(speaker_info)
@@ -54,7 +56,7 @@ class SpeakersDirective(SphinxDirective):
     optional_arguments = 0
     final_argument_whitespace = True
     option_spec = {
-        'template': directives.unchanged_required,  # Template path is required
+        "template": directives.unchanged_required,  # Template path is required
     }
 
     def run(self):
@@ -71,17 +73,17 @@ class SpeakersDirective(SphinxDirective):
         self.state.nested_parse(self.content, self.content_offset, node)
 
         # Data collected by SpeakerDirective should now be in env.workshop_speakers
-        collected_speakers = getattr(env, 'workshop_speakers', [])
+        collected_speakers = getattr(env, "workshop_speakers", [])
 
         if not collected_speakers:
             logger.warning(
                 "No speakers found within the 'speakers' directive.",
-                location=self.get_location()
+                location=self.get_location(),
             )
             return []
 
         # --- Prepare data for template (just use collected data directly) ---
-        template_name = self.options.get('template')
+        template_name = self.options.get("template")
         if not template_name:
             msg = "Speakers directive requires a :template: option."
             logger.error(msg, location=self.get_location())
@@ -94,7 +96,7 @@ class SpeakersDirective(SphinxDirective):
         # template_name is relative to the current RST file's directory
         # OR srcdir if starts with /
         # For simplicity, assume template path is relative to srcdir or absolute
-        if template_name.startswith('/'):
+        if template_name.startswith("/"):
             # If starts with /, treat as relative to srcdir
             template_abs_path = os.path.join(env.srcdir, template_name[1:])
         else:
@@ -106,8 +108,8 @@ class SpeakersDirective(SphinxDirective):
         template_basename = os.path.basename(template_abs_path)
 
         # Need HTML builder for pathto helper
-        if app.builder.format != 'html':
-            html_builder = app.env.app.registry.create_builder(app, 'html')
+        if app.builder.format != "html":
+            html_builder = app.env.app.registry.create_builder(app, "html")
         else:
             html_builder = app.builder
 
@@ -115,8 +117,11 @@ class SpeakersDirective(SphinxDirective):
             jinja_loader = FileSystemLoader(template_dir)
             jinja_env = Environment(loader=jinja_loader, autoescape=True)
             # Provide pathto helper function
-            jinja_env.globals['pathto'] = lambda filename, *args: \
-                html_builder.get_relative_uri(env.docname, filename)
+            jinja_env.globals["pathto"] = (
+                lambda filename, *args: html_builder.get_relative_uri(
+                    env.docname, filename
+                )
+            )
 
             # Template expects raw RST in 'bio_rst' variable
 
@@ -129,14 +134,14 @@ class SpeakersDirective(SphinxDirective):
             return [nodes.error(None, nodes.paragraph(text=err_msg))]
 
         # Create a raw HTML node
-        html_node = nodes.raw(text=rendered_html, format='html')
+        html_node = nodes.raw(text=rendered_html, format="html")
 
         # Add optional section wrapper
-        section = nodes.section(ids=['speakers'])
-        section['classes'] += ['workshop-speakers-section']
-        section += html_node
+        # section = nodes.section()
+        # section["classes"] += ["workshop-speakers-section"]
+        # section += html_node
 
         # Clear the collected speakers (good practice)
         env.workshop_speakers = []
 
-        return [section]
+        return [html_node]
