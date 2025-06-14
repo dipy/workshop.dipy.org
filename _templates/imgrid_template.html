@@ -1,0 +1,19 @@
+<div class="imgrid p-b-40">
+    <div class="heading-underline m-b-40"></div>
+    <div class="dis-flex flex-w flex-c"><!-- Consider adding more specific classes if needed -->
+        {% for image in images %}
+        {% set image_ref = image.ref if image.ref else "#" %}
+        {% set image_width = image.width if image.width else width %}
+        {% set image_height = image.height if image.height else height %}
+        <a href="{{ image_ref }}" class="imgrid-item" target="_blank">
+            <img 
+              class="imgrid-image"
+              src="{{ image.url }}"
+              alt="{{ image.alt }}"
+              width="{{ image_width }}"
+              height="{{ image_height }}"
+            />
+        </a>
+        {% endfor %}
+    </div>
+</div>
