@@ -18,7 +18,7 @@ author = "DIPY Team"
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration
 
 sys.path.append(os.path.abspath("sphinxext"))
-extensions = ["sphinx_design", "workshop", "jinja"]
+extensions = ["sphinx_design", "workshop", "jinja", "sphinx_reredirects"]
 
 templates_path = ["_templates"]
 exclude_patterns = []
@@ -36,7 +36,10 @@ html_logo = "_static/images/dipy-logo.png"
 html_additional_pages = {
     "2019": "dw_2019.html",
     "2020": "dw_2020.html",
-    "2025": "dw_2025.html"
+    "2025": "dw_2025.html",
+    "dipy-workshop-2019": "dw_2019.html",
+    "dipy-workshop-2020": "dw_2020.html",
+    "dipy-workshop-2025": "dw_2025.html",
 }
 
 html_theme_options = {
@@ -78,4 +81,17 @@ html_context = {
         },
         "bg_images": {"all": [{"url": "https://picsum.photos/800"}]},
     },
+}
+
+# -- Options for sphinx-reredirects -------------------------------------------
+redirects = {
+  "workshops/dipy-workshop-2019": "../dipy-workshop-2019.html",
+  "workshops/dipy-workshop-2020": "../dipy-workshop-2020.html",
+  "workshops/dipy-workshop-2021": "../dipy-workshop-2021.html",
+  "workshops/dipy-workshop-2022": "../dipy-workshop-2022.html",
+  "workshops/dipy-workshop-2023": "../dipy-workshop-2023.html",
+  "workshops/dipy-workshop-2024": "../dipy-workshop-2024.html",
+  "workshops/dipy-workshop-2025": "../dipy-workshop-2025.html",
+
+
 }
