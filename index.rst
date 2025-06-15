@@ -33,26 +33,159 @@ Speakers
    .. workshop-speaker::
       :name: Eleftherios Garyfallidis
       :image: garyfallidis.jpg
-      :title: Associate Professor
+      :title: Chair, DIPY Founder & Lead Developer
+      :affiliation: Associate Professor, Indiana University
+
+   .. workshop-speaker::
+      :name: Simon Warfield
+      :image: Simon.jpeg
+      :title: Director of Radiology Research, Thorne Griscom Professor of Radiology
+      :affiliation: Harvard Medical School
+
+   .. workshop-speaker::
+      :name: Franco Pestilli
+      :image: Franco.webp
+      :title: Associate Professor, Department of Psychology and Neuroscience
+      :affiliation: The University of Texas at Austin
+
+   .. workshop-speaker::
+      :name: Ariel Rokem
+      :image: rokem.jpg
+      :title: Associate DIPY Lead, eScience Institute
+      :affiliation: Research Associate Professor, University of Washington, Seattle
+
+   .. workshop-speaker::
+      :name: Maxime Descoteaux
+      :image: Maxime.jpeg
+      :title: DIPY Scientific Advisor
+      :affiliation: Professor in Computer Science, University of Sherbrooke, CA
+
+   .. workshop-speaker::
+      :name: Marco Palombo
+      :image: Marco.avif
+      :title: Associate Professor (Senior Lecturer)
+      :affiliation: Cardiff University
+
+   .. workshop-speaker::
+      :name: Alexandra Badea
+      :image: Alexandra.jpeg
+      :title: Associate Professor Radiology & Neurology
+      :affiliation: Duke University
+
+   .. workshop-speaker::
+      :name: Julien Cohen-Adad
+      :image: Julien.jpeg
+      :title: Associate Professor of Biomedical Engineering
+      :affiliation: Polytechnique Montreal
+
+   .. workshop-speaker::
+      :name: Aris Sotiras
+      :image: Aris.webp
+      :title: Assistant Professor of Radiology
+      :affiliation: Washington University
+
+   .. workshop-speaker::
+      :name: Kelly Chang
+      :image: Kelly.jpeg
+      :title: Postdoctoral Research Scientist
+      :affiliation: University of Washington
+
+   .. workshop-speaker::
+      :name: Gabriel Girard
+      :image: girard.png
+      :title: Research Scientist
+      :affiliation: University of Sherbrooke
+
+   .. workshop-speaker::
+      :name: Rafael Neto Henriques
+      :image: henriques.jpeg
+      :title: Postdoctoral Researcher
+      :affiliation: Champalimaud Centre for the Unknown, PT
+
+   .. workshop-speaker::
+      :name: Wei Tang
+      :image: wei.jpeg
+      :title: Research Scientist
       :affiliation: Indiana University
 
    .. workshop-speaker::
-      :name: Ariel Rokem
-      :image: rokem.jpg
-      :title: Associate Professor
+      :name: Jon Haitz Legarreta Gorroño
+      :image: JHLegarreta.jpg
+      :title: Postdoctoral Research Fellow
+      :affiliation: Harvard University
+
+   .. workshop-speaker::
+      :name: Serge Koudoro
+      :image: serge.png
+      :title: DIPY Release Manager
+      :affiliation: Indiana University
+
+   .. workshop-speaker::
+      :name: Shreyas Fadnavis
+      :image: Fadnavis.jpeg
+      :title: Principal AI Engineer
+      :affiliation: Hologic, Inc.
+
+   .. workshop-speaker::
+      :name: Bramsh Qamar Chandio
+      :image: Chandio.jpeg
+      :title: Postdoctoral Scholar
+      :affiliation: University of Southern California
+
+   .. workshop-speaker::
+      :name: Maeliss Jallais
+      :image: Maeliss.jpeg
+      :title: Research Associate
+      :affiliation: Cardiff University
+
+   .. workshop-speaker::
+      :name: Maharshi Gor
+      :image: maharshi.jpeg
+      :title: Research Associate
+      :affiliation: Indiana University
+
+   .. workshop-speaker::
+      :name: Sreekar Chigurupati
+      :image: sreekar.jpeg
+      :title: PhD Student
+      :affiliation: Indiana University
+
+   .. workshop-speaker::
+      :name: Jong Sung Park
+      :image: jspark.jpeg
+      :title: PhD Student
+      :affiliation: Indiana University
+
+   .. workshop-speaker::
+      :name: John Kruper
+      :image: John.jpeg
+      :title: Graduate Student
       :affiliation: University of Washington
 
    .. workshop-speaker::
-      :name: Ariel Rokem
-      :image: rokem.jpg
-      :title: Associate Professor
-      :affiliation: University of Washington
+      :name: Adam Saunders
+      :image: Adam.jpeg
+      :title: PhD student
+      :affiliation: Vanderbilt University
 
    .. workshop-speaker::
-      :name: Ariel Rokem
-      :image: rokem.jpg
-      :title: Associate Professor
-      :affiliation: University of Washington
+      :name: Aziza Saber Jabdaragh
+      :image: Aziza.jpeg
+      :title: PhD Student
+      :affiliation: Indiana University
+
+   .. workshop-speaker::
+      :name: Mohamed Abouagour
+      :image: Mohamed.jpg
+      :title: PhD Student
+      :affiliation: Indiana University
+
+   .. workshop-speaker::
+      :name: Atharva Shah
+      :image: atharva.png
+      :title: PhD Student
+      :affiliation: Indiana University
+
 
 ---------------------
 Conference Management
@@ -624,6 +757,6 @@ Get the Early Birds 25% Discount before 3rd January 2025.
 Contact
 #######
 
-Contact us for more information by sending an email at dipy@python.org
+Contact us for more information by sending an email at workshop@dipy.org
 
 or joining our forum at https://github.com/dipy/dipy/discussions
