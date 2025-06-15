@@ -83,7 +83,7 @@ transform: translatex(-40%) scale(0.8);
 #item-2:checked ~ .cards #highlight-2,
 #item-3:checked ~ .cards #highlight-3,
 #item-4:checked ~ .cards #highlight-4,
-#item-5:checked ~ .cards #highlight-5, 
+#item-5:checked ~ .cards #highlight-5,
 #item-6:checked ~ .cards #highlight-6 {
   transform: translatex(0) scale(1);
   opacity: 1;
@@ -242,7 +242,7 @@ transform: translatex(-40%) scale(0.8);
   width: 40px;
   height: 40px;
   border-radius: 100%;
-  
+
 }
 
 #cta{
