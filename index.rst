@@ -626,4 +626,4 @@ Contact
 
 Contact us for more information by sending an email at dipy@python.org
 
-or joining our interactive chatroom at https://gitter.im/dipy/dipy
+or joining our forum at https://github.com/dipy/dipy/discussions

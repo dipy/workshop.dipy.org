@@ -33,7 +33,11 @@ html_css_files = ["css/workshop.css"]
 html_js_files = ["js/workshop.js", "js/countdown.js"]
 html_logo = "_static/images/dipy-logo.png"
 
-html_additional_pages = {"2025": "dw_2025.html"}
+html_additional_pages = {
+    "2019": "dw_2019.html",
+    "2020": "dw_2020.html",
+    "2025": "dw_2025.html"
+}
 
 html_theme_options = {
     "logo": {
