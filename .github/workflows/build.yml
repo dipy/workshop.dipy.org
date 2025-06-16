@@ -1,0 +1,96 @@
+name: Build
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    types: [opened, synchronize, edited, reopened]
+    branches:
+      - main
+  pull_request_target:
+    types: [closed]
+    branches:
+      - main
+  schedule:
+    - cron: '0 0 * * 1'
+
+jobs:
+  build:
+    if: ${{ github.event.action != 'closed' }}
+    runs-on: ubuntu-latest
+    env:
+        PR_PATH: workshop.dipy.org/pull/${{github.event.number}}
+        BASE_URL: https://dipy.github.io/workshop.dipy.org
+        HEAD: ${{ github.event.pull_request.head.repo.full_name }}
+        BASE: ${{ github.repository }}
+        NB: ${{github.event.number}}
+        REF: ${{github.ref}}
+        STATUS: ${{github.event.pull_request.head.repo.full_name != github.repository}}
+    steps:
+      - name: Save the PR number in an artifact
+        if: ${{ github.event_name == 'pull_request' }}
+        shell: bash
+        env:
+          PULL_REQUEST_NUMBER: ${{ github.event.number }}
+        run: echo $PULL_REQUEST_NUMBER > pull_request_number.txt
+
+      - name: Upload the PULL REQUEST number
+        if: ${{ github.event_name == 'pull_request' }}
+        uses: actions/upload-artifact@v4
+        with:
+          name: pull_request_number
+          path: ./pull_request_number.txt
+
+      - name: Checkout website repo
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Build website
+        run: |
+            make -C . html
+
+      - name: Upload HTML
+        uses: actions/upload-artifact@v4
+        with:
+            name: DocumentationHTML
+            path: _build/html/
+
+  on-closed:
+    runs-on: ubuntu-latest
+    if: ${{ github.event.action == 'closed' }}
+    env:
+      PR_PATH: workshop.dipy.org/pull/${{github.event.number}}
+    steps:
+      - name: make empty dir
+        run: mkdir public
+
+      - name: delete folder
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          deploy_key: ${{ secrets.ACTIONS_DEPLOY_TOKEN }}
+          external_repository:  dipy/preview-html
+          publish_dir: ./public
+          publish_branch: main
+          destination_dir: ${{ env.PR_PATH }}
+          user_name: 'github-actions[bot]'
+          user_email: 'github-actions[bot]@users.noreply.github.com'
+          commit_message: ${{ github.event.head_commit.message }}
+
+      - name: Update PR Comment
+        uses: hasura/comment-progress@v2.3.0
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          repository: ${{ github.repository }}
+          number: ${{ github.event.number }}
+          id: deploy-preview
+          message: "🪓 PR closed, deleted preview at https://github.com/dipy/preview-html/tree/main/${{ env.PR_PATH }}/"
