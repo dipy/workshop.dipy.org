@@ -3,14 +3,13 @@
 from datetime import datetime
 from venv import logger
 
-import pytz
 from docutils import nodes
 from docutils.parsers.rst import directives
 
 # from docutils.parsers.rst import Directive # Removed unused import
 from jinja2 import Template
 from sphinx.util.docutils import SphinxDirective
-
+from zoneinfo import ZoneInfo
 
 # Helper function to format dates
 def format_date_range(start_date, end_date):
@@ -35,8 +34,8 @@ def convert_to_iso(date_str, format="%Y-%m-%d %H:%M"):
     """Convert a date string to UTC timezone."""
     local_date = parse_date(date_str, format)
     if local_date:
-        local_tz = pytz.timezone("America/New_York")  # Adjust to your local timezone
-        local_date = local_tz.localize(local_date)
+        local_tz = ZoneInfo("America/Indianapolis")  # Adjust to your local timezone
+        local_date = local_date.replace(tzinfo=local_tz)
         return local_date.isoformat()
     return None
 
