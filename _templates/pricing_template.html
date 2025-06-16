@@ -1,0 +1,44 @@
+<div class="pricing-list m-t-100">
+    <div class="flex-col-c">
+        <h3 class="content-title l2-txt1 p-b-10 color-black txt-center">{{ title }}</h3>
+        <div class="speaker-divider m-b-10"></div>
+        <strong class="s2-txt2 fs-16 m-b-20"> {{ subtitle }} </strong>
+    </div>
+    <div class="dis-flex flex-sa flex-w">
+        {% for item in pricing_items %}
+        <div class="col-lg-5 col-sm-12 p-l-20">
+            <div class="payment-card">
+                <h4 class="payment-card-title m2-txt4">{{ item.name|title }}</h4>
+                <h4 class="payment-card-amount">
+                    {% if item.discount %}
+                    <s class="payment-strike-through">{{ item.currency }}{{ item.discount }}</s>
+                    {% endif %}
+                    <span>
+                        {{ item.currency }}{{ item.price }} {% if item.discount %}
+                        <sup>&ast;</sup>
+                        {% endif %}
+                    </span>
+                </h4>
+                <div class="payment-benefits">
+                    <p class="m2-txt3 p-b-10">What will be included?</p>
+                    <ul class="s2-text3">
+                        {% for feature in item.features %}
+                        <li>{{ feature }}</li>
+                        {% endfor %}
+                    </ul>
+                </div>
+                <div class="payment-purchase p-b-20 flex-c">
+                    <div>
+                        <button
+                            class="btn btn-lg btn-secondary register-btn"
+                            onclick="window.location.href='{{ item.registration_link }}'"
+                        >
+                            Register NOW
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>

@@ -1,0 +1,44 @@
+<div class="participants-section">
+    <div class="participants-carousel">
+        {# First set of items #}
+        {% for item in participant_items %}
+        {% if item.image %}
+        <div class="participant-card">
+            <a href="{{ item.url }}" target="_blank">
+                {% set image_path = item.image %}
+                {% if image_path and not image_path.startswith('/') and not image_path.startswith('http') %}
+                    {% set image_src = '_static/images/universities/' + image_path %}
+                {% else %}
+                    {% set image_src = image_path %}
+                {% endif %}
+                <img src="{{ image_src }}"
+                     alt="{{ item.name }}"
+                     class="participant-logo">
+                <h5>{{ item.name }}</h5>
+            </a>
+        </div>
+        {% endif %}
+        {% endfor %}
+
+        {# Duplicate set of items for seamless loop #}
+        {% for item in participant_items %}
+        {% if item.image %}
+        <div class="participant-card">
+            <a href="{{ item.url }}" target="_blank">
+                {% set image_path = item.image %}
+                {% if image_path and not image_path.startswith('/') and not image_path.startswith('http') %}
+                    {% set image_src = '_static/images/universities/' + image_path %}
+                {% else %}
+                    {% set image_src = image_path %}
+                {% endif %}
+                <img src="{{ image_src }}"
+                     alt="{{ item.name }}"
+                     class="participant-logo">
+                <h5>{{ item.name }}</h5>
+            </a>
+        </div>
+        {% endif %}
+        {% endfor %}
+    </div>
+</div>
+
