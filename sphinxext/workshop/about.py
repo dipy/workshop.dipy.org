@@ -32,7 +32,8 @@ class AboutDirective(SphinxDirective):
             "watermark-wrapper",
         ]
         # Resolve static path - this might need refinement
-        # watermark_uri = os.path.join(self.env.app.builder.srcdir, '_static/images/dipy-watermark.svg') # Removed unused variable
+        # watermark_uri = os.path.join(self.env.app.builder.srcdir,
+        # '_static/images/dipy-watermark.svg') # Removed unused variable
         # Check if file exists, Sphinx should handle path resolution
         # For now, creating the node; builder might handle missing images
         # Use relative URI for HTML, Sphinx should resolve this correctly
