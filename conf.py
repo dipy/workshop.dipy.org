@@ -3,9 +3,9 @@
 # For the full list of built-in configuration values, see the documentation:
 # https://www.sphinx-doc.org/en/master/usage/configuration.html
 
+from datetime import date
 import os
 import sys
-from datetime import date
 
 # -- Project information -----------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#project-information
@@ -85,13 +85,11 @@ html_context = {
 
 # -- Options for sphinx-reredirects -------------------------------------------
 redirects = {
-  "workshops/dipy-workshop-2019": "../dipy-workshop-2019.html",
-  "workshops/dipy-workshop-2020": "../dipy-workshop-2020.html",
-  "workshops/dipy-workshop-2021": "../dipy-workshop-2021.html",
-  "workshops/dipy-workshop-2022": "../dipy-workshop-2022.html",
-  "workshops/dipy-workshop-2023": "../dipy-workshop-2023.html",
-  "workshops/dipy-workshop-2024": "../dipy-workshop-2024.html",
-  "workshops/dipy-workshop-2025": "../dipy-workshop-2025.html",
-
-
+    "workshops/dipy-workshop-2019": "../dipy-workshop-2019.html",
+    "workshops/dipy-workshop-2020": "../dipy-workshop-2020.html",
+    "workshops/dipy-workshop-2021": "../dipy-workshop-2021.html",
+    "workshops/dipy-workshop-2022": "../dipy-workshop-2022.html",
+    "workshops/dipy-workshop-2023": "../dipy-workshop-2023.html",
+    "workshops/dipy-workshop-2024": "../dipy-workshop-2024.html",
+    "workshops/dipy-workshop-2025": "../dipy-workshop-2025.html",
 }
