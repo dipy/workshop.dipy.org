@@ -358,7 +358,7 @@ Special Thanks
 
 Multiple speakers including **Garyfallidis, Landman and Harezlak** are funded by the
 `National Institutes of Health <https://www.nih.gov/>`_. In addition, **Koudoro, Rokem and Girard** are funded from
-an EOSS grant through the `Chan Zuckerberg Initiative<https://chanzuckerberg.com/eoss/proposals/strengthening-computational-neuroanatomy-using-dipy/>`.
+an EOSS grant through the `Chan Zuckerberg Initiative <https://chanzuckerberg.com/eoss/proposals/strengthening-computational-neuroanatomy-using-dipy/>`_.
 
 ########
 Schedule
