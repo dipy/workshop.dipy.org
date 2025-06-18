@@ -163,9 +163,9 @@ h1, h2 {
 }
 
 h1:after, h2:after {
-  content: ""; 
+  content: "";
   display: block;
-  height: 10px; 
+  height: 10px;
   width: 100px; /* Set your desired fixed width for the underline */
   background-color: #ff7f00; /* Set the color of the underline */
   position: absolute;
