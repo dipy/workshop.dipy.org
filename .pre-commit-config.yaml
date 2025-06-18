@@ -3,33 +3,38 @@ default_language_version:
 
 exclude: "(data|_static/vendor)/.*"
 repos:
-  - repo: https://github.com/pre-commit/pre-commit-hooks
-    rev: v4.4.0
+-   repo: https://gitlab.com/vojko.pribudic.foss/pre-commit-update
+    rev: v0.7.0
     hooks:
-      - id: trailing-whitespace
-      - id: end-of-file-fixer
-      - id: mixed-line-ending
-      - id: check-yaml
-      - id: check-json
-      - id: check-toml
-      - id: check-added-large-files
-      - id: check-case-conflict
-      - id: check-merge-conflict
-      - id: check-vcs-permalinks
-      - id: detect-aws-credentials
+    -   id: pre-commit-update
+        args: [--keep, pre-commit-update]
+-   repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v5.0.0
+    hooks:
+    -   id: trailing-whitespace
+    -   id: end-of-file-fixer
+    -   id: mixed-line-ending
+    -   id: check-yaml
+    -   id: check-json
+    -   id: check-toml
+    -   id: check-added-large-files
+    -   id: check-case-conflict
+    -   id: check-merge-conflict
+    -   id: check-vcs-permalinks
+    -   id: detect-aws-credentials
         args: [--allow-missing-credentials]
-      - id: detect-private-key
-  - repo: https://github.com/astral-sh/ruff-pre-commit
-    rev: v0.6.9
+    -   id: detect-private-key
+-   repo: https://github.com/astral-sh/ruff-pre-commit
+    rev: v0.12.0
     hooks:
       # Run the linter
-      - id: ruff
-        args: [ --fix ]
+    -   id: ruff
+        args: [--fix]
       # Run the formatter
-      - id: ruff-format
-  - repo: https://github.com/codespell-project/codespell
-    rev: v2.3.0
+    -   id: ruff-format
+-   repo: https://github.com/codespell-project/codespell
+    rev: v2.4.1
     hooks:
-      - id: codespell
+    -   id: codespell
         additional_dependencies:
-          - tomli
+        -   tomli
