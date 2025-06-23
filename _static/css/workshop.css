@@ -218,9 +218,9 @@ h1:after, h2:after {
   }
 
   .about-content, .why-content {
-    max-width: calc(100vw - 20px);
+    max-width: calc(100vw - 90px) !important;
     box-shadow: none;
-    padding: 20px 10px;
+    padding: 20px 10px !important;
   }
 
   .lodging-section {
@@ -440,7 +440,7 @@ html {
 
 /* Adjust main content to use full width */
 .bd-main .bd-content {
-  max-width: none;
+  max-width: 100vw;
   margin: 0 auto;
   padding: 2rem;
 }
