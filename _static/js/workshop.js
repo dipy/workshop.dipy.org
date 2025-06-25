@@ -1,38 +1,3 @@
-document.addEventListener("DOMContentLoaded", function () {
-    // Wait a bit for the page to fully load
-    setTimeout(() => {
-        createCustomNavbar();
-        setupScrollBehavior();
-        addScrollSpy();
-        addSmoothScrollHandlers();
-    }, 100);
-
-    const header = document.querySelector(".bd-header");
-    let lastScrollTop = 0;
-    const scrollThreshold = 100; // Show navbar after scrolling this many pixels
-
-    // Function to handle scroll events
-    function handleScroll() {
-        const currentScroll =
-            window.pageYOffset || document.documentElement.scrollTop;
-
-        // Show navbar when scrolling down past threshold
-        if (currentScroll > scrollThreshold) {
-            header.classList.add("show");
-        } else {
-            header.classList.remove("show");
-        }
-
-        lastScrollTop = currentScroll;
-    }
-
-    // Add scroll event listener
-    window.addEventListener("scroll", handleScroll);
-
-    // Initial check for scroll position
-    handleScroll();
-});
-
 function setupScrollBehavior() {
     const navbar = document.querySelector(".custom-navbar");
     if (!navbar) return;
@@ -90,30 +55,17 @@ function createCustomNavbar() {
 
 function createNavbarFromElements(h1Elements) {
     // Find the navbar or create one
-    let navbarCenter = document.querySelector(".navbar-center");
+    let navbarCenter = document.querySelector(
+        ".navbar-header-items__center .navbar-item"
+    );
 
-    if (!navbarCenter) {
-        // Try to find alternative navbar locations
-        const navbar = document.querySelector(".navbar, .bd-navbar, nav");
-        if (navbar) {
-            navbarCenter = document.createElement("div");
-            navbarCenter.className = "navbar-center";
-            navbar.appendChild(navbarCenter);
-        } else {
-            console.log("No navbar found, creating one...");
-            createNavbarContainer();
-            navbarCenter = document.querySelector(".navbar-center");
-        }
-    }
-
-    if (!navbarCenter) {
-        console.error("Could not create navbar container");
-        return;
-    }
+    let sidebarCenter = document.querySelector(
+        ".sidebar-header-items__center .navbar-item"
+    );
 
     // Create navbar navigation list
-    const navList = document.createElement("ul");
-    navList.className = "navbar-nav";
+    const navList = navbarCenter.querySelector(".navbar-nav");
+    const sidebarNavList = sidebarCenter.querySelector(".navbar-nav");
 
     h1Elements.forEach((h1, index) => {
         // Skip the main title (usually the first H1)
@@ -151,11 +103,14 @@ function createNavbarFromElements(h1Elements) {
 
         navItem.appendChild(navLink);
         navList.appendChild(navItem);
+        sidebarNavList.appendChild(navItem.cloneNode(true)); // Clone for sidebar
     });
 
     // Clear existing content and add our custom nav
     navbarCenter.innerHTML = "";
     navbarCenter.appendChild(navList);
+    sidebarCenter.innerHTML = "";
+    sidebarCenter.appendChild(sidebarNavList);
 
     console.log("Navbar created with", navList.children.length, "items");
 }
@@ -213,7 +168,7 @@ function addScrollSpy() {
     let ticking = false;
 
     function updateActiveSection() {
-        const scrollPos = window.scrollY + 200; // Offset for navbar
+        const scrollPos = window.scrollY + 60; // Offset for navbar
         let current = "";
         let prev = "";
 
@@ -225,8 +180,8 @@ function addScrollSpy() {
                 : document.body.scrollHeight - sectionTop;
 
             if (
-                scrollPos >= sectionTop - 100 &&
-                scrollPos < sectionTop + sectionHeight - 100
+                scrollPos >= sectionTop - 60 &&
+                scrollPos < sectionTop + sectionHeight - 60
             ) {
                 if (current) {
                     prev = current;
@@ -240,6 +195,7 @@ function addScrollSpy() {
                 "home",
                 "about",
                 "speakers",
+                "highlights",
                 "schedule",
                 "registration",
                 "contact",
@@ -277,6 +233,40 @@ function updateActiveNavLink(activeLink) {
     // Add active class to clicked link
     activeLink.classList.add("active");
 }
+
+document.addEventListener("DOMContentLoaded", function () {
+    // Wait a bit for the page to fully load
+    setTimeout(() => {
+        createCustomNavbar();
+        setupScrollBehavior();
+        addScrollSpy();
+        addSmoothScrollHandlers();
+    }, 100);
+
+    const header = document.querySelector(".bd-header");
+    const scrollThreshold = 100; // Show navbar after scrolling this many pixels
+
+    // Function to handle scroll events
+    function handleScroll() {
+        const currentScroll =
+            window.pageYOffset || document.documentElement.scrollTop;
+
+        // Show navbar when scrolling down past threshold
+        if (currentScroll > scrollThreshold) {
+            header.classList.add("show");
+        } else {
+            header.classList.remove("show");
+        }
+
+        lastScrollTop = currentScroll;
+    }
+
+    // Add scroll event listener
+    window.addEventListener("scroll", handleScroll);
+
+    // Initial check for scroll position
+    handleScroll();
+});
 
 const fadeOut = (element, duration = 500) => {
     element.style.transition = `opacity ${duration}ms ease-in-out`;
