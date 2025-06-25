@@ -83,6 +83,8 @@ html_context = {
     },
 }
 
+html_sidebars = {"**": ["sidebar-nav-bs"]}
+
 # -- Options for sphinx-reredirects -------------------------------------------
 redirects = {
     "workshops/dipy-workshop-2019": "../dipy-workshop-2019.html",
