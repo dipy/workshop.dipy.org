@@ -348,18 +348,23 @@ Participants from
 Special Thanks
 ---------------------
 
-.. imgrid::
-   :template: _templates/imgrid_template.html
+.. grid:: 4
+   :gutter: 5
 
-   .. imgrid-item::
-      :url: _static/images/universities/GRG.png
-      :alt: Garyfallidis Research Group (GRG)
-      :ref: https://grg.luddy.indiana.edu/
+   .. grid-item::
 
-   .. imgrid-item::
-      :url: _static/images/universities/ISE.jpeg
-      :alt: Intelligent Systems Engineering (IU)
-      :ref: https://engineering.indiana.edu/index.html
+   .. grid-item-card::
+      :img-background: _static/images/universities/GRG.png
+      :img-alt: Garyfallidis Research Group (GRG)
+      :link: https://grg.luddy.indiana.edu/
+      :text-align: center
+
+   .. grid-item-card::
+      :img-background: _static/images/universities/ISE.jpeg
+      :img-alt: Intelligent Systems Engineering (IU)
+      :link: https://engineering.indiana.edu/index.html
+      :text-align: center
+
 
 
 Multiple speakers including **Garyfallidis, Landman and Harezlak** are funded by the
