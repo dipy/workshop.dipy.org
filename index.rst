@@ -438,6 +438,10 @@ Schedule
          :image: serge.png
 
       .. workshop-timeline-item::
+         :time: 12:00 - 12:45
+         :title: Lunch Break
+
+      .. workshop-timeline-item::
          :time: 13:00 - 13:45
          :title: DeepN4: Learning N4ITK Bias Field Correction for T1-weighted Images
          :speaker: Adam Saunders
@@ -496,6 +500,10 @@ Schedule
          :title: Diffusion Tensor and Kurtosis Imaging
          :speaker: Atharva Shah
          :image: atharva.png
+
+      .. workshop-timeline-item::
+         :time: 12:00 - 12:45
+         :title: Lunch Break
 
       .. workshop-timeline-item::
          :time: 13:00 - 13:45
@@ -558,6 +566,10 @@ Schedule
          :image: girard.png
 
       .. workshop-timeline-item::
+         :time: 12:00 - 12:45
+         :title: Lunch Break
+
+      .. workshop-timeline-item::
          :time: 13:00 - 13:45
          :title: Keynote: Advanced Diffusion and Functional MRI for Brain Network Insights
          :speaker: Alexandra Badea
@@ -612,6 +624,10 @@ Schedule
          :image: Chandio.jpeg
 
       .. workshop-timeline-item::
+         :time: 12:00 - 12:45
+         :title: Lunch Break
+
+      .. workshop-timeline-item::
          :time: 13:00 - 13:45
          :title: New Frontiers in Bundle Analytics
          :speaker: Ariel Rokem
@@ -664,6 +680,10 @@ Schedule
          :title: Keynote: Unsupervised multivariate pattern analysis for neuroimaging studies
          :speaker: Aris Sotiras
          :image: Aris.webp
+
+      .. workshop-timeline-item::
+         :time: 12:00 - 12:45
+         :title: Lunch Break
 
       .. workshop-timeline-item::
          :time: 13:00 - 13:45

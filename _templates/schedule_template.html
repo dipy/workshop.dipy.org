@@ -12,6 +12,11 @@
                 <!-- Timeline Area -->
                 <div class="apland-timeline-area"> <!-- Use original CSS class -->
                     {% for item in timeline.timeline_entries %}
+                    {% if item.title == "Lunch Break" %}
+                    <hr class="hr-text" data-content="Lunch Break" />
+                    {% endif %}
+
+                    {% if item.title != "Lunch Break" or not item.title %}
                     <!-- Single Timeline Content -->
                     <div class="single-timeline-area">
                         <div class="timeline-date wow fadeInLeft" data-wow-delay="0.1s" style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInLeft;">
@@ -50,10 +55,7 @@
                             </div>
                         </div>
                     </div>
-                    {% if loop.index == 3 %} {# Example: Add break after 3rd item #}
-                        {# <hr class="hr-text" data-content="Lunch Break" /> #}
                     {% endif %}
-
                     {% endfor %}
                 </div>
             </div>
