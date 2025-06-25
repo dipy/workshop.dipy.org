@@ -1,0 +1,18 @@
+<div class="full-page-content why-content">
+    <h3 class="m2-txt4 lh-1-5">
+        {{ subtitle }}:
+    </h3>
+    <div class="p-t-20">
+        <ol class="list">
+            {% for item in why_items %}
+            <li class="list-item">
+                <span class="list-item__number">{{loop.index}}.</span>
+                <p class="list-item__title">{{ item.title }}:</p>
+                <p class="list-item__details txt-justify">
+                    {{ item.description}}
+                </p>
+            </li>
+            {% endfor %}
+        </ol>
+    </div>
+</div>

@@ -195,6 +195,7 @@ function addScrollSpy() {
                 "home",
                 "about",
                 "speakers",
+                "why",
                 "highlights",
                 "schedule",
                 "registration",

@@ -366,6 +366,43 @@ Multiple speakers including **Garyfallidis, Landman and Harezlak** are funded by
 `National Institutes of Health <https://www.nih.gov/>`_. In addition, **Koudoro, Rokem and Girard** are funded from
 an EOSS grant through the `Chan Zuckerberg Initiative <https://chanzuckerberg.com/eoss/proposals/strengthening-computational-neuroanatomy-using-dipy/>`_.
 
+####
+Why?
+####
+
+.. workshop-why::
+   :template: _templates/why_template.html
+   :subtitle: Here are a few reasons why attending the DIPY MR Imaging workshop is essential
+
+   .. workshop-why-item::
+      :title: Hands-on experience
+
+      The workshop offers a hands-on learning experience, which is essential for learning how to use MR imaging techniques and software effectively. The practical sessions provide attendees with the opportunity to work on real-world problems and gain valuable experience in the field.
+
+   .. workshop-why-item::
+      :title: Expert instructors
+
+      The workshop is led by expert instructors who have extensive experience in MR imaging and DIPY software. They provide valuable insights and expertise, which is essential for staying up-to-date with the latest advancements in this rapidly evolving field.
+
+   .. workshop-why-item::
+      :title: Networking opportunities
+
+      The workshop provides an excellent opportunity for attendees to network with other professionals in the field. This can lead to collaborations and the sharing of knowledge and expertise, which is critical for advancing research in the field.
+
+   .. workshop-why-item::
+      :title: Access to the latest technology
+
+      The DIPY workshop provides access to the latest software for analyzing and processing MR imaging data. This ensures that attendees are working with the most advanced technology available, which can lead to more accurate and efficient analysis of data.
+
+   .. workshop-why-item::
+      :title: Deep understanding of the theory behind the methods
+
+      The topics covered need a solid understanding of the models, theory and math. For this reason, all tutorials will be provided at four levels : <br />
+         a&#41; Theory <br />
+         b&#41; Algorithms/Methods <br />
+         c&#41; Code/Interfaces <br />
+         d&#41; Clinical Application Examples.
+
 
 ##########
 Highlights
