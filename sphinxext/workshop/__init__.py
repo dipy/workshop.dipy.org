@@ -3,7 +3,6 @@ from sphinx.application import Sphinx
 from .about import AboutDirective
 from .carousel import CarouselDirective, CarouselItemDirective
 from .home import HomeDirective, HomeSlideDirective
-from .imgrid import ImgridDirective, ImgridItemDirective
 from .participants import ParticipantItemDirective, ParticipantsDirective
 from .pricing import PricingItemDirective, PricingListDirective
 from .schedule import ScheduleDirective
@@ -29,8 +28,6 @@ def setup(app: Sphinx):
     app.add_directive("pricing-item", PricingItemDirective)
     app.add_directive("participants", ParticipantsDirective)
     app.add_directive("participant-item", ParticipantItemDirective)
-    app.add_directive("imgrid", ImgridDirective)
-    app.add_directive("imgrid-item", ImgridItemDirective)
     app.add_directive("carousel", CarouselDirective)
     app.add_directive("carousel-item", CarouselItemDirective)
     app.add_directive("workshop-why", WhyDirective)
