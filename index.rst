@@ -366,6 +366,47 @@ Multiple speakers including **Garyfallidis, Landman and Harezlak** are funded by
 `National Institutes of Health <https://www.nih.gov/>`_. In addition, **Koudoro, Rokem and Girard** are funded from
 an EOSS grant through the `Chan Zuckerberg Initiative <https://chanzuckerberg.com/eoss/proposals/strengthening-computational-neuroanatomy-using-dipy/>`_.
 
+
+##########
+Highlights
+##########
+
+.. carousel::
+   :template: _templates/swipe_carousel.html
+
+   .. carousel-item::
+      :image: https://raw.githubusercontent.com/dipy/dipy_data/master/tractometry.png?raw=true
+      :title: Advanced tractometry
+      :description: Advanced techniques in tractography for diffusion MRI.
+
+   .. carousel-item::
+      :image: https://raw.githubusercontent.com/dipy/dipy_data/master/wrapping_bundles.png?raw=true
+      :title: Warping of bundles
+      :description: Techniques for warping and aligning bundles in diffusion MRI.
+
+   .. carousel-item::
+      :image: https://raw.githubusercontent.com/dipy/dipy_data/master/illuminating_lines.png?raw=true
+      :title: Cinematic visualization
+      :description: Cinematic techniques for visualizing diffusion MRI data.
+
+   .. carousel-item::
+      :image: https://raw.githubusercontent.com/dipy/dipy_data/master/preprocess.png?raw=true
+      :title: State-of-the-art preprocessing
+      :description: Advanced preprocessing techniques for diffusion MRI data.
+
+   .. carousel-item::
+      :image: https://raw.githubusercontent.com/dipy/dipy_data/master/brain-extraction.png?raw=true
+      :title: Accurate brain extraction
+      :description: Techniques for accurate brain extraction in diffusion MRI.
+
+   .. carousel-item::
+      :image: https://raw.githubusercontent.com/dipy/dipy_data/master/generative_approach.png?raw=true
+      :title: Generative approaches for missing data
+      :description: Techniques for generative modeling of missing data in diffusion MRI.
+
+
+
+
 ########
 Schedule
 ########

@@ -3,11 +3,11 @@
 @import "./util.css";
 @import "./timeline.css";
 @import "./carousel.css";
-@import "./highlight-carousel.css";
 @import "./speaker.css";
 @import "./participants.css";
 @import "./imgrid.css";
 @import "./pricing.css";
+@import "./swipe-carousel.css";
 
 
 html, body {
@@ -460,6 +460,14 @@ html {
   .navbar-center {
       width: 100%;
   }
+}
+
+@media (min-width: 1200px) {
+    .bd-main .bd-content .bd-article-container .bd-article {
+        padding-left: 2rem;
+        padding-right: 2rem;
+        padding-top: 1.5rem;
+    }
 }
 
 /* Navbar Styles */
