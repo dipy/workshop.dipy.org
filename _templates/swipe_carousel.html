@@ -1,0 +1,18 @@
+<div class="swipe-carousel-container">
+  <div class="sc-track">
+    {% for item in carousel_items %}
+    <div class="sc-card" data-index="{{ loop.index }}">
+      <img src="{{ item.image }}" alt="{{ item.title }}">
+    </div>
+    {% endfor %}
+  </div>
+</div>
+
+{% for item in carousel_items %}
+<div class="swipe-carousel-info">
+	<h3 class="sc-title"> {{ item.title }} </h3>
+  <p class="sc-description"> {{ item.description }} </p>
+</div>
+{% endfor %}
+
+<script src="_static/js/swipe_carousel.js"></script>
