@@ -84,6 +84,12 @@
         setupHomeCarousel(".simpleslide100", ".simpleslide100-item");
         initializeClock("countdown", "{{ workshop.reg_start_date }}", "{{ workshop.start_date }}", []);
         initializeClock("reg-countdown", 0, "{{ workshop.reg_start_date }}", []);
-        setTimeout(() => hideAfterDate("{{ workshop.end_date }}", "reg-countdown-stop"), 1000);
+        setTimeout(() => {
+            hideAfterDate("{{ workshop.end_date }}", "reg-countdown-stop");
+            messageAfterDate(
+                "{{ workshop.end_date }}",
+                "countdown-stop",
+                "<b class='m2-txt2'>Workshop</b> has been ended. <br/> See you next year!");
+         }, 1000);
     </script>
 </section>

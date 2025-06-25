@@ -60,10 +60,11 @@ const hideAfterDate = (datetime, id) => {
     }
 };
 
-// const workshopStart = "2025-03-17T09:00:00-04:00";
-// const registrationStart = "2024-08-29T09:00:00-04:00";
-// initializeClock("countdown", registrationStart, workshopStart, []);
-// initializeClock("reg-countdown", 0, registrationStart, [
-//   "Registration",
-//   "Registration-link",
-// ]);
+const messageAfterDate = (datetime, id, message) => {
+    if (Date.parse(datetime) < Date.parse(new Date())) {
+        const element = document.getElementById(id);
+        if (element) {
+            element.innerHTML = message;
+        }
+    }
+};
