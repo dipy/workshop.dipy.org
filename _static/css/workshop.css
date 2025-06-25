@@ -160,7 +160,7 @@ html, body {
 h1, h2 {
   position: relative; /* Position the h1 element relatively to anchor the :after element */
   display: inline-block; /* Makes the h1 element shrink-wrap to its content's width */
-  margin: 50px 0;
+  margin: 50px 0 100px;
 }
 
 h1:after, h2:after {
@@ -455,6 +455,10 @@ html {
 
   .bd-main .bd-content .bd-article-container {
     max-width: 80em;
+  }
+
+  section {
+    margin-bottom: 100px;
   }
 
 }

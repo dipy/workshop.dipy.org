@@ -27,7 +27,14 @@ About
 #####
 
 .. workshop-about::
+   :template: _templates/about_template.html
+   :watermark_image_url: _static/images/dipy-watermark.svg
+   :note_name: DIPY Team
 
+   Attention grads, researchers, physicists, radiologists, doctors and technicians interested in medical imaging! Join us for an exciting online workshop hosted by DIPY. Our comprehensive program is designed to equip you with the skills and knowledge needed to master the latest techniques and tools in structural and diffusion imaging.
+   Our team of expert instructors will guide you through the fundamentals of diffusion theory, data pre-processing, fiber tracking, and much more. You'll have the opportunity to learn from industry-leading professionals, ask questions, and network with like-minded peers.
+   Whether you're new to diffusion imaging or an experienced practitioner, this workshop is perfect for you. Our curriculum is tailored to meet the needs of individuals at all levels of expertise. Don't miss this chance to enhance your skills and advance your career.
+   Register today to secure your spot in this highly anticipated event. We can't wait to see you in the event!
 
 ########
 Speakers

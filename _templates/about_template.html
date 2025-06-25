@@ -1,0 +1,11 @@
+<div class="full-page-content about-content p-t-20">
+    <div class="flex-col-c-m pos-absolute watermark-wrapper">
+        <img class="watermark" src="{{ watermark_image_url }}" alt="" />
+    </div>
+    {% for content in note_content %}
+    <p class="s2-txt4 txt-justify fs-18 m-t-10">
+        {{ content }}
+    </p>
+    {% endfor %}
+    <p class="s2-txt2 txt-right p-t-20">&#8211; {{ note_name }}!</p>
+</div>
