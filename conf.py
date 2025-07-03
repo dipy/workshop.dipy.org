@@ -55,6 +55,9 @@ html_theme_options = {
     "footer_start": [],
     "footer_center": [],
     "footer_end": [],
+    "analytics": {
+        "google_analytics_id": "G-D2TV6ZZQL3",
+    },
 }
 
 html_context = {

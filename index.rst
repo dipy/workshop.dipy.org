@@ -1,8 +1,8 @@
 .. meta::
-   :description: The 2025 Dipy Workshop is a 5-day event focused on diffusion MRI, featuring expert speakers and hands-on sessions.
-   :keywords: Dipy, Workshop, Diffusion MRI, Neuroimaging, Tractography
+   :description: The 2025 DIPY Workshop is a 5-day event focused on diffusion MRI, featuring expert speakers and hands-on sessions.
+   :keywords: DIPY, Workshop, Diffusion MRI, Neuroimaging, Tractography
 
-.. title:: Dipy Workshop 2025
+.. title:: DIPY Workshop 2025
 
 .. workshop-home::
    :year: 2025
@@ -14,7 +14,7 @@
    :team_location: Bloomington, IN
 
    .. workshop-home-slide:: _static/images/dipy_odf_vs_2018-10-03.png
-      :alt: Dipy ODF vs 2018-10-03
+      :alt: DIPY ODF vs 2018-10-03
 
    .. workshop-home-slide:: _static/images/CST.png
       :alt: CST
