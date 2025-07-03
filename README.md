@@ -12,7 +12,7 @@ We use Github Webhook to deploy the website and IU server (Indiana University) t
 - `_static`: Contains all assets (images, CSS, JS) for Sphinx to look at.
 - `_templates`: Contains html layout for custom Sphinx design.
 - `_build`: Contains the generated documentation.
-- `sphinxext`: Sphinx custom plugins (Especially multiple custon directive).
+- `sphinxext`: Sphinx custom plugins (Especially multiple custom directive).
 
 ## Testing Locally: Doc generation steps:
 
@@ -22,7 +22,7 @@ To set up your computer to run this site locally, you need to install the variou
 
 ```bash
 $ pip install -U -r requirements.txt
-$ pre-commit run --all-files
+$ pre-commit install
 ```
 
 ### Generate all the Documentation
@@ -31,6 +31,7 @@ $ pre-commit run --all-files
 
 ```bash
 $ make -C . clean && make -C . html
+$ pre-commit run --all-files
 ```
 
 #### Under Windows
