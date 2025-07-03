@@ -31,6 +31,7 @@ html_static_path = ["_static"]
 html_css_files = ["css/workshop.css"]
 html_js_files = ["js/workshop.js", "js/countdown.js"]
 html_logo = "_static/images/dipy-logo.png"
+html_favicon = "_static/images/dipy-watermark.svg"
 
 html_additional_pages = {
     "2019": "dw_2019.html",
