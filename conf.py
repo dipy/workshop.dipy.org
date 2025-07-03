@@ -36,10 +36,6 @@ html_logo = "_static/images/dipy-logo.png"
 html_additional_pages = {
     "2019": "dw_2019.html",
     "2020": "dw_2020.html",
-    "2025": "dw_2025.html",
-    "dipy-workshop-2019": "dw_2019.html",
-    "dipy-workshop-2020": "dw_2020.html",
-    "dipy-workshop-2025": "dw_2025.html",
 }
 
 html_theme_options = {
