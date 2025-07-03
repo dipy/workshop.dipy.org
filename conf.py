@@ -3,7 +3,6 @@
 # For the full list of built-in configuration values, see the documentation:
 # https://www.sphinx-doc.org/en/master/usage/configuration.html
 
-from datetime import date
 import os
 import sys
 
@@ -59,24 +58,6 @@ html_theme_options = {
 
 html_context = {
     "default_mode": "light",
-    "workshop": {
-        "year": 2025,
-        "location": "online",
-        "codename": "Online",
-        "start_date": date(2025, 3, 17),
-        "end_date": date(2025, 3, 21),
-        "speakers": {
-            "all": [
-                {
-                    "avatar_url": "https://picsum.photos/200",
-                    "fullname": "John Doe",
-                    "title": "Research Associate",
-                    "affiliation": "Indiana University",
-                }
-            ]
-        },
-        "bg_images": {"all": [{"url": "https://picsum.photos/800"}]},
-    },
 }
 
 html_sidebars = {"**": ["sidebar-nav-bs"]}
