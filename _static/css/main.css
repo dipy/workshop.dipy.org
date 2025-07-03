@@ -526,7 +526,7 @@ div.apply-section h4, td {
 
 .alert-validate::after {
   content: "\f06a";
-  font-family: FontAwesome;
+  font-family: "FontAwesome";
   display: block;
   position: absolute;
   color: #c80000;
