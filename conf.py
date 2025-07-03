@@ -10,7 +10,7 @@ import sys
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#project-information
 
 project = "workshop.dipy.org"
-copyright = "2024, DIPY Team"
+copyright = "2025, DIPY Team"
 author = "DIPY Team"
 
 # -- General configuration ---------------------------------------------------
@@ -64,11 +64,18 @@ html_sidebars = {"**": ["sidebar-nav-bs"]}
 
 # -- Options for sphinx-reredirects -------------------------------------------
 redirects = {
-    "workshops/dipy-workshop-2019": "../dipy-workshop-2019.html",
-    "workshops/dipy-workshop-2020": "../dipy-workshop-2020.html",
-    "workshops/dipy-workshop-2021": "../dipy-workshop-2021.html",
-    "workshops/dipy-workshop-2022": "../dipy-workshop-2022.html",
-    "workshops/dipy-workshop-2023": "../dipy-workshop-2023.html",
-    "workshops/dipy-workshop-2024": "../dipy-workshop-2024.html",
-    "workshops/dipy-workshop-2025": "../dipy-workshop-2025.html",
+    "workshops/dipy-workshop-2019": "../2019.html",
+    "workshops/dipy-workshop-2020": "../2020.html",
+    "workshops/dipy-workshop-2021": "../2021.html",
+    "workshops/dipy-workshop-2022": "../2022.html",
+    "workshops/dipy-workshop-2023": "../2023.html",
+    "workshops/dipy-workshop-2024": "../2024.html",
+    "workshops/dipy-workshop-2025": "../2025.html",
+    "dipy-workshop-2019": "2019.html",
+    "dipy-workshop-2020": "2020.html",
+    "dipy-workshop-2021": "2021.html",
+    "dipy-workshop-2022": "2022.html",
+    "dipy-workshop-2023": "2023.html",
+    "dipy-workshop-2024": "2024.html",
+    "dipy-workshop-2025": "2025.html",
 }

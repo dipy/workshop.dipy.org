@@ -876,8 +876,3 @@ Contact
 Contact us for more information by sending an email at workshop@dipy.org
 
 or joining our forum at https://github.com/dipy/dipy/discussions
-
-.. toctree::
-   :hidden:
-
-   2025.rst
