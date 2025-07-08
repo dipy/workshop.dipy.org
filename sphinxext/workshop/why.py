@@ -3,6 +3,7 @@ import os
 from docutils import nodes
 from docutils.parsers.rst import directives
 from jinja2 import Environment, FileSystemLoader
+from markupsafe import Markup
 from sphinx.util import logging
 from sphinx.util.docutils import SphinxDirective
 
@@ -30,7 +31,7 @@ class WhyItemDirective(SphinxDirective):
         # Collect data for the why item
         why_item_info = {
             "title": self.options.get("title", ""),
-            "description": description_rst,
+            "description": Markup(description_rst),
         }
 
         env.workshop_why.append(why_item_info)

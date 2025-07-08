@@ -216,7 +216,7 @@ Conference Management
       :name: Kaustav Deka
       :image: Kaustav.png
       :title: Graduate Student
-      :affiliation: University of Washington
+      :affiliation: Indiana University
 
 -----------------
 Participants from
