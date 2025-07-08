@@ -37,13 +37,9 @@ function createCustomNavbar() {
         ".bd-main h1, .bd-content h1, main h1, .document h1"
     );
 
-    console.log("Found H1 elements:", h1Elements.length); // Debug log
-
     if (h1Elements.length === 0) {
-        console.log("No H1 elements found, trying alternative selectors...");
         // Try alternative selectors
         const altH1 = document.querySelectorAll("h1");
-        console.log("Alternative H1 search found:", altH1.length);
         if (altH1.length > 0) {
             createNavbarFromElements(altH1);
         }
@@ -65,14 +61,9 @@ function createNavbarFromElements(h1Elements) {
 
     // Create navbar navigation list
     const navList = navbarCenter.querySelector(".navbar-nav");
+    navList.innerHTML = ""; // Clear existing items
     const sidebarNavList = sidebarCenter.querySelector(".navbar-nav");
-
-    h1Elements.forEach((h1, index) => {
-        // Skip the main title (usually the first H1)
-        if (index === 0 && h1.textContent.includes("Welcome")) {
-            return;
-        }
-
+    h1Elements.forEach((h1) => {
         // Create ID for the section if it doesn't exist
         if (!h1.id) {
             // Generate ID from text content
@@ -111,8 +102,6 @@ function createNavbarFromElements(h1Elements) {
     navbarCenter.appendChild(navList);
     sidebarCenter.innerHTML = "";
     sidebarCenter.appendChild(sidebarNavList);
-
-    console.log("Navbar created with", navList.children.length, "items");
 }
 
 function createNavbarContainer() {
