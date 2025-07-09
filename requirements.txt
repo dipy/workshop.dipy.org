@@ -1,5 +1,6 @@
 sphinx==7.4.6
 sphinx-reredirects==1.0.0
+sphinx-design
+sphinx-sitemap>=2.7.2
 Jinja2
 pydata-sphinx-theme
-sphinx-design

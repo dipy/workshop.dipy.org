@@ -17,7 +17,13 @@ author = "DIPY Team"
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration
 
 sys.path.append(os.path.abspath("sphinxext"))
-extensions = ["sphinx_design", "workshop", "jinja", "sphinx_reredirects"]
+extensions = [
+    "sphinx_design",
+    "workshop",
+    "jinja",
+    "sphinx_reredirects",
+    "sphinx_sitemap",
+]
 
 templates_path = ["_templates"]
 exclude_patterns = []
@@ -32,6 +38,7 @@ html_css_files = ["css/workshop.css"]
 html_js_files = ["js/workshop.js", "js/countdown.js"]
 html_logo = "_static/images/dipy-logo.png"
 html_favicon = "_static/images/dipy-watermark.svg"
+html_baseurl = "https://workshop.dipy.org/"
 
 html_additional_pages = {
     "2019": "dw_2019.html",
@@ -83,3 +90,8 @@ redirects = {
     "dipy-workshop-2024": "2024.html",
     "dipy-workshop-2025": "2025.html",
 }
+
+
+# -- Sitemap options --------------------------------------------------
+sitemap_locales = [None]
+sitemap_url_scheme = "{link}"
