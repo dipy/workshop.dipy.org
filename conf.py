@@ -37,7 +37,7 @@ html_static_path = ["_static"]
 html_css_files = ["css/workshop.css"]
 html_js_files = ["js/workshop.js", "js/countdown.js"]
 html_logo = "_static/images/dipy-logo.png"
-html_favicon = "_static/images/dipy-watermark.svg"
+html_favicon = "_static/images/icons/favicon.ico"
 html_baseurl = "https://workshop.dipy.org/"
 
 html_additional_pages = {
