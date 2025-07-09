@@ -58,7 +58,7 @@ body {
   font-size: 1.25rem;
 }
 
-.email-box {
+.email-box form {
   display: flex;
   max-width: 400px;
   width: 100%;
@@ -68,7 +68,7 @@ body {
   background-color: white;
 }
 
-.email-box input {
+.email-box form > input {
   flex: 1;
   padding: 0.75rem 1.5rem;
   border: none;
@@ -78,7 +78,7 @@ body {
   font: 1em DM Sans, sans-serif;
 }
 
-.email-box button {
+.email-box form > button {
   font: 1em DM Sans, sans-serif;
   padding: 0.5rem 1.5rem;
   border: none;

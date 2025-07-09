@@ -13,7 +13,7 @@
     />
   </head>
   <body>
-    <img src="_static/images/comingsoon-bg.jpeg" alt="bg" class="bg-image" />
+    <img src="_static/images/comingsoon-bg.jpeg" alt="" aria-hidden="true" class="bg-image" />
     <main class="container">
       <section class="hero-section">
         <div>
@@ -24,8 +24,10 @@
           </p>
         </div>
         <div class="email-box">
-          <input type="email" placeholder="Please enter your email" />
-          <button>Notify Me</button>
+          <form action="https://airform.io/workshop+w2026@dipy.org" method="post">
+            <input type="email" name="email" placeholder="Please enter your email" />
+            <button>Notify Me</button>
+          </form>
         </div>
         <div class="notify-text">
           Notify me when the workshop registrations are available.
@@ -58,7 +60,7 @@
           </p>
         </div>
         <div class="video-container">
-          <video autoplay muted loop>
+          <video autoplay muted loop playsinline>
             <source src="https://github.com/dipy/workshop.dipy.org/raw/a10692f418e375d32bd1200132b4f95b8f30eaca/_static/videos/vid_c.mp4" type="video/mp4" />
             Your browser does not support the video tag.
           </video>
