@@ -771,6 +771,150 @@ Schedule
          :speaker: All
          :image: dipy-all.svg
 
+############
+Registration
+############
+
+.. pricing-list::
+  :template: _templates/pricing_template.html
+  :title: Student
+  :subtitle: Master's Degree Students, PhD Candidates, Postdocs should take this option.
+  :columns: 3
+
+  .. pricing-item::
+    :name: Silver
+    :currency: $
+    :price: 200
+    :discount: 500
+    :registration_link:
+
+    - Listen to the talks live.
+    - Learn from the experts.
+    - First 3 days workshop.
+    - Basic kit for diffusion imaging.
+    - Ability to upgrade during the workshop.
+
+  .. pricing-item::
+    :name: Gold
+    :currency: $
+    :price: 500
+    :discount: 900
+    :registration_link:
+
+    - Everything in Silver.
+    - Complete 5 days of workshop.
+    - Attend Study Groups.
+    - Present your work.
+    - LinkedIn verifiable certificate.
+    - Ability to upgrade during the workshop.
+
+  .. pricing-item::
+    :name: Platinum
+    :currency: $
+    :price: 995
+    :discount: 1800
+    :registration_link:
+
+    - Everything in Gold.
+    - Up to 6 one-hour 1:1 with DIPY developers.
+    - Access to talks after the workshop.
+    - Access to materials after the workshop.
+    - Year-long support option.
+
+
+
+.. pricing-list::
+  :template: _templates/pricing_template.html
+  :title: Academic
+  :subtitle: Faculty, Research Scientists, Any Academic Personnel should take this option.
+  :columns: 3
+
+  .. pricing-item::
+    :name: Silver
+    :currency: $
+    :price: 300
+    :discount: 500
+    :registration_link:
+
+    - Listen to the talks live.
+    - Learn from the experts.
+    - First 3 days workshop.
+    - Basic kit for diffusion imaging.
+    - Ability to upgrade during the workshop.
+
+  .. pricing-item::
+    :name: Gold
+    :currency: $
+    :price: 600
+    :discount: 900
+    :registration_link:
+
+    - Everything in Silver.
+    - Complete 5 days of workshop.
+    - Attend Study Groups.
+    - Present your work.
+    - LinkedIn verifiable certificate.
+    - Ability to upgrade during the workshop.
+
+  .. pricing-item::
+    :name: Platinum
+    :currency: $
+    :price: 1200
+    :discount: 1800
+    :registration_link:
+
+    - Everything in Gold.
+    - Up to 6 one-hour 1:1 with DIPY developers.
+    - Access to talks after the workshop.
+    - Access to materials after the workshop.
+    - Year-long support option.
+
+
+.. pricing-list::
+  :template: _templates/pricing_template.html
+  :title: Non - Academic
+  :subtitle: Industry Personnel, Medical Staff, Radiologists, Neurologists, etc. should take this option.
+  :columns: 3
+
+  .. pricing-item::
+    :name: Silver
+    :currency: $
+    :price: 400
+    :discount: 500
+    :registration_link:
+
+    - Listen to the talks live.
+    - Learn from the experts.
+    - First 3 days workshop.
+    - Basic kit for diffusion imaging.
+    - Ability to upgrade during the workshop.
+
+  .. pricing-item::
+    :name: Gold
+    :currency: $
+    :price: 750
+    :discount: 900
+    :registration_link:
+
+    - Everything in Silver.
+    - Complete 5 days of workshop.
+    - Attend Study Groups.
+    - Present your work.
+    - LinkedIn verifiable certificate.
+    - Ability to upgrade during the workshop.
+
+  .. pricing-item::
+    :name: Platinum
+    :currency: $
+    :price: 1500
+    :discount: 1800
+    :registration_link:
+
+    - Everything in Gold.
+    - Up to 6 one-hour 1:1 with DIPY developers.
+    - Access to talks after the workshop.
+    - Access to materials after the workshop.
+    - Year-long support option.
 
 #######
 Contact

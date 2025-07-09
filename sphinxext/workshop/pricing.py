@@ -18,6 +18,7 @@ class PricingListDirective(SphinxDirective):
         "template": directives.path,
         "title": directives.unchanged,
         "subtitle": directives.unchanged,
+        "columns": directives.unchanged,
     }
 
     def run(self):
@@ -63,6 +64,7 @@ class PricingListDirective(SphinxDirective):
             logger.error(f"Could not read template file {template_path}: {e}")
             return []
 
+        columns = int(12 / int(self.options.get("columns", 2)))
         # Render the template
         try:
             template = Template(template_content)
@@ -70,6 +72,8 @@ class PricingListDirective(SphinxDirective):
                 pricing_items=pricing_items,
                 title=self.options.get("title", ""),
                 subtitle=self.options.get("subtitle", ""),
+                columns=columns,
+                padding=f"p-l-{10 * columns}",
             )
 
             # Create a raw HTML node with the rendered content
