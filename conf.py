@@ -41,6 +41,7 @@ html_favicon = "_static/images/dipy-watermark.svg"
 html_baseurl = "https://workshop.dipy.org/"
 
 html_additional_pages = {
+    "index": "coming_soon.html",
     "2019": "dw_2019.html",
     "2020": "dw_2020.html",
 }
