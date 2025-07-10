@@ -44,6 +44,13 @@ body {
   margin: 0 1rem;
 }
 
+.hero-date {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #fcd34d;
+  margin: 0.5rem 0;
+}
+
 .hero-subtitle {
   font-size: 3.5rem;
   font-weight: bold;
