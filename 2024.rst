@@ -13,14 +13,14 @@
    :location: Online
    :team_location: Bloomington, IN
 
-   .. workshop-home-slide:: _static/images/dipy_odf_vs_2018-10-03.png
-      :alt: DIPY ODF vs 2018-10-03
+   .. workshop-home-slide:: https://raw.githubusercontent.com/dipy/dipy_data/master/white_matter_museum.png
+      :alt: museum of white matter
 
-   .. workshop-home-slide:: _static/images/CST.png
-      :alt: CST
+   .. workshop-home-slide:: https://raw.githubusercontent.com/dipy/dipy_data/master/bundles.png
+      :alt: generated bundles
 
-   .. workshop-home-slide:: _static/images/msd_odfs.png
-      :alt: MCSd
+   .. workshop-home-slide:: https://raw.githubusercontent.com/dipy/dipy_data/master/exciting_results.png
+      :alt: exciting results
 
 #####
 About
