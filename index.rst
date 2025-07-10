@@ -13,14 +13,14 @@
    :location: Online
    :team_location: Bloomington, IN
 
-   .. workshop-home-slide:: _static/images/dipy_odf_vs_2018-10-03.png
-      :alt: DIPY ODF vs 2018-10-03
+   .. workshop-home-slide:: https://github.com/dipy/dipy_data/blob/master/dw2025bg1_Fl4pT1X.png?raw=true
+      :alt: dw_2025_bg_1
 
-   .. workshop-home-slide:: _static/images/CST.png
-      :alt: CST
+   .. workshop-home-slide:: https://github.com/dipy/dipy_data/blob/master/dw2025b2.png?raw=true
+      :alt: dw_2025_bg_2
 
-   .. workshop-home-slide:: _static/images/msd_odfs.png
-      :alt: MCSd
+   .. workshop-home-slide:: https://github.com/dipy/dipy_data/blob/master/dw2025bg3_4H3Ag9O.png?raw=true
+      :alt: dw_2025_bg_3
 
 #####
 About

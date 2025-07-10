@@ -90,6 +90,7 @@ class HomeDirective(SphinxDirective):
     def run(self):
         env = self.env
 
+        env.workshop_slides = []
         home_slides = nodes.container()
 
         self.state.nested_parse(self.content, self.content_offset, home_slides)

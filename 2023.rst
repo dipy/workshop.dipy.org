@@ -13,11 +13,11 @@
    :location: Online
    :team_location: Bloomington, IN
 
-   .. workshop-home-slide:: _static/images/dipy_odf_vs_2018-10-03.png
-      :alt: DIPY ODF vs 2018-10-03
+   .. workshop-home-slide:: https://github.com/dipy/dipy_data/blob/master/brains_ml.png?raw=true
+      :alt: Brains ML
 
-   .. workshop-home-slide:: _static/images/CST.png
-      :alt: CST
+   .. workshop-home-slide:: https://github.com/dipy/dipy_data/blob/master/Screen_Shot_2022-02-19_at_3.47.06_PM.png?raw=true
+      :alt: Bundle Demonstration
 
    .. workshop-home-slide:: _static/images/msd_odfs.png
       :alt: MCSd
