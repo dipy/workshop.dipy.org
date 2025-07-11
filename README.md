@@ -22,6 +22,7 @@ To set up your computer to run this site locally, you need to install the variou
 
 ```bash
 $ pip install -U -r requirements.txt
+$ pip install pre-commit
 $ pre-commit install
 ```
 
