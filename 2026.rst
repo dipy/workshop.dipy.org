@@ -1,15 +1,15 @@
 .. meta::
-   :description: The 2025 DIPY Workshop is a 5-day event focused on diffusion MRI, featuring expert speakers and hands-on sessions.
-   :keywords: DIPY, Workshop, Diffusion MRI, Neuroimaging, Tractography
+   :description: The 2026 Dipy Workshop is a 5-day event focused on diffusion MRI, featuring expert speakers and hands-on sessions.
+   :keywords: Dipy, Workshop, Diffusion MRI, Neuroimaging, Tractography
 
-.. title:: DIPY Workshop 2025
+.. title:: Dipy Workshop 2026
 
 .. workshop-home::
-   :year: 2025
+   :year: 2026
    :codename: Online Edition
-   :reg_start_date: 2024-08-01 00:00
-   :start_date: 2025-03-17 09:00
-   :end_date: 2025-03-21 17:00
+   :reg_start_date: 2025-10-01 00:00
+   :start_date: 2026-03-16 09:00
+   :end_date: 2026-03-20 17:00
    :location: Online
    :team_location: Bloomington, IN
 
@@ -50,64 +50,10 @@ Speakers
       :affiliation: Associate Professor, Indiana University
 
    .. workshop-speaker::
-      :name: Simon Warfield
-      :image: Simon.jpeg
-      :title: Director of Radiology Research, Thorne Griscom Professor of Radiology
-      :affiliation: Harvard Medical School
-
-   .. workshop-speaker::
-      :name: Franco Pestilli
-      :image: Franco.webp
-      :title: Associate Professor, Department of Psychology and Neuroscience
-      :affiliation: The University of Texas at Austin
-
-   .. workshop-speaker::
       :name: Ariel Rokem
       :image: rokem.jpg
       :title: Associate DIPY Lead, eScience Institute
       :affiliation: Research Associate Professor, University of Washington, Seattle
-
-   .. workshop-speaker::
-      :name: Maxime Descoteaux
-      :image: Maxime.jpeg
-      :title: DIPY Scientific Advisor
-      :affiliation: Professor in Computer Science, University of Sherbrooke, CA
-
-   .. workshop-speaker::
-      :name: Marco Palombo
-      :image: Marco.avif
-      :title: Associate Professor (Senior Lecturer)
-      :affiliation: Cardiff University
-
-   .. workshop-speaker::
-      :name: Alexandra Badea
-      :image: Alexandra.jpeg
-      :title: Associate Professor Radiology & Neurology
-      :affiliation: Duke University
-
-   .. workshop-speaker::
-      :name: Julien Cohen-Adad
-      :image: Julien.jpeg
-      :title: Associate Professor of Biomedical Engineering
-      :affiliation: Polytechnique Montreal
-
-   .. workshop-speaker::
-      :name: Aris Sotiras
-      :image: Aris.webp
-      :title: Assistant Professor of Radiology
-      :affiliation: Washington University
-
-   .. workshop-speaker::
-      :name: Kelly Chang
-      :image: Kelly.jpeg
-      :title: Postdoctoral Research Scientist
-      :affiliation: University of Washington
-
-   .. workshop-speaker::
-      :name: Gabriel Girard
-      :image: girard.png
-      :title: Research Scientist
-      :affiliation: University of Sherbrooke
 
    .. workshop-speaker::
       :name: Rafael Neto Henriques
@@ -122,34 +68,16 @@ Speakers
       :affiliation: Indiana University
 
    .. workshop-speaker::
-      :name: Jon Haitz Legarreta Gorroño
-      :image: JHLegarreta.jpg
-      :title: Postdoctoral Research Fellow
-      :affiliation: Harvard University
-
-   .. workshop-speaker::
       :name: Serge Koudoro
       :image: serge.png
       :title: DIPY Release Manager
       :affiliation: Indiana University
 
    .. workshop-speaker::
-      :name: Shreyas Fadnavis
-      :image: Fadnavis.jpeg
-      :title: Principal AI Engineer
-      :affiliation: Hologic, Inc.
-
-   .. workshop-speaker::
       :name: Bramsh Qamar Chandio
       :image: Chandio.jpeg
       :title: Postdoctoral Scholar
       :affiliation: University of Southern California
-
-   .. workshop-speaker::
-      :name: Maeliss Jallais
-      :image: Maeliss.jpeg
-      :title: Research Associate
-      :affiliation: Cardiff University
 
    .. workshop-speaker::
       :name: Maharshi Gor
@@ -168,18 +96,6 @@ Speakers
       :image: jspark.jpeg
       :title: PhD Student
       :affiliation: Indiana University
-
-   .. workshop-speaker::
-      :name: John Kruper
-      :image: John.jpeg
-      :title: Graduate Student
-      :affiliation: University of Washington
-
-   .. workshop-speaker::
-      :name: Adam Saunders
-      :image: Adam.jpeg
-      :title: PhD student
-      :affiliation: Vanderbilt University
 
    .. workshop-speaker::
       :name: Aziza Saber Jabdaragh
@@ -375,8 +291,7 @@ Special Thanks
 
 
 Multiple speakers including **Garyfallidis, Landman and Harezlak** are funded by the
-`National Institutes of Health <https://www.nih.gov/>`_. In addition, **Koudoro, Rokem and Girard** are funded from
-an EOSS grant through the `Chan Zuckerberg Initiative <https://chanzuckerberg.com/eoss/proposals/strengthening-computational-neuroanatomy-using-dipy/>`_.
+`National Institutes of Health <https://www.nih.gov/>`_.
 
 ####
 Why?
@@ -465,7 +380,7 @@ Schedule
    .. workshop-timeline::
       :title: Day 1
       :subtitle: Preprocessing
-      :date: 2025-03-17
+      :date: 2026-03-16
       :template: _templates/schedule_template.html
 
       .. workshop-timeline-item::
@@ -476,9 +391,9 @@ Schedule
 
       .. workshop-timeline-item::
          :time: 10:00 - 10:45
-         :title: Keynote: Diffusion MRI for characterizing development, disease and injury.
-         :speaker: Simon Warfield
-         :image: Simon.jpeg
+         :title: Keynote: TBA
+         :speaker: TBA
+         :image: dipy-all.svg
 
       .. workshop-timeline-item::
          :time: 11:00 - 11:45
@@ -492,9 +407,9 @@ Schedule
 
       .. workshop-timeline-item::
          :time: 13:00 - 13:45
-         :title: DeepN4: Learning N4ITK Bias Field Correction for T1-weighted Images
-         :speaker: Adam Saunders
-         :image: Adam.jpeg
+         :title: TBA
+         :speaker: TBA
+         :image: dipy-all.svg
 
       .. workshop-timeline-item::
          :time: 14:00 - 14:45
@@ -517,8 +432,8 @@ Schedule
       .. workshop-timeline-item::
          :time: 17:00 - 17:45
          :title: Denoising with Patch2Self3
-         :speaker: Shreyas Fadnavis
-         :image: Fadnavis.jpeg
+         :speaker: Sai Prajwal Reddy
+         :image: Prajwal.jpeg
 
       .. workshop-timeline-item::
          :time: 18:00 - 18:30
@@ -529,14 +444,14 @@ Schedule
    .. workshop-timeline::
       :title: Day 2
       :subtitle: Reconstruction
-      :date: 2025-03-18
+      :date: 2025-03-17
       :template: _templates/schedule_template.html
 
       .. workshop-timeline-item::
          :time: 09:00 - 09:45
-         :title: Keynote: Fast and robust simulation-based Bayesian inference with AI
-         :speaker: Maeliss Jallais
-         :image: Maeliss.jpeg
+         :title: Keynote: TBA
+         :speaker: TBA
+         :image: dipy-all.svg
 
       .. workshop-timeline-item::
          :time: 10:00 - 10:45
@@ -557,8 +472,8 @@ Schedule
       .. workshop-timeline-item::
          :time: 13:00 - 13:45
          :title: Spherical Harmonic Reconstruction
-         :speaker: Maxime Descoteaux
-         :image: Maxime.jpeg
+         :speaker: Eleftherios Garyfallidis
+         :image: garyfallidis.jpg
 
       .. workshop-timeline-item::
          :time: 14:00 - 14:45
@@ -593,14 +508,14 @@ Schedule
    .. workshop-timeline::
       :title: Day 3
       :subtitle: Tractography
-      :date: 2025-03-19
+      :date: 2025-03-18
       :template: _templates/schedule_template.html
 
       .. workshop-timeline-item::
          :time: 09:00 - 09:45
-         :title: Overview: Handbook of Diffusion MR Tractography
-         :speaker: Maxime Descoteaux
-         :image: Maxime.jpeg
+         :title: TBA
+         :speaker: TBA
+         :image: dipy-all.svg
 
       .. workshop-timeline-item::
          :time: 10:00 - 10:45
@@ -620,9 +535,9 @@ Schedule
 
       .. workshop-timeline-item::
          :time: 13:00 - 13:45
-         :title: Keynote: Advanced Diffusion and Functional MRI for Brain Network Insights
-         :speaker: Alexandra Badea
-         :image: Alexandra.jpeg
+         :title: Keynote: TBA
+         :speaker: TBA
+         :image: dipy-all.svg
 
       .. workshop-timeline-item::
          :time: 14:00 - 14:45
@@ -651,14 +566,14 @@ Schedule
    .. workshop-timeline::
       :title: Day 4
       :subtitle: Tractometry
-      :date: 2025-03-20
+      :date: 2025-03-19
       :template: _templates/schedule_template.html
 
       .. workshop-timeline-item::
          :time: 09:00 - 09:45
-         :title: Keynote: Putting big data and AI to good use in neuroscience research
-         :speaker: Franco Pestilli
-         :image: Franco.webp
+         :title: Keynote: TBA
+         :speaker: TBA
+         :image: dipy-all.svg
 
       .. workshop-timeline-item::
          :time: 10:00 - 10:45
@@ -690,15 +605,15 @@ Schedule
 
       .. workshop-timeline-item::
          :time: 15:00 - 15:45
-         :title: Keynote : Bridging Quantitative MRI and Histology for White Matter Microstructure Imaging
-         :speaker: Julien Cohen-Adad
-         :image: Julien.jpeg
+         :title: Keynote : TBA
+         :speaker: TBA
+         :image: dipy-all.svg
 
       .. workshop-timeline-item::
          :time: 16:00 - 16:45
-         :title: Free water elimination in tractography
-         :speaker: Kelly Chang
-         :image: Kelly.jpeg
+         :title: TBA
+         :speaker: TBA
+         :image: dipy-all.svg
 
       .. workshop-timeline-item::
          :time: 17:00 - 17:45
@@ -709,14 +624,14 @@ Schedule
    .. workshop-timeline::
       :title: Day 5
       :subtitle: Mixed Topics
-      :date: 2025-03-21
+      :date: 2025-03-20
       :template: _templates/schedule_template.html
 
       .. workshop-timeline-item::
          :time: 09:00 - 09:45
-         :title: Keynote: Advancing microstructure imaging via diffusion MRI: harnessing modern machine learning and advanced computational models
-         :speaker: Marco Palombo
-         :image: Marco.avif
+         :title: Keynote: TBA
+         :speaker: TBA
+         :image: dipy-all.svg
 
       .. workshop-timeline-item::
          :time: 10:00 - 10:45
@@ -726,9 +641,9 @@ Schedule
 
       .. workshop-timeline-item::
          :time: 11:00 - 11:45
-         :title: Keynote: Unsupervised multivariate pattern analysis for neuroimaging studies
-         :speaker: Aris Sotiras
-         :image: Aris.webp
+         :title: Keynote: TBA
+         :speaker: TBA
+         :image: dipy-all.svg
 
       .. workshop-timeline-item::
          :time: 12:00 - 12:45
@@ -736,21 +651,21 @@ Schedule
 
       .. workshop-timeline-item::
          :time: 13:00 - 13:45
-         :title: GPU-accelerated Diffusion MRI Tractography in DIPY
-         :speaker: John Kruper
-         :image: John.jpeg
+         :title: TBA
+         :speaker: TBA
+         :image: dipy-all.svg
 
       .. workshop-timeline-item::
          :time: 14:00 - 14:45
-         :title: Guided Practice
-         :speaker: John Kruper
-         :image: John.jpeg
+         :title: TBA
+         :speaker: TBA
+         :image: dipy-all.svg
 
       .. workshop-timeline-item::
          :time: 15:00 - 15:45
-         :title: AI Huddle
-         :speaker: Sreekar Chigurupati
-         :image: sreekar.jpeg
+         :title: TBA
+         :speaker: TBA
+         :image: dipy-all.svg
 
       .. workshop-timeline-item::
          :time: 16:00 - 16:45
@@ -762,111 +677,72 @@ Schedule
 ############
 Registration
 ############
-Get the Early Birds 25% Discount before 3rd January 2025.
+Get the Early Birds Discount before 3rd January 2026.
 
 .. pricing-list::
    :template: _templates/pricing_template.html
-   :title: Student
-   :subtitle: Master's Degree Students, PhD Candidates, Postdocs should take this option.
+   :title: One Price for all to get you started
+   :subtitle: Get the most of the workshop with easy pricing, no hidden fees.
 
    .. pricing-item::
-      :name: Basic
+      :name: Students, Academic, Professionals
       :currency: $
-      :price: 300
-      :discount: 400
-      :registration_link: https://indianauniv.ungerboeck.com/prod/emc00/register.aspx?aat=6339736c62496b4d736c38766d4468385256652f62534c54694e2b56662b566436455441393567527a546b3d
+      :price: 500
+      :discount: 650
+      :registration_link: https://iubgrg-fireform.eas.iu.edu/online/form/index/grgdw2026
+
+      - One price for all
+      - Listen to the talks live.
+      - Learn from the experts.
+      - Basic kit for diffusion imaging.
+      - Attend Study Groups.
+      - Present your work.
+      - Complete 5 days of workshop
+      - LinkedIn verifiable certificate.
+
+   .. pricing-item::
+      :name: Returning Participants
+      :currency: $
+      :price: 250
+      :discount: 300
+      :registration_link: https://iubgrg-fireform.eas.iu.edu/online/form/index/grgdw2026
 
       - Listen to the talks live.
       - Learn from the experts.
       - Basic kit for diffusion imaging.
-      - Ability to upgrade during the workshop.
-      - Complete 5 days of workshop
-
-   .. pricing-item::
-      :name: Premium
-      :currency: $
-      :price: 600
-      :discount: 800
-      :registration_link: https://indianauniv.ungerboeck.com/prod/emc00/register.aspx?aat=6339736c62496b4d736c38766d4468385256652f62534c54694e2b56662b566436455441393567527a546b3d
-
-      - Everything in Basic.
-      - Up to 6 one-hour 1:1 with DIPY developers.
-      - Access to talks after the workshop.
-      - Access to materials after the workshop.
-      - Year-long support option.
       - Attend Study Groups.
       - Present your work.
+      - Complete 5 days of workshop
       - LinkedIn verifiable certificate.
 
 
 .. pricing-list::
    :template: _templates/pricing_template.html
-   :title: Academic
-   :subtitle: Faculty, Research Scientists, Any Academic Personnel should take this option.
+   :title: Optional Packages
+   :subtitle: Need more flexibility? Check out our optional packages.
 
    .. pricing-item::
-      :name: Basic
+      :name: Recording Access
       :currency: $
-      :price: 412.5
-      :discount: 550
-      :registration_link: https://indianauniv.ungerboeck.com/prod/emc00/register.aspx?aat=6339736c62496b4d736c38766d4468385256652f62534c54694e2b56662b566436455441393567527a546b3d
+      :price: 250
+      :discount: 350
+      :registration_link: https://iubgrg-fireform.eas.iu.edu/online/form/index/grgdw2026
 
-      - Listen to the talks live.
-      - Learn from the experts.
-      - Basic kit for diffusion imaging.
-      - Ability to upgrade during the workshop.
-      - Complete 5 days of workshop
+      - Only accessible if you register for the workshop.
+      - Access to talks during and after the workshop.
+      - Access to materials during and after the workshop.
 
    .. pricing-item::
-      :name: Premium
+      :name: Coaching Package
       :currency: $
-      :price: 825
-      :discount: 1100
-      :registration_link: https://indianauniv.ungerboeck.com/prod/emc00/register.aspx?aat=6339736c62496b4d736c38766d4468385256652f62534c54694e2b56662b566436455441393567527a546b3d
+      :price: 500
+      :discount: 750
+      :registration_link: https://iubgrg-fireform.eas.iu.edu/online/form/index/grgdw2026
 
-      - Everything in Basic.
-      - Up to 6 one-hour 1:1 with DIPY developers.
-      - Access to talks after the workshop.
-      - Access to materials after the workshop.
-      - Year-long support option.
-      - Attend Study Groups.
-      - Present your work.
-      - LinkedIn verifiable certificate.
-
-
-.. pricing-list::
-   :template: _templates/pricing_template.html
-   :title: Non - Academic
-   :subtitle: Industry Personnel, Medical Staff, Radiologists, Neurologists, etc. should take this option.
-
-   .. pricing-item::
-      :name: Basic
-      :currency: $
-      :price: 525
-      :discount: 700
-      :registration_link: https://indianauniv.ungerboeck.com/prod/emc00/register.aspx?aat=6339736c62496b4d736c38766d4468385256652f62534c54694e2b56662b566436455441393567527a546b3d
-
-      - Listen to the talks live.
-      - Learn from the experts.
-      - Basic kit for diffusion imaging.
-      - Ability to upgrade during the workshop.
-      - Complete 5 days of workshop
-
-   .. pricing-item::
-      :name: Premium
-      :currency: $
-      :price: 975
-      :discount: 1300
-      :registration_link: https://indianauniv.ungerboeck.com/prod/emc00/register.aspx?aat=6339736c62496b4d736c38766d4468385256652f62534c54694e2b56662b566436455441393567527a546b3d
-
-      - Everything in Basic.
-      - Up to 6 one-hour 1:1 with DIPY developers.
-      - Access to talks after the workshop.
-      - Access to materials after the workshop.
-      - Year-long support option.
-      - Attend Study Groups.
-      - Present your work.
-      - LinkedIn verifiable certificate.
+      - Only accessible if you register for the workshop.
+      - Deep Dive into your data and project with expert guidance.
+      - Up to 3 one-hour 1:1 with DIPY developers.
+      - A Discount Year-long support option available.
 
 
 #######
@@ -876,11 +752,3 @@ Contact
 Contact us for more information by sending an email at workshop@dipy.org
 
 or joining our forum at https://github.com/dipy/dipy/discussions
-
-.. toctree::
-   :hidden:
-
-   2026.rst
-   2025.rst
-   2024.rst
-   2023.rst

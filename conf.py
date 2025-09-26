@@ -83,6 +83,7 @@ redirects = {
     "workshops/dipy-workshop-2023": "../2023.html",
     "workshops/dipy-workshop-2024": "../2024.html",
     "workshops/dipy-workshop-2025": "../2025.html",
+    "workshops/dipy-workshop-2026": "../2026.html",
     "dipy-workshop-2019": "2019.html",
     "dipy-workshop-2020": "2020.html",
     "dipy-workshop-2021": "2021.html",
@@ -90,6 +91,7 @@ redirects = {
     "dipy-workshop-2023": "2023.html",
     "dipy-workshop-2024": "2024.html",
     "dipy-workshop-2025": "2025.html",
+    "dipy-workshop-2026": "2026.html",
 }
 
 

@@ -134,12 +134,6 @@ Speakers
       :affiliation: Indiana University
 
    .. workshop-speaker::
-      :name: Shreyas Fadnavis
-      :image: Fadnavis.jpeg
-      :title: Principal AI Engineer
-      :affiliation: Hologic, Inc.
-
-   .. workshop-speaker::
       :name: Bramsh Qamar Chandio
       :image: Chandio.jpeg
       :title: Postdoctoral Scholar
