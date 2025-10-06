@@ -57,6 +57,8 @@ class SpeakersDirective(SphinxDirective):
     final_argument_whitespace = True
     option_spec = {
         "template": directives.unchanged_required,  # Template path is required
+        "title": directives.unchanged,
+        "subtitle": directives.unchanged,
     }
 
     def run(self):
@@ -126,7 +128,11 @@ class SpeakersDirective(SphinxDirective):
             # Template expects raw RST in 'bio_rst' variable
 
             template = jinja_env.get_template(template_basename)
-            rendered_html = template.render(speakers=speakers_for_template)
+            rendered_html = template.render(
+                speakers=speakers_for_template,
+                title=self.options.get("title", "Our Expert Speakers"),
+                subtitle=self.options.get("subtitle", "")
+            )
 
         except Exception as e:
             err_msg = f'Error rendering speaker template "{template_name}": {e}'

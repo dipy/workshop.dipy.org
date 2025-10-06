@@ -1,95 +1,141 @@
-<section class="home" id="home">
-    <div class="gradient"></div>
-    <div class="simpleslide100">
+<section class="hero-section" id="home">
+    {# Background Carousel #}
+    <div class="hero-background-container">
         {% for bg in home_slides %}
-        <div
-            class="simpleslide100-item bg-img1"
-            style="background-image: url('{{ bg.image }}');"
-        ></div>
+        <div class="hero-background-image {% if loop.index0 == 0 %}active{% endif %}">
+            <img src="{{ bg.image }}" alt="{{ bg.alt }}" />
+        </div>
         {% endfor %}
+        {# Dark overlay for better text readability #}
+        <div class="hero-overlay"></div>
     </div>
-    <div class="content-section">
-        <h1 class="content-title l1-txt1 p-b-10">DIPY WORKSHOP {{ workshop.year }}</h1>
-        <div class="speaker-divider m-b-40"></div>
-        <h5 class="m2-txt2 p-b-25">{{workshop.codename}}</h5>
-        <p class="m2-txt3 p-b-10">{{ workshop.dates }}</p>
-        <p class="m2-txt4 p-b-48">{{workshop.location}}</p>
-        <p class="m2-txt5-light p-b-48">Managed by: GRG, {{workshop.team_location}}</p>
 
-        <small id="countdown-stop" style="display: none" class="m2-txt1 p-b-25">
-            <b class="m2-txt2">Workshop</b>
-            has been started
-            <br />
-            Don't miss it!
-        </small>
-
-        <small id="countdown-title" style="display: none" class="m2-txt1 p-b-25">
-            <b class="m2-txt2">Registration</b>
-            has been started
-            <br />
-            Don't miss it!
-        </small>
-
-        <div id="countdown" class="p-b-48">
-            <div class="number">
-                <span class="days time"></span>
-                <span class="text">Days</span>
-            </div>
-            <div class="number">
-                <span class="hours time"></span>
-                <span class="text">Hours</span>
-            </div>
-            <div class="number">
-                <span class="minutes time"></span>
-                <span class="text">Minutes</span>
-            </div>
-            <div class="number">
-                <span class="seconds time"></span>
-                <span class="text">Seconds</span>
+    {# Content #}
+    <div class="hero-content">
+        {# Top Left - Title and Date #}
+        <div class="hero-title-section">
+            <h1 class="hero-title">
+                DIPY WORKSHOP {{ workshop.year }}
+            </h1>
+            <div class="title-underline-heading"></div>
+            <p class="hero-subtitle">
+                {{ workshop.codename }}
+            </p>
+            <div class="hero-info">
+                <div class="hero-info-item">
+                    <svg class="hero-info-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+                    </svg>
+                    <span>{{ workshop.start_date.strftime('%B %d') }} - {{ workshop.end_date.strftime('%B %d, %Y') }}</span>
+                </div>
+                <div class="hero-info-item">
+                    <svg class="hero-info-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                    </svg>
+                    <span>{{ workshop.team_location }}</span>
+                </div>
             </div>
         </div>
 
-        <div class="p-b-25" id="reg-countdown-stop">
-            <a href="#Registration" role="button" class="btn btn-lg btn-secondary register-btn">
-                Register Now
-            </a>
-        </div>
+        {# Bottom Left - Registration Card #}
+        <div class="hero-registration-container">
+            <div class="hero-registration-card">
+                <h3 class="hero-registration-title" id="countdown-title">
+                    <b>Registration</b> has been started
+                </h3>
+                <p class="hero-registration-subtitle">Time left to register:</p>
 
-        <small id="reg-countdown-title" style="display: none" class="m2-txt1 p-b-25">
-            <b class="m2-txt2">Registration</b>
-            will start in ...
-        </small>
+                {# Countdown Timer #}
+                <div class="hero-countdown-grid" id="countdown">
+                    <div class="hero-countdown-item">
+                        <div class="hero-countdown-box">
+                            <span class="hero-countdown-number days time">00</span>
+                        </div>
+                        <span class="hero-countdown-label">DAYS</span>
+                    </div>
+                    <div class="hero-countdown-item">
+                        <div class="hero-countdown-box">
+                            <span class="hero-countdown-number hours time">00</span>
+                        </div>
+                        <span class="hero-countdown-label">HOURS</span>
+                    </div>
+                    <div class="hero-countdown-item">
+                        <div class="hero-countdown-box">
+                            <span class="hero-countdown-number minutes time">00</span>
+                        </div>
+                        <span class="hero-countdown-label">MINS</span>
+                    </div>
+                    <div class="hero-countdown-item">
+                        <div class="hero-countdown-box">
+                            <span class="hero-countdown-number seconds time">00</span>
+                        </div>
+                        <span class="hero-countdown-label">SECS</span>
+                    </div>
+                </div>
 
-        <div id="reg-countdown" class="p-b-48">
-            <div class="number">
-                <span class="days time"></span>
-                <span class="text">Days</span>
-            </div>
-            <div class="number">
-                <span class="hours time"></span>
-                <span class="text">Hours</span>
-            </div>
-            <div class="number">
-                <span class="minutes time"></span>
-                <span class="text">Minutes</span>
-            </div>
-            <div class="number">
-                <span class="seconds time"></span>
-                <span class="text">Seconds</span>
+                {# Register Button #}
+                <div id="reg-countdown-stop">
+                    <a href="#registration" role="button" class="hero-register-button">
+                        Register Now
+                    </a>
+                </div>
+
+                <small id="reg-countdown-title" style="display: none;">
+                    <b>Registration</b> will start in ...
+                </small>
+
+                <div id="reg-countdown" class="hero-countdown-grid">
+                    <div class="hero-countdown-item">
+                        <div class="hero-countdown-box">
+                            <span class="hero-countdown-number days time">00</span>
+                        </div>
+                        <span class="hero-countdown-label">DAYS</span>
+                    </div>
+                    <div class="hero-countdown-item">
+                        <div class="hero-countdown-box">
+                            <span class="hero-countdown-number hours time">00</span>
+                        </div>
+                        <span class="hero-countdown-label">HOURS</span>
+                    </div>
+                    <div class="hero-countdown-item">
+                        <div class="hero-countdown-box">
+                            <span class="hero-countdown-number minutes time">00</span>
+                        </div>
+                        <span class="hero-countdown-label">MINS</span>
+                    </div>
+                    <div class="hero-countdown-item">
+                        <div class="hero-countdown-box">
+                            <span class="hero-countdown-number seconds time">00</span>
+                        </div>
+                        <span class="hero-countdown-label">SECS</span>
+                    </div>
+                </div>
             </div>
         </div>
+    </div>
+
+    {# Carousel Indicators #}
+    <div class="hero-carousel-indicators">
+        {% for bg in home_slides %}
+        <button
+            class="hero-carousel-indicator {% if loop.index0 == 0 %}active{% endif %}"
+            data-index="{{ loop.index0 }}"
+            aria-label="Go to slide {{ loop.index }}"
+        ></button>
+        {% endfor %}
     </div>
 
     <script>
-        setupHomeCarousel(".simpleslide100", ".simpleslide100-item");
-        initializeClock("countdown", "{{ workshop.reg_start_date }}", "{{ workshop.start_date }}", []);
+        setupHomeCarousel(".hero-background-container", ".hero-background-image");
+        initializeClock("countdown", "{{ workshop.reg_start_date }}", "{{ workshop.iso_start_date }}", []);
         initializeClock("reg-countdown", 0, "{{ workshop.reg_start_date }}", []);
         setTimeout(() => {
-            hideAfterDate("{{ workshop.end_date }}", "reg-countdown-stop");
+            hideAfterDate("{{ workshop.iso_end_date }}", "reg-countdown-stop");
             messageAfterDate(
-                "{{ workshop.end_date }}",
+                "{{ workshop.iso_end_date }}",
                 "countdown-stop",
-                "<b class='m2-txt2'>Workshop</b> has been ended. <br/> See you next year!");
-         }, 1000);
+                "<b>Workshop</b> has been ended. <br/> See you next year!");
+        }, 1000);
     </script>
 </section>

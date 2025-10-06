@@ -1,0 +1,344 @@
+/* Common Utility Styles */
+
+/* Override PyData Theme Width Constraints */
+.bd-main .bd-content .bd-article-container {
+  max-width: none !important;
+  padding: 0 !important;
+}
+
+.bd-page-width {
+  max-width: none !important;
+  width: 100% !important;
+}
+
+.bd-container {
+  max-width: none !important;
+  width: 100% !important;
+}
+
+.bd-container__inner {
+  max-width: none !important;
+  width: 100% !important;
+  padding: 0 !important;
+}
+
+.bd-article {
+  padding: 0 !important;
+  max-width: none !important;
+}
+
+/* Hide PyData Theme Header but keep custom navbar visible */
+.bd-header.navbar {
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  padding: 0 !important;
+}
+
+.bd-header > *:not(.bd-header__inner) {
+  display: none !important;
+}
+
+.bd-header__inner {
+  background: transparent !important;
+  max-width: none !important;
+  width: 100% !important;
+  padding: 0 !important;
+}
+
+.bd-header .navbar-header-items__start {
+  width: 100% !important;
+  max-width: none !important;
+  flex: 1 !important;
+}
+
+.bd-header button.primary-toggle {
+  display: none;
+}
+
+.bd-header .navbar-item {
+  width: 100% !important;
+  max-width: none !important;
+  display: block !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  height: auto !important;
+  max-height: none !important;
+  align-items: unset !important;
+  position: static !important;
+}
+
+.bd-header .col-lg-3 {
+  width: 100% !important;
+  max-width: none !important;
+  flex: 0 0 100% !important;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+/* Override Bootstrap navbar styles for custom navbar */
+nav.navbar {
+  --bs-navbar-padding-x: 0 !important;
+  --bs-navbar-padding-y: 0 !important;
+  align-items: center !important;
+  display: flex !important;
+  flex-wrap: nowrap !important;
+  justify-content: space-between !important;
+  padding: 1rem 1rem !important;
+  position: fixed !important;
+}
+
+nav.navbar .navbar-nav,
+ul.navbar-nav,
+.bd-header ul.navbar-nav {
+  --bs-nav-link-padding-x: 0 !important;
+  --bs-nav-link-padding-y: 0 !important;
+  --bs-nav-link-color: white !important;
+  --bs-nav-link-hover-color: #F58F00 !important;
+  list-style: none !important;
+  margin-bottom: 0 !important;
+  margin-top: 0 !important;
+  margin-block-start: 0 !important;
+  margin-block-end: 0 !important;
+  padding-left: 0 !important;
+  padding-inline-start: 0 !important;
+  align-items: center !important;
+  color: white !important;
+}
+
+/* Desktop horizontal layout */
+@media (min-width: 1024px) {
+  nav.navbar .navbar-nav,
+  ul.navbar-nav,
+  .bd-header ul.navbar-nav {
+    flex-direction: row !important;
+  }
+}
+
+nav.navbar .navbar-nav li,
+ul.navbar-nav li {
+  list-style: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+nav.navbar .navbar-nav a,
+ul.navbar-nav a {
+  color: white !important;
+  text-decoration: none !important;
+}
+
+nav.navbar .navbar-nav a:hover,
+ul.navbar-nav a:hover {
+  color: #F58F00 !important;
+}
+
+/* Hide PyData Theme Elements */
+.bd-sidebar-primary {
+  display: none !important;
+}
+
+.bd-sidebar-secondary {
+  display: none !important;
+}
+
+.bd-breadcrumbs {
+  display: none !important;
+}
+
+nav[aria-label="Breadcrumb"] {
+  display: none !important;
+}
+
+.header-article-items {
+  display: none !important;
+}
+
+/* Make content full width without sidebars */
+.bd-main {
+  grid-template-columns: 1fr !important;
+  padding: 0 !important;
+}
+
+.bd-content {
+  width: 100% !important;
+  max-width: 100% !important;
+  padding: 0 !important;
+}
+
+html, body {
+  scroll-behavior: smooth;
+  margin: 0 !important;
+  padding: 0 !important;
+  width: 100% !important;
+  overflow-x: hidden !important;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0 !important;
+  line-height: none !important;
+}
+
+/* Hide Sphinx-generated section headers (we use template headers instead) */
+.bd-article > section > h1,
+.bd-article > section > h2,
+.bd-article > section > section > h1,
+.bd-article > section > section > h2 {
+  display: none !important;
+}
+
+/* Section Separators */
+.section-separator {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(to right, transparent, #F58F00, transparent);
+}
+
+/* Section Containers */
+.section-container {
+  position: relative;
+  max-width: 80rem;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* Section Headers */
+.section-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+/* Section Titles */
+.section-title {
+  font-size: 1.875rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.section-title-light {
+  color: white;
+}
+
+.section-title-dark {
+  color: black;
+}
+
+/* Title Underlines - Common utility class */
+.title-underline-heading {
+  height: 0.25rem;
+  background-color: #F58F00;
+  border-radius: 9999px;
+  margin-top: 0.5rem;
+  width: 6rem;
+}
+
+.title-underline {
+  height: 0.25rem;
+  background-color: #F58F00;
+  border-radius: 9999px;
+  margin: 1.5rem auto;
+}
+
+/* Title underline width variants */
+.title-underline-sm {
+  width: 5rem;
+}
+
+.title-underline-md {
+  width: 6rem;
+}
+
+.title-underline-lg {
+  width: 8rem;
+}
+
+.title-underline-xl {
+  width: 10rem;
+}
+
+.title-underline-2xl {
+  width: 12rem;
+}
+
+/* Responsive underline widths */
+@media (min-width: 640px) {
+  .title-underline-sm { width: 6rem; }
+  .title-underline-md { width: 8rem; }
+}
+
+@media (min-width: 768px) {
+  .title-underline-lg { width: 10rem; }
+}
+
+@media (min-width: 1024px) {
+  .title-underline-xl { width: 12rem; }
+}
+
+/* Decorative Elements */
+.decorative-blur {
+  position: absolute;
+  width: 24rem;
+  height: 24rem;
+  background-color: rgba(245, 143, 0, 0.05);
+  border-radius: 9999px;
+  filter: blur(64px);
+}
+
+.decorative-blur-top {
+  top: 0;
+  left: 0;
+}
+
+.decorative-blur-top-alt {
+  top: 25%;
+  left: 0;
+}
+
+.decorative-blur-bottom {
+  bottom: 0;
+  right: 0;
+}
+
+.decorative-blur-bottom-alt {
+  bottom: 25%;
+  right: 0;
+}
+
+/* Common Transitions */
+.transition-smooth {
+  transition: all 0.3s ease;
+}
+
+.transition-transform {
+  transition: transform 0.3s ease;
+}
+
+.transition-colors {
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+/* Responsive Padding */
+@media (min-width: 640px) {
+  .section-container {
+    padding: 0 1.5rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .section-title {
+    font-size: 2.25rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .section-container {
+    padding: 0 2rem;
+  }
+  
+  .section-title {
+    font-size: 3rem;
+  }
+}

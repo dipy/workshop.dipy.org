@@ -1,0 +1,367 @@
+/* Hero Section Styles */
+.hero-section {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+}
+
+.hero-background-container {
+  position: absolute;
+  inset: 0;
+}
+
+.hero-background-image {
+  position: absolute;
+  inset: 0;
+  transition: opacity 1s;
+  opacity: 0;
+}
+
+.hero-background-image.active {
+  opacity: 1;
+}
+
+.hero-background-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.hero-content {
+  position: relative;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 1rem;
+  max-width: 85%;
+  margin: 0 auto;
+}
+
+.hero-title-section {
+  margin-top: 6rem;
+}
+
+.hero-title {
+  font-size: 2.25rem;
+  font-weight: 700;
+  color: white;
+  margin-bottom: 0.75rem;
+  letter-spacing: -0.025em;
+  line-height: 1.1;
+  filter: drop-shadow(0 25px 25px rgba(0, 0, 0, 0.5));
+}
+
+/* Use .title-underline and .title-underline-md from utils.css */
+
+.hero-subtitle {
+  font-size: 1rem;
+  padding-top: 0.5rem;
+  color: #F58F00;
+  font-weight: 600;
+  filter: drop-shadow(0 10px 8px rgba(0, 0, 0, 0.4));
+}
+
+.hero-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-top: 1.5rem;
+}
+
+.hero-info-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: white;
+  font-size: 0.875rem;
+  font-weight: 500;
+  filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.5));
+}
+
+.hero-info-icon {
+  width: 1.25rem;
+  height: 1.25rem;
+  color: #F58F00;
+  flex-shrink: 0;
+}
+
+.hero-registration-container {
+  margin-bottom: 1rem;
+}
+
+.hero-registration-card {
+  background-color: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(40px) saturate(180%);
+  -webkit-backdrop-filter: blur(40px) saturate(180%);
+  border: 2px solid rgba(245, 143, 0, 0.5);
+  border-radius: 1rem;
+  padding: 1rem;
+  max-width: 100%;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+}
+
+.hero-registration-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: white;
+  margin-bottom: 0.5rem;
+}
+
+.hero-registration-subtitle {
+  color: #F58F00;
+  margin-bottom: 1rem;
+  font-size: 0.875rem;
+}
+
+.hero-countdown-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.hero-countdown-item {
+  text-align: center;
+}
+
+.hero-countdown-box {
+  background-color: rgba(245, 143, 0, 0.3);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(245, 143, 0, 0.4);
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+  margin-bottom: 0.25rem;
+}
+
+.hero-countdown-number {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #F58F00;
+}
+
+.hero-countdown-label {
+  font-size: 0.625rem;
+  color: rgba(255, 255, 255, 0.8);
+  font-weight: 500;
+}
+
+.hero-register-button {
+  display: block;
+  width: 100%;
+  background-color: #F58F00;
+  color: black;
+  font-weight: 700;
+  text-align: center;
+  padding: 0.75rem 0;
+  border-radius: 0.5rem;
+  transition: all 0.2s;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+  text-decoration: none;
+  font-size: 0.875rem;
+}
+
+.hero-register-button:hover {
+  background-color: rgba(245, 143, 0, 0.9);
+  box-shadow: 0 10px 15px -3px rgba(245, 143, 0, 0.5);
+}
+
+.hero-carousel-indicators {
+  position: absolute;
+  bottom: 1rem;
+  right: 1rem;
+  display: flex;
+  gap: 0.5rem;
+}
+
+.hero-carousel-indicator {
+  width: 0.75rem;
+  height: 0.75rem;
+  border-radius: 9999px;
+  background-color: rgba(255, 255, 255, 0.5);
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  padding: 0;
+}
+
+.hero-carousel-indicator.active {
+  background-color: #F58F00;
+}
+
+/* Responsive Styles */
+@media (min-width: 640px) {
+  .hero-content {
+    padding: 1.5rem;
+  }
+  
+  .hero-title-section {
+    margin-top: 6rem;
+  }
+  
+  .hero-title {
+    font-size: 3rem;
+  }
+  
+  /* Responsive width handled by .title-underline-md in utils.css */
+  
+  .hero-subtitle {
+    font-size: 1.125rem;
+  }
+
+  .hero-info {
+    flex-direction: row;
+    gap: 1.5rem;
+  }
+
+  .hero-info-item {
+    font-size: 1rem;
+  }
+
+  .hero-info-icon {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+  
+  .hero-registration-container {
+    margin-bottom: 1.5rem;
+  }
+  
+  .hero-registration-card {
+    padding: 1.5rem;
+    max-width: 28rem;
+  }
+  
+  .hero-registration-title {
+    font-size: 1.5rem;
+  }
+  
+  .hero-registration-subtitle {
+    margin-bottom: 1.5rem;
+    font-size: 1rem;
+  }
+  
+  .hero-countdown-grid {
+    gap: 0.75rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .hero-countdown-box {
+    padding: 0.75rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .hero-countdown-number {
+    font-size: 1.875rem;
+  }
+  
+  .hero-countdown-label {
+    font-size: 0.75rem;
+  }
+  
+  .hero-register-button {
+    padding: 1rem 0;
+    font-size: 1rem;
+  }
+  
+  .hero-carousel-indicators {
+    bottom: 1.5rem;
+    right: 1.5rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .hero-content {
+    padding: 3rem;
+  }
+  
+  .hero-title-section {
+    margin-top: 7rem;
+  }
+  
+  .hero-title {
+    font-size: 3.75rem;
+    margin-bottom: 1rem;
+  }
+  
+  /* Responsive width handled by .title-underline-lg in utils.css */
+  
+  .hero-subtitle {
+    font-size: 1.25rem;
+  }
+
+  .hero-info-item {
+    font-size: 1.125rem;
+  }
+  
+  .hero-registration-container {
+    margin-bottom: 3rem;
+  }
+  
+  .hero-registration-card {
+    padding: 2rem;
+  }
+  
+  .hero-registration-title {
+    font-size: 1.875rem;
+  }
+  
+  .hero-registration-subtitle {
+    font-size: 1rem;
+  }
+  
+  .hero-countdown-number {
+    font-size: 2.25rem;
+  }
+  
+  .hero-countdown-label {
+    font-size: 0.875rem;
+  }
+  
+  .hero-register-button {
+    font-size: 1.125rem;
+  }
+  
+  .hero-carousel-indicators {
+    bottom: 2rem;
+    right: 2rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .hero-content {
+    padding: 4rem;
+  }
+  
+  .hero-title-section {
+    margin-top: 8rem;
+  }
+  
+  .hero-title {
+    font-size: 4.5rem;
+  }
+  
+  /* Responsive width handled by .title-underline-xl in utils.css */
+  
+  .hero-subtitle {
+    font-size: 1.5rem;
+  }
+  
+  .hero-registration-card {
+    max-width: 32rem;
+  }
+}
+
+@media (min-width: 1280px) {
+  .hero-title {
+    font-size: 6rem;
+  }
+}

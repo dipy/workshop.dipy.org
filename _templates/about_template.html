@@ -1,11 +1,75 @@
-<div class="full-page-content about-content p-t-20">
-    <div class="flex-col-c-m pos-absolute watermark-wrapper">
-        <img class="watermark" src="{{ watermark_image_url }}" alt="" />
+<section id="about" class="about-section">
+    <div class="about-container">
+        {# Section Header #}
+        <div class="about-header">
+            <h2 class="about-title">
+                About the Workshop
+            </h2>
+            <div class="title-underline title-underline-sm"></div>
+        </div>
+
+        {# Content Grid #}
+        <div class="about-content">
+            {# Description #}
+            <div class="about-description">
+                {% for content in note_content %}
+                <p>
+                    {{ content }}
+                </p>
+                {% endfor %}
+            </div>
+
+            {# Stats Cards #}
+            <div class="about-stats-grid">
+                <div class="about-stat-card">
+                    <div class="about-stat-content">
+                        <div class="about-stat-icon">
+                            🏆
+                        </div>
+                        <div class="about-stat-number">
+                            17
+                        </div>
+                        <div class="about-stat-label">
+                            Years of Excellence
+                        </div>
+                    </div>
+                </div>
+
+                <div class="about-stat-card">
+                    <div class="about-stat-content">
+                        <div class="about-stat-icon">
+                            👤
+                        </div>
+                        <div class="about-stat-number">
+                            2000+
+                        </div>
+                        <div class="about-stat-label">
+                            Participants Worldwide
+                        </div>
+                    </div>
+                </div>
+
+                <div class="about-stat-card">
+                    <div class="about-stat-content">
+                        <div class="about-stat-icon">
+                            🎤
+                        </div>
+                        <div class="about-stat-number">
+                            100+
+                        </div>
+                        <div class="about-stat-label">
+                            Distinguished Speakers
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        {# Decorative Elements #}
+        <div class="about-decorative-circle-left"></div>
+        <div class="about-decorative-circle-right"></div>
     </div>
-    {% for content in note_content %}
-    <p class="s2-txt4 txt-justify fs-18 m-t-10">
-        {{ content }}
-    </p>
-    {% endfor %}
-    <p class="s2-txt2 txt-right p-t-20">&#8211; {{ note_name }}!</p>
-</div>
+
+    {# Section Separator #}
+    <div class="section-separator"></div>
+</section>

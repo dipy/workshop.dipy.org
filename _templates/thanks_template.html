@@ -1,0 +1,31 @@
+<section id="special-thanks" class="thanks-section">
+    <div class="section-container">
+        <div class="section-header">
+            <h2 class="section-title section-title-dark">{{ title }}</h2>
+            <div class="title-underline title-underline-md"></div>
+            {% if subtitle %}
+            <p class="thanks-subtitle">{{ subtitle }}</p>
+            {% endif %}
+        </div>
+
+        <div class="thanks-grid">
+            {% for item in thanks_items %}
+            <a href="{{ item.url }}" target="_blank" rel="noopener noreferrer" class="thanks-card">
+                <div class="thanks-image-wrapper">
+                    <img src="{{ item.image }}" alt="{{ item.name }}" class="thanks-image" />
+                </div>
+                {% if item.name %}
+                <p class="thanks-name">{{ item.name }}</p>
+                {% endif %}
+            </a>
+            {% endfor %}
+        </div>
+
+        {% if note %}
+        <div class="thanks-note">
+            <p>{{ note }}</p>
+        </div>
+        {% endif %}
+    </div>
+    <div class="section-separator"></div>
+</section>

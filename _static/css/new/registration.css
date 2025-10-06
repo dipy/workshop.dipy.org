@@ -1,0 +1,267 @@
+/* Registration Section Styles */
+.registration-section {
+  position: relative;
+  background-color: white;
+  padding: 4rem 0;
+}
+
+.registration-container {
+  max-width: 80rem;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.registration-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.registration-title {
+  font-size: 2.25rem;
+  font-weight: 700;
+  color: black;
+  margin-bottom: 1rem;
+}
+
+/* Use .title-underline and .title-underline-md from utils.css */
+
+.registration-subtitle {
+  font-size: 1.25rem;
+  color: #4B5563;
+  max-width: 48rem;
+  margin: 0 auto;
+}
+
+.registration-main-packages {
+  margin-bottom: 5rem;
+}
+
+.registration-section-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.registration-section-title {
+  font-size: 1.875rem;
+  font-weight: 700;
+  color: black;
+  margin-bottom: 0.75rem;
+}
+
+.registration-section-description {
+  font-size: 1.125rem;
+  color: #4B5563;
+}
+
+.registration-packages-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  max-width: 80rem;
+  margin: 0 auto;
+}
+
+.registration-package-card {
+  position: relative;
+  background-color: white;
+  border-radius: 1rem;
+  border: 2px solid #E5E7EB;
+  transition: all 0.3s;
+  display: flex;
+  flex-direction: column;
+}
+
+.registration-package-card.popular {
+  border-color: #F58F00;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+.registration-package-card:not(.popular):hover {
+  border-color: #F58F00;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+.registration-popular-badge {
+  position: absolute;
+  top: -1rem;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #F58F00;
+  color: black;
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 0.5rem 1.5rem;
+  border-radius: 9999px;
+}
+
+.registration-package-content {
+  padding: 2rem 2.5rem;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.registration-package-name {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: black;
+  margin-bottom: 1.5rem;
+  min-height: 60px;
+  display: flex;
+  align-items: center;
+}
+
+.registration-pricing {
+  margin-bottom: 2rem;
+}
+
+.registration-price-wrapper {
+  display: flex;
+  align-items: baseline;
+  gap: 0.75rem;
+  margin-bottom: 0.75rem;
+}
+
+.registration-price {
+  font-size: 3rem;
+  font-weight: 700;
+  color: black;
+}
+
+.registration-original-price {
+  font-size: 1.25rem;
+  color: #9CA3AF;
+  text-decoration: line-through;
+}
+
+.registration-savings {
+  font-size: 0.875rem;
+  color: #F58F00;
+  font-weight: 600;
+}
+
+.registration-features-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 2rem;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid #E5E7EB;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  flex-grow: 1;
+}
+
+.registration-feature-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+}
+
+.registration-feature-icon {
+  width: 1.25rem;
+  height: 1.25rem;
+  color: #F58F00;
+  flex-shrink: 0;
+  margin-top: 0.125rem;
+}
+
+.registration-feature-icon svg {
+  width: 100%;
+  height: 100%;
+}
+
+.registration-feature-text {
+  color: #374151;
+  font-size: 0.875rem;
+  line-height: 1.75;
+}
+
+.registration-cta-button {
+  display: block;
+  width: 100%;
+  text-align: center;
+  padding: 1rem 0;
+  border-radius: 0.75rem;
+  font-weight: 700;
+  font-size: 1rem;
+  transition: all 0.3s;
+  text-decoration: none;
+}
+
+.registration-cta-button.popular {
+  background: linear-gradient(to right, #F58F00, #FF8C00, #FFA500);
+  color: black;
+}
+
+.registration-cta-button.popular:hover {
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+  transform: scale(1.05);
+}
+
+.registration-cta-button:not(.popular) {
+  background: linear-gradient(to right, #111827, black);
+  color: white;
+}
+
+.registration-cta-button:not(.popular):hover {
+  background: linear-gradient(to right, #1F2937, #111827);
+}
+
+
+/* Responsive Styles */
+@media (min-width: 640px) {
+  .registration-section {
+    padding: 5rem 0;
+  }
+  
+  .registration-container {
+    padding: 0 1.5rem;
+  }
+  
+  .registration-title {
+    font-size: 3rem;
+  }
+  
+  /* Responsive width handled by .title-underline-md in utils.css */
+  
+  .registration-subtitle {
+    font-size: 1.5rem;
+  }
+  
+  .registration-section-title {
+    font-size: 2.25rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .registration-section {
+    padding: 6rem 0;
+  }
+  
+  .registration-container {
+    padding: 0 2rem;
+  }
+  
+  .registration-header {
+    margin-bottom: 4rem;
+  }
+  
+  .registration-title {
+    font-size: 3.75rem;
+  }
+  
+  .registration-main-packages {
+    margin-bottom: 7rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .registration-section {
+    padding: 8rem 0;
+  }
+  
+  .registration-packages-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

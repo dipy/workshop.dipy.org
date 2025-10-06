@@ -1,18 +1,65 @@
-<div class="full-page-content why-content">
-    <h3 class="m2-txt4 lh-1-5">
-        {{ subtitle }}:
-    </h3>
-    <div class="p-t-20">
-        <ol class="list">
+<section id="why" class="why-section">
+    {# Background Decorative Elements #}
+    <div class="why-decorative-top"></div>
+    <div class="why-decorative-bottom"></div>
+
+    <div class="why-container">
+        {# Section Header #}
+        <div class="why-header">
+            <h2 class="why-title">
+                {{ title }}
+            </h2>
+            <div class="title-underline title-underline-sm"></div>
+            {% if subtitle %}
+            <p class="why-subtitle">
+                {{ subtitle }}
+            </p>
+            {% endif %}
+        </div>
+
+        {# Reasons Grid #}
+        <div class="why-reasons-container">
             {% for item in why_items %}
-            <li class="list-item">
-                <span class="list-item__number">{{loop.index}}.</span>
-                <p class="list-item__title">{{ item.title }}:</p>
-                <p class="list-item__details txt-justify">
-                    {{ item.description}}
-                </p>
-            </li>
+            <div class="why-reason-row">
+                <div class="why-reason-row {% if loop.index0 % 2 != 0 %}reverse{% endif %}">
+                    {# Icon and Number Side #}
+                    <div class="why-icon-side">
+                        <div class="why-icon-container">
+                            {# Number Background #}
+                            <div class="why-number-background">
+                                {{ "%02d"|format(loop.index) }}
+                            </div>
+                            {# Icon #}
+                            <div class="why-icon-box">
+                                <div class="why-icon">
+                                    {% if loop.index == 1 %}🔬{% endif %}
+                                    {% if loop.index == 2 %}👨‍🏫{% endif %}
+                                    {% if loop.index == 3 %}🤝{% endif %}
+                                    {% if loop.index == 4 %}💻{% endif %}
+                                    {% if loop.index == 5 %}📊{% endif %}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    {# Content Side #}
+                    <div class="why-content-side">
+                        <div class="why-content-card">
+                            <h3 class="why-content-title">
+                                <span class="why-content-number">{{ "%02d"|format(loop.index) }}.</span>
+                                {{ item.title }}
+                            </h3>
+                            <p class="why-content-description">
+                                {{ item.description }}
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
             {% endfor %}
-        </ol>
+        </div>
     </div>
-</div>
+
+    {# Section Separator #}
+    <div class="section-separator"></div>
+</section>

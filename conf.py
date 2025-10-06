@@ -34,8 +34,15 @@ exclude_patterns = []
 html_theme = "pydata_sphinx_theme"
 html_static_path = ["_static"]
 
-html_css_files = ["css/workshop.css"]
-html_js_files = ["js/workshop.js", "js/countdown.js"]
+html_style = "css/new/workshop.css"
+html_js_files = [
+    "js/splide.js",
+    "js/workshop.js",
+    "js/countdown.js",
+    "js/carousel.js",
+    "js/hero-carousel.js",
+    "js/navbar.js",
+]
 html_logo = "_static/images/dipy-logo.png"
 html_favicon = "_static/images/icons/favicon.ico"
 html_baseurl = "https://workshop.dipy.org/"
@@ -50,8 +57,8 @@ html_theme_options = {
     "logo": {
         "link": "https://dipy.org",
     },
-    "navbar_start": ["navbar-logo"],
-    "navbar_center": ["navbar-nav"],
+    "navbar_start": ["navbar.html"],
+    "navbar_center": [],
     "navbar_end": [],
     "navbar_persistent": [],
     "primary_sidebar_end": [],
@@ -72,7 +79,7 @@ html_context = {
     "default_mode": "light",
 }
 
-html_sidebars = {"**": ["sidebar-nav-bs"]}
+html_sidebars = {"**": []}
 
 # -- Options for sphinx-reredirects -------------------------------------------
 redirects = {

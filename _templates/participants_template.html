@@ -1,43 +1,50 @@
-<div class="participants-section">
-    <div class="participants-carousel">
-        {# First set of items #}
-        {% for item in participant_items %}
-        {% if item.image %}
-        <div class="participant-card">
-            <a href="{{ item.url }}" target="_blank">
-                {% set image_path = item.image %}
-                {% if image_path and not image_path.startswith('/') and not image_path.startswith('http') %}
-                    {% set image_src = '_static/images/universities/' + image_path %}
-                {% else %}
-                    {% set image_src = image_path %}
-                {% endif %}
-                <img src="{{ image_src }}"
-                     alt="{{ item.name }}"
-                     class="participant-logo">
-                <h5>{{ item.name }}</h5>
-            </a>
+<section id="participants" class="participants-section">
+    <div class="participants-container">
+        {# Section Header #}
+        <div class="participants-header">
+            <h2 class="participants-title">
+                {{ title }}
+            </h2>
+            <div class="title-underline title-underline-sm"></div>
+            {% if subtitle %}
+            <p class="participants-subtitle">
+                {{ subtitle }}
+            </p>
+            {% endif %}
         </div>
-        {% endif %}
-        {% endfor %}
 
-        {# Duplicate set of items for seamless loop #}
-        {% for item in participant_items %}
-        {% if item.image %}
-        <div class="participant-card">
-            <a href="{{ item.url }}" target="_blank">
-                {% set image_path = item.image %}
-                {% if image_path and not image_path.startswith('/') and not image_path.startswith('http') %}
-                    {% set image_src = '_static/images/universities/' + image_path %}
-                {% else %}
-                    {% set image_src = image_path %}
-                {% endif %}
-                <img src="{{ image_src }}"
-                     alt="{{ item.name }}"
-                     class="participant-logo">
-                <h5>{{ item.name }}</h5>
-            </a>
+        {# Carousel Container #}
+        <div class="participants-carousel-container">
+            <div class="participants-carousel splide">
+                <div class="splide__track">
+                    <ul class="splide__list">
+                        {% for item in participant_items %}
+                        {% if item.image %}
+                        <li class="splide__slide">
+                            <div class="participants-slide-item">
+                                <div class="participants-logo-wrapper">
+                                    <a href="{{ item.url }}" target="_blank">
+                                        {% set image_path = item.image %}
+                                        {% if image_path and not image_path.startswith('/') and not image_path.startswith('http') %}
+                                            {% set image_src = '_static/images/universities/' + image_path %}
+                                        {% else %}
+                                            {% set image_src = image_path %}
+                                        {% endif %}
+                                        <img src="{{ image_src }}"
+                                             alt="{{ item.name }}"
+                                             class="participants-logo-image">
+                                    </a>
+                                </div>
+                            </div>
+                        </li>
+                        {% endif %}
+                        {% endfor %}
+                    </ul>
+                </div>
+            </div>
         </div>
-        {% endif %}
-        {% endfor %}
     </div>
-</div>
+
+    {# Section Separator #}
+    <div class="section-separator"></div>
+</section>

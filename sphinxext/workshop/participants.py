@@ -13,6 +13,8 @@ class ParticipantsDirective(SphinxDirective):
     has_content = True
     option_spec = {
         "template": directives.path,
+        "title": directives.unchanged,
+        "subtitle": directives.unchanged,
     }
 
     def run(self):
@@ -47,7 +49,11 @@ class ParticipantsDirective(SphinxDirective):
         try:
             with open(template_path, "r") as f:
                 template = Template(f.read())
-                rendered = template.render(participant_items=items)
+                rendered = template.render(
+                    participant_items=items,
+                    title=self.options.get("title", "Participants From"),
+                    subtitle=self.options.get("subtitle", "")
+                )
                 return [nodes.raw("", rendered, format="html")]
         except Exception as e:
             logger.error(f"Error rendering participants: {e}")
