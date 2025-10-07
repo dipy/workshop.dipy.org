@@ -39,7 +39,7 @@
         </div>
 
         {# Bottom Left - Registration Card #}
-        <div class="hero-registration-container">
+        <div class="hero-registration-container" id="hero-registration-container">
             <div class="hero-registration-card">
                 <h3 class="hero-registration-title" id="countdown-title">
                     <b>Registration</b> has been started
@@ -115,23 +115,13 @@
         </div>
     </div>
 
-    {# Carousel Indicators #}
-    <div class="hero-carousel-indicators">
-        {% for bg in home_slides %}
-        <button
-            class="hero-carousel-indicator {% if loop.index0 == 0 %}active{% endif %}"
-            data-index="{{ loop.index0 }}"
-            aria-label="Go to slide {{ loop.index }}"
-        ></button>
-        {% endfor %}
-    </div>
 
     <script>
         setupHomeCarousel(".hero-background-container", ".hero-background-image");
         initializeClock("countdown", "{{ workshop.reg_start_date }}", "{{ workshop.iso_start_date }}", []);
         initializeClock("reg-countdown", 0, "{{ workshop.reg_start_date }}", []);
         setTimeout(() => {
-            hideAfterDate("{{ workshop.iso_end_date }}", "reg-countdown-stop");
+            hideAfterDate("{{ workshop.iso_end_date }}", "hero-registration-container");
             messageAfterDate(
                 "{{ workshop.iso_end_date }}",
                 "countdown-stop",

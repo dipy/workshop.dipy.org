@@ -30,7 +30,7 @@
 
 .speakers-container {
   position: relative;
-  max-width: 80rem;
+  max-width: 80%;
   margin: 0 auto;
   padding: 0 1rem;
 }
@@ -57,15 +57,18 @@
 }
 
 .speakers-grid {
-  display: grid;
-  grid-template-columns: 1fr;
+  display: flex;
+  flex-wrap: wrap;
   gap: 1.5rem;
-  grid-auto-rows: 1fr;
+  justify-content: center;
 }
 
 .speaker-card-wrapper {
   position: relative;
   display: flex;
+  width: 100%;
+  max-width: 400px;
+  flex: 0 0 auto;
 }
 
 .speaker-card {
@@ -222,8 +225,9 @@
     font-size: 1.25rem;
   }
 
-  .speakers-grid {
-    grid-template-columns: repeat(2, 1fr);
+  .speaker-card-wrapper {
+    width: calc(50% - 0.75rem);
+    max-width: 400px;
   }
 
   .speaker-name {
@@ -304,13 +308,15 @@
 
   /* Responsive width handled by .title-underline-sm in utils.css */
 
-  .speakers-grid {
-    grid-template-columns: repeat(3, 1fr);
+  .speaker-card-wrapper {
+    width: calc(33.333% - 1.33rem);
+    max-width: 400px;
   }
 }
 
 @media (min-width: 1280px) {
-  .speakers-grid {
-    grid-template-columns: repeat(4, 1fr);
+  .speaker-card-wrapper {
+    width: calc(25% - 1.125rem);
+    max-width: 400px;
   }
 }

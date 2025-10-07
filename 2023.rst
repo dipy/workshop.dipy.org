@@ -299,31 +299,25 @@ Participants from
       :url: https://www.iupui.edu/
 
 
----------------------
+---------------
 Special Thanks
----------------------
+---------------
 
-.. grid:: 4
-   :gutter: 5
+.. workshop-thanks::
+   :template: _templates/thanks_template.html
+   :title: Special Thanks
+   :note: Multiple speakers including <b>Garyfallidis, Landman and Harezlak</b> are funded by the <br/><a href="https://www.nih.gov/">National Institutes of Health</a>.
 
-   .. grid-item::
+   .. workshop-thanks-item::
+      :name: Garyfallidis Research Group (GRG)
+      :image: _static/images/universities/GRG.png
+      :url: https://grg.luddy.indiana.edu/
 
-   .. grid-item-card::
-      :img-background: _static/images/universities/GRG.png
-      :img-alt: Garyfallidis Research Group (GRG)
-      :link: https://grg.luddy.indiana.edu/
-      :text-align: center
+   .. workshop-thanks-item::
+      :name: Intelligent Systems Engineering (IU)
+      :image: _static/images/universities/ISE.jpeg
+      :url: https://engineering.indiana.edu/index.html
 
-   .. grid-item-card::
-      :img-background: _static/images/universities/ISE.jpeg
-      :img-alt: Intelligent Systems Engineering (IU)
-      :link: https://engineering.indiana.edu/index.html
-      :text-align: center
-
-
-
-Multiple speakers including **Garyfallidis, Landman and Harezlak** are funded by the
-`National Institutes of Health <https://www.nih.gov/>`_.
 
 ####
 Why?
@@ -706,6 +700,7 @@ Registration
 
 .. pricing-list::
   :template: _templates/pricing_template.html
+  :section_title: Registration
   :title: Student
   :subtitle: Master's Degree Students, PhD Candidates, Postdocs should take this option.
   :columns: 3
@@ -849,6 +844,23 @@ Registration
 Contact
 #######
 
-Contact us for more information by sending an email at workshop@dipy.org
+.. workshop-contact::
+   :template: _templates/contact_template.html
+   :title: Contact
+   :subtitle: Contact us for more information
 
-or joining our forum at https://github.com/dipy/dipy/discussions
+   .. workshop-contact-item::
+      :title: Email Us
+      :link: mailto:workshop@dipy.org
+      :link_text: workshop@dipy.org
+      :icon: email
+
+      Send us an email for inquiries
+
+   .. workshop-contact-item::
+      :title: Join Our Forum
+      :link: https://github.com/dipy/dipy/discussions
+      :link_text: github.com/dipy/dipy/discussions
+      :icon: forum
+
+      Connect with the community

@@ -320,7 +320,7 @@ Special Thanks
 .. workshop-thanks::
    :template: _templates/thanks_template.html
    :title: Special Thanks
-   :note: Multiple speakers including Garyfallidis, Landman and Harezlak are funded by the National Institutes of Health (NIH).
+   :note: Multiple speakers including <b>Garyfallidis, Landman and Harezlak</b> are funded by the <br/><a href="https://www.nih.gov/">National Institutes of Health</a>.<br/> In addition, <b>Koudoro, Rokem and Girard</b> are funded froman EOSS grant through the <br/><a href="https://chanzuckerberg.com/eoss/proposals/strengthening-computational-neuroanatomy-using-dipy/">Chan Zuckerberg Initiative</a>.
 
    .. workshop-thanks-item::
       :name: Garyfallidis Research Group (GRG)
@@ -625,7 +625,7 @@ Registration
 .. pricing-list::
    :template: _templates/pricing_template.html
    :section_title: Registration
-   :section_subtitle: Get the Early Birds Discount before 3rd January 2026
+   :section_subtitle: Get the Early Birds Discount before 4th January 2026
    :title: Main Packages
    :subtitle: One Price for all to get you started
    :description: Get the most of the workshop with easy pricing, no hidden fees.

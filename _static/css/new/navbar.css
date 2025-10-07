@@ -46,7 +46,7 @@
   display: none;
   width: 12rem;
   height: 1.5rem;
-  flex-shrink: 0;
+  padding-left: 1rem;
 }
 
 .navbar-arrow svg {
