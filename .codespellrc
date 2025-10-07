@@ -1,5 +1,5 @@
 [codespell]
-skip = .git,*.pdf,*.svg,*.bib,*.json, _build/*, _static/vendor/*
+skip = .git,*.pdf,*.svg,*.bib,*.json, _build/*, _static/vendor/*, _static/js/splide.js
 # reson -- abbreviation from Resonance frequently used
 # nd -- import shortening etc
 # te -- the TE

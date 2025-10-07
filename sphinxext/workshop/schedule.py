@@ -73,7 +73,7 @@ class ScheduleDirective(SphinxDirective):
             rendered_html = template.render(
                 timelines=collected_timelines,
                 title=self.options.get("title", "Workshop Schedule"),
-                subtitle=self.options.get("subtitle", "")
+                subtitle=self.options.get("subtitle", ""),
             )
 
         except Exception as e:

@@ -131,7 +131,7 @@ class SpeakersDirective(SphinxDirective):
             rendered_html = template.render(
                 speakers=speakers_for_template,
                 title=self.options.get("title", "Our Expert Speakers"),
-                subtitle=self.options.get("subtitle", "")
+                subtitle=self.options.get("subtitle", ""),
             )
 
         except Exception as e:

@@ -83,17 +83,17 @@
   .participants-section {
     padding: 5rem 0;
   }
-  
+
   .participants-container {
     padding: 0 1.5rem;
   }
-  
+
   .participants-title {
     font-size: 2.25rem;
   }
-  
+
   /* Responsive width handled by .title-underline-sm in utils.css */
-  
+
   .participants-subtitle {
     font-size: 1.25rem;
   }
@@ -103,23 +103,23 @@
   .participants-section {
     padding: 6rem 0;
   }
-  
+
   .participants-container {
     padding: 0 2rem;
   }
-  
+
   .participants-header {
     margin-bottom: 4rem;
   }
-  
+
   .participants-title {
     font-size: 3rem;
   }
-  
+
   .participants-title-underline {
     margin-bottom: 2rem;
   }
-  
+
   .participants-subtitle {
     font-size: 1.5rem;
   }
@@ -129,18 +129,18 @@
   .participants-section {
     padding: 8rem 0;
   }
-  
+
   .participants-container {
     padding: 0 3rem;
   }
-  
+
   .participants-header {
     margin-bottom: 5rem;
   }
-  
+
   .participants-title {
     font-size: 3.75rem;
   }
-  
+
   /* Responsive width handled by .title-underline-sm in utils.css */
 }

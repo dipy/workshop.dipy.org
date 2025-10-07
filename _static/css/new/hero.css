@@ -202,17 +202,17 @@
   .hero-content {
     padding: 1.5rem;
   }
-  
+
   .hero-title-section {
     margin-top: 6rem;
   }
-  
+
   .hero-title {
     font-size: 3rem;
   }
-  
+
   /* Responsive width handled by .title-underline-md in utils.css */
-  
+
   .hero-subtitle {
     font-size: 1.125rem;
   }
@@ -230,48 +230,48 @@
     width: 1.5rem;
     height: 1.5rem;
   }
-  
+
   .hero-registration-container {
     margin-bottom: 1.5rem;
   }
-  
+
   .hero-registration-card {
     padding: 1.5rem;
     max-width: 28rem;
   }
-  
+
   .hero-registration-title {
     font-size: 1.5rem;
   }
-  
+
   .hero-registration-subtitle {
     margin-bottom: 1.5rem;
     font-size: 1rem;
   }
-  
+
   .hero-countdown-grid {
     gap: 0.75rem;
     margin-bottom: 1.5rem;
   }
-  
+
   .hero-countdown-box {
     padding: 0.75rem;
     margin-bottom: 0.5rem;
   }
-  
+
   .hero-countdown-number {
     font-size: 1.875rem;
   }
-  
+
   .hero-countdown-label {
     font-size: 0.75rem;
   }
-  
+
   .hero-register-button {
     padding: 1rem 0;
     font-size: 1rem;
   }
-  
+
   .hero-carousel-indicators {
     bottom: 1.5rem;
     right: 1.5rem;
@@ -282,18 +282,18 @@
   .hero-content {
     padding: 3rem;
   }
-  
+
   .hero-title-section {
     margin-top: 7rem;
   }
-  
+
   .hero-title {
     font-size: 3.75rem;
     margin-bottom: 1rem;
   }
-  
+
   /* Responsive width handled by .title-underline-lg in utils.css */
-  
+
   .hero-subtitle {
     font-size: 1.25rem;
   }
@@ -301,35 +301,35 @@
   .hero-info-item {
     font-size: 1.125rem;
   }
-  
+
   .hero-registration-container {
     margin-bottom: 3rem;
   }
-  
+
   .hero-registration-card {
     padding: 2rem;
   }
-  
+
   .hero-registration-title {
     font-size: 1.875rem;
   }
-  
+
   .hero-registration-subtitle {
     font-size: 1rem;
   }
-  
+
   .hero-countdown-number {
     font-size: 2.25rem;
   }
-  
+
   .hero-countdown-label {
     font-size: 0.875rem;
   }
-  
+
   .hero-register-button {
     font-size: 1.125rem;
   }
-  
+
   .hero-carousel-indicators {
     bottom: 2rem;
     right: 2rem;
@@ -340,21 +340,21 @@
   .hero-content {
     padding: 4rem;
   }
-  
+
   .hero-title-section {
     margin-top: 8rem;
   }
-  
+
   .hero-title {
     font-size: 4.5rem;
   }
-  
+
   /* Responsive width handled by .title-underline-xl in utils.css */
-  
+
   .hero-subtitle {
     font-size: 1.5rem;
   }
-  
+
   .hero-registration-card {
     max-width: 32rem;
   }

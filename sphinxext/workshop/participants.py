@@ -52,7 +52,7 @@ class ParticipantsDirective(SphinxDirective):
                 rendered = template.render(
                     participant_items=items,
                     title=self.options.get("title", "Participants From"),
-                    subtitle=self.options.get("subtitle", "")
+                    subtitle=self.options.get("subtitle", ""),
                 )
                 return [nodes.raw("", rendered, format="html")]
         except Exception as e:

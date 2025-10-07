@@ -89,7 +89,7 @@ class WhyDirective(SphinxDirective):
             rendered_html = template.render(
                 why_items=env.workshop_why,
                 title=self.options.get("title", "Why Attend?"),
-                subtitle=self.options.get("subtitle", "")
+                subtitle=self.options.get("subtitle", ""),
             )
         except Exception as e:
             err_msg = f'Error rendering timeline template "{template_name}": {e}'

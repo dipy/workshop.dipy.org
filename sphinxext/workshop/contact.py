@@ -67,7 +67,8 @@ class ContactDirective(SphinxDirective):
         node = nodes.container()
         self.state.nested_parse(self.content, self.content_offset, node)
 
-        # Data collected by ContactItemDirective should now be in env.workshop_contact_items
+        # Data collected by ContactItemDirective should now be in
+        # env.workshop_contact_items
         collected_items = getattr(env, "workshop_contact_items", [])
 
         if not collected_items:

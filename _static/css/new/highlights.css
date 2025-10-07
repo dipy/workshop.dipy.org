@@ -138,33 +138,33 @@
   .highlights-section {
     padding: 5rem 0;
   }
-  
+
   .highlights-container {
     padding: 0 1.5rem;
   }
-  
+
   .highlights-title {
     font-size: 2.25rem;
   }
-  
+
   /* Responsive width handled by .title-underline-sm in utils.css */
-  
+
   .highlights-subtitle {
     font-size: 1.25rem;
   }
-  
+
   .highlights-image-container {
     height: 500px;
   }
-  
+
   .highlights-content {
     padding: 2.5rem 2rem;
   }
-  
+
   .highlights-content-title {
     font-size: 1.875rem;
   }
-  
+
   .highlights-content-description {
     font-size: 1.25rem;
   }
@@ -174,40 +174,40 @@
   .highlights-section {
     padding: 6rem 0;
   }
-  
+
   .highlights-container {
     padding: 0 2rem;
   }
-  
+
   .highlights-header {
     margin-bottom: 4rem;
   }
-  
+
   .highlights-title {
     font-size: 3rem;
   }
-  
+
   .highlights-title-underline {
     margin-bottom: 2rem;
   }
-  
+
   .highlights-subtitle {
     font-size: 1.5rem;
   }
-  
+
   .highlights-image-container {
     height: 600px;
   }
-  
+
   .highlights-content {
     padding: 3rem;
   }
-  
+
   .highlights-content-title {
     font-size: 2.25rem;
     margin-bottom: 1.5rem;
   }
-  
+
   .highlights-content-description {
     font-size: 1.5rem;
   }
@@ -217,21 +217,21 @@
   .highlights-section {
     padding: 8rem 0;
   }
-  
+
   .highlights-container {
     padding: 0 3rem;
   }
-  
+
   .highlights-header {
     margin-bottom: 5rem;
   }
-  
+
   .highlights-title {
     font-size: 3.75rem;
   }
-  
+
   /* Responsive width handled by .title-underline-sm in utils.css */
-  
+
   .highlights-content {
     padding: 3.5rem 4rem;
   }

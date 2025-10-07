@@ -212,10 +212,10 @@
   .about-section {
     padding: 8rem 3rem;
   }
-  
+
   .about-title {
     font-size: 3.75rem;
   }
-  
+
   /* Responsive width handled by .title-underline-sm in utils.css */
 }

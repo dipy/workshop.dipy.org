@@ -1,8 +1,5 @@
-import os
-
 from docutils import nodes
 from docutils.parsers.rst import directives
-from jinja2 import Environment, FileSystemLoader
 from sphinx.util import logging
 from sphinx.util.docutils import SphinxDirective
 

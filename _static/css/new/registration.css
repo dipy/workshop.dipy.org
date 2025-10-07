@@ -214,21 +214,21 @@
   .registration-section {
     padding: 5rem 0;
   }
-  
+
   .registration-container {
     padding: 0 1.5rem;
   }
-  
+
   .registration-title {
     font-size: 3rem;
   }
-  
+
   /* Responsive width handled by .title-underline-md in utils.css */
-  
+
   .registration-subtitle {
     font-size: 1.5rem;
   }
-  
+
   .registration-section-title {
     font-size: 2.25rem;
   }
@@ -238,19 +238,19 @@
   .registration-section {
     padding: 6rem 0;
   }
-  
+
   .registration-container {
     padding: 0 2rem;
   }
-  
+
   .registration-header {
     margin-bottom: 4rem;
   }
-  
+
   .registration-title {
     font-size: 3.75rem;
   }
-  
+
   .registration-main-packages {
     margin-bottom: 7rem;
   }
@@ -260,7 +260,7 @@
   .registration-section {
     padding: 8rem 0;
   }
-  
+
   .registration-packages-grid {
     grid-template-columns: repeat(2, 1fr);
   }

@@ -118,17 +118,17 @@
   .contact-section {
     padding: 5rem 0;
   }
-  
+
   .contact-container {
     padding: 0 1.5rem;
   }
-  
+
   .contact-title {
     font-size: 3rem;
   }
-  
+
   /* Responsive width handled by .title-underline-md in utils.css */
-  
+
   .contact-subtitle {
     font-size: 1.5rem;
   }
@@ -138,19 +138,19 @@
   .contact-section {
     padding: 6rem 0;
   }
-  
+
   .contact-container {
     padding: 0 2rem;
   }
-  
+
   .contact-header {
     margin-bottom: 4rem;
   }
-  
+
   .contact-title {
     font-size: 3.75rem;
   }
-  
+
   .contact-cards-grid {
     grid-template-columns: repeat(2, 1fr);
   }

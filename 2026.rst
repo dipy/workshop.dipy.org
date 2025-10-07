@@ -13,13 +13,13 @@
    :location: Online
    :team_location: Bloomington, IN
 
-   .. workshop-home-slide:: _static/images/background/bg1.png
+   .. workshop-home-slide:: _static/images/background/bg1-min.png
       :alt: dw_2026_bg_1
 
-   .. workshop-home-slide:: _static/images/background/bg2.jpeg
+   .. workshop-home-slide:: _static/images/background/bg2-min.jpeg
       :alt: dw_2026_bg_2
 
-   .. workshop-home-slide:: _static/images/background/bg3.jpeg
+   .. workshop-home-slide:: _static/images/background/bg3-min.jpeg
       :alt: dw_2026_bg_3
 
 #####

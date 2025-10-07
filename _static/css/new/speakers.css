@@ -207,33 +207,33 @@
   .speakers-section {
     padding: 5rem 0;
   }
-  
+
   .speakers-container {
     padding: 0 1.5rem;
   }
-  
+
   .speakers-title {
     font-size: 2.25rem;
   }
-  
+
   /* Responsive width handled by .title-underline-sm in utils.css */
-  
+
   .speakers-subtitle {
     font-size: 1.25rem;
   }
-  
+
   .speakers-grid {
     grid-template-columns: repeat(2, 1fr);
   }
-  
+
   .speaker-name {
     font-size: 1.125rem;
   }
-  
+
   .speaker-role {
     font-size: 0.875rem;
   }
-  
+
   .speaker-university {
     font-size: 0.875rem;
   }
@@ -243,43 +243,43 @@
   .speakers-section {
     padding: 6rem 0;
   }
-  
+
   .speakers-container {
     padding: 0 2rem;
   }
-  
+
   .speakers-header {
     margin-bottom: 4rem;
   }
-  
+
   .speakers-title {
     font-size: 3rem;
   }
-  
+
   .speakers-title-underline {
     margin-bottom: 2rem;
   }
-  
+
   .speakers-subtitle {
     font-size: 1.5rem;
   }
-  
+
   .speakers-grid {
     gap: 2rem;
   }
-  
+
   .speaker-content {
     padding: 1.25rem 1.5rem;
   }
-  
+
   .speaker-name {
     font-size: 1.25rem;
   }
-  
+
   .speaker-role {
     font-size: 1rem;
   }
-  
+
   .speaker-university {
     font-size: 1rem;
   }
@@ -289,21 +289,21 @@
   .speakers-section {
     padding: 8rem 0;
   }
-  
+
   .speakers-container {
     padding: 0 3rem;
   }
-  
+
   .speakers-header {
     margin-bottom: 5rem;
   }
-  
+
   .speakers-title {
     font-size: 3.75rem;
   }
-  
+
   /* Responsive width handled by .title-underline-sm in utils.css */
-  
+
   .speakers-grid {
     grid-template-columns: repeat(3, 1fr);
   }

@@ -187,45 +187,45 @@
   .why-section {
     padding: 5rem 0;
   }
-  
+
   .why-container {
     padding: 0 1.5rem;
   }
-  
+
   .why-title {
     font-size: 2.25rem;
   }
-  
+
   /* Responsive width handled by .title-underline-sm in utils.css */
-  
+
   .why-subtitle {
     font-size: 1.25rem;
   }
-  
+
   .why-icon-box {
     padding: 2.5rem;
   }
-  
+
   .why-icon {
     font-size: 4.5rem;
   }
-  
+
   .why-content-card {
     padding: 2rem;
   }
-  
+
   .why-content-title {
     font-size: 1.875rem;
   }
-  
+
   .why-content-description {
     font-size: 1.125rem;
   }
-  
+
   .why-levels-grid {
     grid-template-columns: repeat(2, 1fr);
   }
-  
+
   .why-number-background {
     font-size: 7rem;
   }
@@ -235,64 +235,64 @@
   .why-section {
     padding: 6rem 0;
   }
-  
+
   .why-container {
     padding: 0 2rem;
   }
-  
+
   .why-header {
     margin-bottom: 4rem;
   }
-  
+
   .why-title {
     font-size: 3rem;
   }
-  
+
   .why-title-underline {
     margin-bottom: 2rem;
   }
-  
+
   .why-subtitle {
     font-size: 1.5rem;
   }
-  
+
   .why-reasons-container {
     gap: 3rem;
   }
-  
+
   .why-reason-row {
     flex-direction: row;
     gap: 2rem;
   }
-  
+
   .why-reason-row.reverse {
     flex-direction: row-reverse;
   }
-  
+
   .why-icon-side {
     width: 33.333333%;
   }
-  
+
   .why-content-side {
     width: 66.666667%;
   }
-  
+
   .why-icon-box {
     padding: 3rem;
   }
-  
+
   .why-icon {
     font-size: 5rem;
   }
-  
+
   .why-content-card {
     padding: 2.5rem;
   }
-  
+
   .why-content-title {
     font-size: 2.25rem;
   }
-  
+
   .why-content-description {
     font-size: 1.25rem;
   }
@@ -302,21 +302,21 @@
   .why-section {
     padding: 8rem 0;
   }
-  
+
   .why-container {
     padding: 0 3rem;
   }
-  
+
   .why-header {
     margin-bottom: 5rem;
   }
-  
+
   .why-title {
     font-size: 3.75rem;
   }
-  
+
   /* Responsive width handled by .title-underline-sm in utils.css */
-  
+
   .why-reason-row {
     gap: 3rem;
   }
