@@ -1,120 +1,68 @@
-<section id="schedule" class="schedule-section">
-    <div class="schedule-container">
-        {# Section Header #}
-        <div class="schedule-header">
-            <h2 class="schedule-title">
-                {{ title }}
-            </h2>
-            <div class="title-underline title-underline-md"></div>
-            {% if subtitle %}
-            <p class="schedule-subtitle">
-                {{ subtitle }}
-            </p>
-            {% endif %}
-        </div>
+<div class="row">
+{% for timeline in timelines %}
+<div class="col-lg-6 col-sm-12 m-t-40">
+    <div class="program-day"> <!-- Mimics original structure -->
+        <h3 class="program-title m2-txt3 m-b-10">
+            {{ timeline.title }}{% if timeline.date %} - {{ timeline.date }}{% endif %}
+        </h3>
+        {% if timeline.subtitle %}
+        <h5 class="program-title m2-txt4 p-b-20">{{ timeline.subtitle }}</h5>
+        {% endif %}
 
-        {# Schedule Grid - 2 columns #}
-        <div class="schedule-grid">
-            {% for timeline in timelines %}
-            <div class="schedule-day-column">
-                {# Day Header - Improved visual #}
-                <div class="schedule-day-header">
-                    <div class="schedule-day-header-inner">
-                        <h3 class="schedule-day-title">
-                            {{ timeline.title }}
-                        </h3>
-                        <div class="schedule-day-underline"></div>
-                        {% if timeline.subtitle %}
-                        <p class="schedule-day-subtitle">
-                            {{ timeline.subtitle }}
-                        </p>
-                        {% endif %}
-                        {% if timeline.date %}
-                        <p class="schedule-day-date">
-                            {{ timeline.date }}
-                        </p>
-                        {% endif %}
-                    </div>
-                </div>
-
-                {# Timeline #}
-                <div class="schedule-timeline">
-                    {# Vertical line #}
-                    <div class="schedule-timeline-line"></div>
-
-                    {# Sessions #}
+        <div class="row">
+            <div class="col-12">
+                <!-- Timeline Area -->
+                <div class="apland-timeline-area"> <!-- Use original CSS class -->
                     {% for item in timeline.timeline_entries %}
-                    <div class="schedule-session">
-                        {% if item.title == 'Lunch Break' %}
-                        <div class="schedule-lunch-break">
-                            <div class="schedule-lunch-line"></div>
-                            <div class="schedule-lunch-overlay">
-                                <span class="schedule-lunch-text">
-                                    Lunch Break
-                                </span>
-                            </div>
+                    {% if item.title == "Lunch Break" %}
+                    <hr class="hr-text" data-content="Lunch Break" />
+                    {% endif %}
+
+                    {% if item.title != "Lunch Break" or not item.title %}
+                    <!-- Single Timeline Content -->
+                    <div class="single-timeline-area">
+                        <div class="timeline-date wow fadeInLeft" data-wow-delay="0.1s" style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInLeft;">
+                            <!-- Date/Icon can go here if needed -->
                         </div>
-                        {% else %}
-                        {# Timeline dot - positioned outside card #}
-                        <div class="schedule-session-dot"></div>
-
-                        {# Session card #}
-                        <div class="schedule-session-card">
-                            {# Session title #}
-                            <h4 class="schedule-session-title">
-                                {{ item.title }}
-                            </h4>
-
-                            {# Time #}
-                            {% if item.time %}
-                            <p class="schedule-session-time">
-                                {{ item.time }}
-                            </p>
-                            {% endif %}
-
-                            {# Description/Info #}
-                            {% if item.info %}
-                            <p class="schedule-session-info">
-                                {{ item.info }}
-                            </p>
-                            {% endif %}
-
-                            {# Speaker with avatar #}
-                            {% if item.speaker %}
-                            <div class="schedule-speaker-container">
-                                {# Orange badge with circular cutout for avatar #}
-                                <div class="schedule-speaker-badge">
-                                    {# Avatar positioned to overlap badge #}
-                                    <div class="schedule-speaker-avatar">
-                                        {% if item.image %}
-                                            {% set image_path = item.image %}
-                                            {% if image_path and not image_path.startswith('/') and not image_path.startswith('http') %}
-                                                {% set image_src = '_static/images/speakers/' + image_path %}
-                                            {% else %}
-                                                {% set image_src = image_path %}
-                                            {% endif %}
-                                            <img src="{{ image_src }}" alt="{{ item.speaker }}" />
-                                        {% else %}
-                                            <img src="_static/images/speakers/dipy-all.svg" alt="{{ item.speaker }}" />
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="single-timeline-content d-flex wow fadeInLeft" data-wow-delay="0.3s" style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInLeft;">
+                                    <div class="timeline-text">
+                                        <h6 class="timeline-text-title">{{ item.title }}</h6>
+                                        {% if item.time %}<p>{{ item.time }}</p>{% endif %}
+                                        {% if item.speaker %}
+                                        <div class="timeline-speaker-wrapper">
+                                            <div class="avatar-wrapper">
+                                                {% if item.image %}
+                                                    {# Construct image path without pathto for static files #}
+                                                    {% set image_path = item.image %}
+                                                    {% if image_path and not image_path.startswith('/') and not image_path.startswith('http') %}
+                                                        {# Assume relative path is within _static/images/speakers/ #}
+                                                        {% set image_src = '_static/images/speakers/' + image_path %}
+                                                    {% else %}
+                                                        {# Use absolute/external URL or root-relative path as is #}
+                                                        {% set image_src = image_path %}
+                                                    {% endif %}
+                                                    <img class="avatar" src="{{ image_src }}" alt="{{ item.speaker }}"/>
+                                                {% else %}
+                                                    {# Placeholder image or default avatar - direct static path #}
+                                                    <img class="avatar" src="_static/images/speakers/dipy-all.svg" alt="{{ item.speaker }}"/>
+                                                {% endif %}
+                                                <span class="avatar-name">{{ item.speaker }}</span>
+                                            </div>
+                                        </div>
                                         {% endif %}
                                     </div>
-                                    {# Speaker name #}
-                                    <span class="schedule-speaker-name">
-                                        {{ item.speaker }}
-                                    </span>
                                 </div>
                             </div>
-                            {% endif %}
                         </div>
-                        {% endif %}
                     </div>
+                    {% endif %}
                     {% endfor %}
                 </div>
             </div>
-            {% endfor %}
         </div>
     </div>
-
-    {# Section Separator #}
-    <div class="section-separator"></div>
-</section>
+</div>
+{% endfor %}
+</div>

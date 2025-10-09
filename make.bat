@@ -30,8 +30,6 @@ if "%1" == "help" (
 if "%1" == "clean" (
 	for /d %%i in (_build\*) do rmdir /q /s %%i
 	del /q /s _build\*
-	call :api-clean
-	call :examples-clean
 	goto end
 )
 
@@ -66,9 +64,7 @@ if "%1" == "rstexamples" (
 
 if "%1" == "html" (
     :html
-    echo "build full docs including examples"
-    call :api
-    call :rstexamples %*
+    echo "Building HTML Website"
     call :html-after-examples
     exit /B
 	)
@@ -79,7 +75,7 @@ if "%1" == "html-after-examples" (
 	echo.
 	echo.Build finished. The HTML pages are in _build/html.
 	exit /B
-    )
+  )
 
 if "%1" == "dirhtml" (
 	%SPHINXBUILD% -b dirhtml %ALLSPHINXOPTS% _build/dirhtml

@@ -1,0 +1,51 @@
+<section id="highlights" class="highlights-section">
+    {# Background Decorative Elements #}
+    <div class="highlights-decorative-top"></div>
+    <div class="highlights-decorative-bottom"></div>
+
+    <div class="highlights-container">
+        {# Section Header #}
+        <div class="highlights-header">
+            <h2 class="highlights-title">
+                Workshop Highlights
+            </h2>
+            <div class="title-underline title-underline-sm"></div>
+            <p class="highlights-subtitle">
+                Explore cutting-edge techniques and methodologies in diffusion MRI analysis
+            </p>
+        </div>
+
+        {# Carousel #}
+        <div class="highlights-carousel">
+            <div id="highlights-splide" class="splide">
+                <div class="splide__track">
+                    <ul class="splide__list">
+                        {% for item in carousel_items %}
+                        <li class="splide__slide">
+                            <div class="highlights-card-container">
+                                {# Image Container #}
+                                <div class="highlights-image-container">
+                                    <img src="{{ item.image }}" alt="{{ item.title }}" class="highlights-image" />
+                                </div>
+
+                                {# Content #}
+                                <div class="highlights-content">
+                                    <h3 class="highlights-content-title">
+                                        {{ item.title }}
+                                    </h3>
+                                    <p class="highlights-content-description">
+                                        {{ item.description }}
+                                    </p>
+                                </div>
+                            </div>
+                        </li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    {# Section Separator #}
+    <div class="section-separator"></div>
+</section>

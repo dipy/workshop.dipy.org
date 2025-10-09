@@ -1,0 +1,103 @@
+{% if section_title %}
+<section id="registration" class="registration-section">
+    <div class="registration-container">
+        <div class="registration-header">
+            <h2 class="registration-title">{{ section_title }}</h2>
+            <div class="title-underline title-underline-md"></div>
+            {% if section_subtitle %}
+            <p class="registration-subtitle">{{ section_subtitle }}</p>
+            {% endif %}
+        </div>
+{% endif %}
+
+<div class="registration-main-packages">
+            <div class="registration-section-header">
+                <h3 class="registration-section-title">
+                    {{ title }}
+                </h3>
+                {% if subtitle %}
+                <p class="registration-section-description">
+                    {{ subtitle }}
+                </p>
+                {% endif %}
+                {% if note %}
+                <p class="registration-section-note">
+                    {{ note }}
+                </p>
+                {% endif %}
+                {% if description %}
+                <p class="registration-section-description">
+                    {{ description }}
+                </p>
+                {% endif %}
+            </div>
+
+            <div class="registration-packages-grid">
+                {% for item in pricing_items %}
+                <div class="registration-package-card {% if item.popular %}popular{% endif %}">
+                    {# Popular Badge #}
+                    {% if item.popular %}
+                    <div class="registration-popular-badge">
+                        MOST POPULAR
+                    </div>
+                    {% endif %}
+
+                    <div class="registration-package-content">
+                        {# Package Name #}
+                        <h4 class="registration-package-name">
+                            {{ item.name|title }}
+                        </h4>
+
+                        {# Pricing #}
+                        <div class="registration-pricing">
+                            <div class="registration-price-wrapper">
+                                <span class="registration-price">
+                                    {{ item.currency }}{{ item.price }}
+                                </span>
+                                {% if item.discount %}
+                                <span class="registration-original-price">
+                                    {{ item.currency }}{{ item.discount }}
+                                </span>
+                                {% endif %}
+                            </div>
+                            {% if item.discount %}
+                            <div class="registration-savings">
+                                Save {{ item.currency }}{{ item.discount - item.price }} with Early Bird
+                            </div>
+                            {% endif %}
+                        </div>
+
+                        {# Features - Grows to fill space #}
+                        <ul class="registration-features-list">
+                            {% for feature in item.features %}
+                            <li class="registration-feature-item">
+                                <div class="registration-feature-icon">
+                                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7" />
+                                    </svg>
+                                </div>
+                                <span class="registration-feature-text">{{ feature }}</span>
+                            </li>
+                            {% endfor %}
+                        </ul>
+
+                        {# CTA Button - Always at bottom #}
+                        <a
+                            href="{{ item.registration_link }}"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="registration-cta-button {% if item.popular %}popular{% endif %}"
+                        >
+                            Register Now
+                        </a>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+
+{% if wrap_section %}
+    </div>
+    <div class="section-separator"></div>
+</section>
+{% endif %}

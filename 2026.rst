@@ -1,3 +1,7 @@
+.. raw:: html
+
+   <link rel="stylesheet" href="_static/css/v2/workshop.css"/>
+
 .. meta::
    :description: The 2026 Dipy Workshop is a 5-day event focused on diffusion MRI, featuring expert speakers and hands-on sessions.
    :keywords: Dipy, Workshop, Diffusion MRI, Neuroimaging, Tractography
@@ -5,6 +9,7 @@
 .. title:: Dipy Workshop 2026
 
 .. workshop-home::
+   :template: _templates/v2/home_template.html
    :year: 2026
    :codename: Online Edition
    :reg_start_date: 2025-10-01 00:00
@@ -27,7 +32,7 @@ About
 #####
 
 .. workshop-about::
-   :template: _templates/about_template.html
+   :template: _templates/v2/about_template.html
    :watermark_image_url: _static/images/dipy-watermark.svg
    :note_name: DIPY Team
 
@@ -41,7 +46,7 @@ Why?
 ####
 
 .. workshop-why::
-   :template: _templates/why_template.html
+   :template: _templates/v2/why_template.html
    :title: Why Attend?
    :subtitle: Here are a few reasons why attending the DIPY MR Imaging workshop is essential
 
@@ -80,7 +85,7 @@ Speakers
 ########
 
 .. workshop-speakers::
-   :template: _templates/speaker_template.html
+   :template: _templates/v2/speaker_template.html
    :title: Speakers
    :subtitle: Our expert speakers
 
@@ -162,7 +167,7 @@ Conference Management
 ---------------------
 
 .. workshop-speakers::
-   :template: _templates/speaker_template.html
+   :template: _templates/v2/speaker_template.html
    :title: Conference Management
    :subtitle: Our dedicated team
 
@@ -183,7 +188,7 @@ Participants from
 -----------------
 
 .. participants::
-   :template: _templates/participants_template.html
+   :template: _templates/v2/participants_template.html
    :title: Participants from
    :subtitle: Participating Institutions
 
@@ -318,7 +323,7 @@ Special Thanks
 ---------------
 
 .. workshop-thanks::
-   :template: _templates/thanks_template.html
+   :template: _templates/v2/thanks_template.html
    :title: Special Thanks
    :note: Multiple speakers including <b>Garyfallidis, Landman and Harezlak</b> are funded by the <br/><a href="https://www.nih.gov/">National Institutes of Health</a>.<br/> In addition, <b>Koudoro, Rokem and Girard</b> are funded froman EOSS grant through the <br/><a href="https://chanzuckerberg.com/eoss/proposals/strengthening-computational-neuroanatomy-using-dipy/">Chan Zuckerberg Initiative</a>.
 
@@ -337,7 +342,7 @@ Highlights
 ##########
 
 .. carousel::
-   :template: _templates/swipe_carousel.html
+   :template: _templates/v2/swipe_carousel.html
 
    .. carousel-item::
       :image: https://raw.githubusercontent.com/dipy/dipy_data/master/tractometry.png?raw=true
@@ -377,7 +382,7 @@ Schedule
 ########
 
 .. workshop-schedule::
-   :template: _templates/schedule_template.html
+   :template: _templates/v2/schedule_template.html
    :title: Workshop Schedule
    :subtitle: Five days of intensive learning and networking
 
@@ -623,7 +628,7 @@ Registration
 ############
 
 .. pricing-list::
-   :template: _templates/pricing_template.html
+   :template: _templates/v2/pricing_template.html
    :section_title: Registration
    :section_subtitle: Get the Early Birds Discount before 4th January 2026
    :title: Main Packages
@@ -663,7 +668,7 @@ Registration
       - LinkedIn verifiable certificate.
 
 .. pricing-list::
-   :template: _templates/pricing_template.html
+   :template: _templates/v2/pricing_template.html
    :wrap_section:
    :title: Optional Packages
    :subtitle: Need more flexibility? Check out our optional packages.
@@ -697,7 +702,7 @@ Contact
 #######
 
 .. workshop-contact::
-   :template: _templates/contact_template.html
+   :template: _templates/v2/contact_template.html
    :title: Contact
    :subtitle: Contact us for more information
 

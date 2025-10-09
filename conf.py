@@ -34,7 +34,6 @@ exclude_patterns = []
 html_theme = "pydata_sphinx_theme"
 html_static_path = ["_static"]
 
-html_style = "css/new/workshop.css"
 html_js_files = [
     "js/splide.js",
     "js/workshop.js",
@@ -57,8 +56,8 @@ html_theme_options = {
     "logo": {
         "link": "https://dipy.org",
     },
-    "navbar_start": ["navbar.html"],
-    "navbar_center": [],
+    "navbar_start": ["navbar-logo"],
+    "navbar_center": ["navbar-nav"],
     "navbar_end": [],
     "navbar_persistent": [],
     "primary_sidebar_end": [],
