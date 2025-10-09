@@ -34,8 +34,14 @@ exclude_patterns = []
 html_theme = "pydata_sphinx_theme"
 html_static_path = ["_static"]
 
-html_css_files = ["css/workshop.css"]
-html_js_files = ["js/workshop.js", "js/countdown.js"]
+html_js_files = [
+    "js/splide.js",
+    "js/workshop.js",
+    "js/countdown.js",
+    "js/carousel.js",
+    "js/hero-carousel.js",
+    "js/navbar.js",
+]
 html_logo = "_static/images/dipy-logo.png"
 html_favicon = "_static/images/icons/favicon.ico"
 html_baseurl = "https://workshop.dipy.org/"
@@ -72,7 +78,7 @@ html_context = {
     "default_mode": "light",
 }
 
-html_sidebars = {"**": ["sidebar-nav-bs"]}
+html_sidebars = {"**": []}
 
 # -- Options for sphinx-reredirects -------------------------------------------
 redirects = {
@@ -83,6 +89,7 @@ redirects = {
     "workshops/dipy-workshop-2023": "../2023.html",
     "workshops/dipy-workshop-2024": "../2024.html",
     "workshops/dipy-workshop-2025": "../2025.html",
+    "workshops/dipy-workshop-2026": "../2026.html",
     "dipy-workshop-2019": "2019.html",
     "dipy-workshop-2020": "2020.html",
     "dipy-workshop-2021": "2021.html",
@@ -90,6 +97,7 @@ redirects = {
     "dipy-workshop-2023": "2023.html",
     "dipy-workshop-2024": "2024.html",
     "dipy-workshop-2025": "2025.html",
+    "dipy-workshop-2026": "2026.html",
 }
 
 

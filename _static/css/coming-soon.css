@@ -1,16 +1,15 @@
-body {
+.coming-soon {
   margin: 0;
   font-family: 'DM Sans', sans-serif;
   font-optical-sizing: auto;
   font-weight: 500;
   font-style: normal;
   color: white;
-  background: black;
   position: relative;
   overflow-x: hidden;
 }
 
-.bg-image {
+.coming-soon .bg-image {
   position: fixed;
   inset: 0;
   width: 100%;
@@ -21,13 +20,14 @@ body {
   transform: scaleX(-1);
 }
 
-.container {
+.coming-soon .container {
   display: flex;
   height: 95vh;
   width: 100%;
 }
 
-.hero-section, .video-section {
+.coming-soon .hero-section,
+.coming-soon .video-section {
   width: 50%;
   padding: 2rem;
   display: flex;
@@ -38,20 +38,20 @@ body {
   gap: 2rem;
 }
 
-.hero-title {
+.coming-soon .hero-title {
   font-size: 4rem;
   font-weight: 800;
   margin: 0 1rem;
 }
 
-.hero-date {
+.coming-soon .hero-date {
   font-size: 1.5rem;
   font-weight: 600;
   color: #fcd34d;
   margin: 0.5rem 0;
 }
 
-.hero-subtitle {
+.coming-soon .hero-subtitle {
   font-size: 3.5rem;
   font-weight: bold;
   background: linear-gradient(to right, #fef3c7, #b45309);
@@ -61,11 +61,11 @@ body {
   margin: 0;
 }
 
-.hero-description {
+.coming-soon .hero-description {
   font-size: 1.25rem;
 }
 
-.email-box form {
+.coming-soon .email-box form {
   display: flex;
   max-width: 400px;
   width: 100%;
@@ -75,7 +75,7 @@ body {
   background-color: white;
 }
 
-.email-box form > input {
+.coming-soon .email-box form > input {
   flex: 1;
   padding: 0.75rem 1.5rem;
   border: none;
@@ -85,7 +85,7 @@ body {
   font: 1em DM Sans, sans-serif;
 }
 
-.email-box form > button {
+.coming-soon .email-box form > button {
   font: 1em DM Sans, sans-serif;
   padding: 0.5rem 1.5rem;
   border: none;
@@ -96,26 +96,26 @@ body {
   transition: background 0.3s ease;
 }
 
-.email-box button:hover {
+.coming-soon .email-box button:hover {
   background: linear-gradient(to right, #fbbf24, #d97706);
 }
 
-.notify-text {
+.coming-soon .notify-text {
   font-size: 1rem;
 }
 
-.socials h4 {
+.coming-soon .socials h4 {
   font-size: 1.25rem;
   font-weight: 600;
 }
 
-.social-icons {
+.coming-soon .social-icons {
   display: flex;
   gap: 1.5rem;
   justify-content: center;
 }
 
-.social-icons a {
+.coming-soon .social-icons a {
   background: gray;
   width: 48px;
   height: 48px;
@@ -126,28 +126,28 @@ body {
   transition: transform 0.3s ease;
 }
 
-.social-icons a:hover {
+.coming-soon .social-icons a:hover {
   transform: scale(1.1);
 }
 
-.social-icons img {
+.coming-soon .social-icons img {
   width: 24px;
   height: 24px;
 }
 
-.video-section h3 {
+.coming-soon .video-section h3 {
   font-size: 1.75rem;
   font-weight: bold;
   margin-bottom: 1rem;
 }
 
-.video-section p {
+.coming-soon .video-section p {
   font-size: 1.125rem;
   max-width: 500px;
   margin: 0 auto;
 }
 
-.video-container {
+.coming-soon .video-container {
   width: 100%;
   max-width: 640px;
   aspect-ratio: 16 / 9;
@@ -157,18 +157,18 @@ body {
   box-shadow: 0 0 10px rgba(0,0,0,0.5);
 }
 
-.video-container video {
+.coming-soon .video-container video {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
 
-.workshops {
+.coming-soon .workshops {
   width: 240px;
   position: relative;
 }
 
-.workshops summary {
+.coming-soon .workshops summary {
   background: rgba(255, 255, 255, 0.1);
   border: 1px solid rgba(255, 255, 255, 0.2);
   border-radius: 0.5rem;
@@ -178,11 +178,11 @@ body {
   transition: background 0.3s ease;
 }
 
-.workshops summary:hover {
+.coming-soon .workshops summary:hover {
   background: rgba(255, 255, 255, 0.2);
 }
 
-.dropdown {
+.coming-soon .dropdown {
   position: absolute;
   top: 100%;
   left: 0;
@@ -199,7 +199,7 @@ body {
   color: black;
 }
 
-.dropdown a {
+.coming-soon .dropdown a {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -208,16 +208,16 @@ body {
   transition: color 0.3s ease;
 }
 
-.dropdown a:hover {
+.coming-soon .dropdown a:hover {
   color: #d97706;
 }
 
-.dropdown img {
+.coming-soon .dropdown img {
   width: 16px;
   height: 16px;
 }
 
-footer {
+.coming-soon + footer {
   text-align: center;
   padding: 1.5rem;
   font-size: 0.875rem;
@@ -225,7 +225,7 @@ footer {
 }
 
 @media (max-width: 1200px) {
-  body {
+  .coming-soon {
     padding: 1rem;
     overflow-x: hidden;
     display: flex;
@@ -233,15 +233,19 @@ footer {
     align-items: center;
     justify-content: center;
   }
-  .hero-section {
+
+  .coming-soon .hero-section {
     margin-top: 5rem;
   }
-  .container {
+
+  .coming-soon .container {
     flex-direction: column;
     height: auto;
     align-items: center;
   }
-  .hero-section, .video-section {
+
+  .coming-soon .hero-section,
+  .coming-soon .video-section {
     width: 90%;
     padding: 0;
     display: flex;
@@ -250,27 +254,35 @@ footer {
     justify-content: center;
   }
 }
+
 @media (max-width: 480px) {
-  .hero-title {
+  .coming-soon .hero-title {
     font-size: 2.5rem;
   }
-  .hero-subtitle {
+
+  .coming-soon .hero-subtitle {
     font-size: 2rem;
   }
-  .hero-date {
+
+  .coming-soon .hero-date {
     font-size: 1rem;
   }
-  .hero-description {
+
+  .coming-soon .hero-description {
     font-size: 1rem;
   }
-  .email-box form > input, .email-box form > button {
+
+  .coming-soon .email-box form > input,
+  .coming-soon .email-box form > button {
     padding: 0.5rem;
     font-size: 0.7rem;
   }
-  .video-section h3 {
+
+  .coming-soon .video-section h3 {
     font-size: 1.25rem;
   }
-  .video-section p {
+
+  .coming-soon .video-section p {
     font-size: 0.875rem;
   }
 }

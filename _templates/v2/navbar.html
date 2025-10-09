@@ -1,0 +1,80 @@
+<nav class="navbar">
+    <div class="navbar-container">
+        {# Logo and Name #}
+        <div class="navbar-logo-section">
+            <img
+                src="_static/images/icons/dipy-logo.png"
+                alt="DIPY Logo"
+                width="32"
+                height="32"
+                class="navbar-logo-image"
+            />
+            <span class="navbar-logo-text">DIPY</span>
+        </div>
+
+        {# Decorative Arrow connecting logo to nav #}
+        <div class="navbar-arrow">
+            <svg viewBox="0 0 240 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                    d="M2 12 L230 12 M230 12 L224 8 M230 12 L224 16"
+                    stroke="white"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    opacity="0.3"
+                />
+            </svg>
+        </div>
+
+        {# Navigation Links #}
+        <ul class="navbar-nav">
+            <li>
+                <a href="#home" class="navbar-nav-item">
+                    Home
+                </a>
+            </li>
+            <li>
+                <a href="#about" class="navbar-nav-item">
+                    About
+                </a>
+            </li>
+            <li>
+                <a href="#speakers" class="navbar-nav-item">
+                    Speakers
+                </a>
+            </li>
+            <li>
+                <a href="#why" class="navbar-nav-item">
+                    Why?
+                </a>
+            </li>
+            <li>
+                <a href="#highlights" class="navbar-nav-item">
+                    Highlights
+                </a>
+            </li>
+            <li>
+                <a href="#schedule" class="navbar-nav-item">
+                    Schedule
+                </a>
+            </li>
+            <li>
+                <a href="#registration" class="navbar-nav-item">
+                    Registration
+                </a>
+            </li>
+            <li>
+                <a href="#contact" class="navbar-nav-item">
+                    Contact
+                </a>
+            </li>
+        </ul>
+
+        {# Mobile Menu Button #}
+        <button class="navbar-mobile-button" id="mobile-menu-button">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+        </button>
+    </div>
+</nav>

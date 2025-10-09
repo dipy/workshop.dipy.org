@@ -1,0 +1,67 @@
+<section id="speakers" class="speakers-section">
+    {# Background Decorative Elements #}
+    <div class="speakers-decorative-top"></div>
+    <div class="speakers-decorative-bottom"></div>
+
+    <div class="speakers-container">
+        {# Section Header #}
+        <div class="speakers-header">
+            <h2 class="speakers-title">
+                {{ title }}
+            </h2>
+            <div class="title-underline title-underline-sm"></div>
+            {% if subtitle %}
+            <p class="speakers-subtitle">
+                {{ subtitle }}
+            </p>
+            {% endif %}
+        </div>
+
+        {# Speakers Grid #}
+        <div class="speakers-grid">
+            {% for speaker in speakers %}
+            <div class="speaker-card-wrapper">
+                {# Card #}
+                <div class="speaker-card">
+                    {# Image Container #}
+                    <div class="speaker-image-container">
+                        {% if speaker.image %}
+                            {% set image_path = speaker.image %}
+                            {% if image_path and not image_path.startswith('/') and not image_path.startswith('http') %}
+                                {% set image_src = '_static/images/speakers/' + image_path %}
+                            {% else %}
+                                {% set image_src = image_path %}
+                            {% endif %}
+                            <img src="{{ image_src }}" alt="{{ speaker.name }}" class="speaker-image" />
+                        {% endif %}
+                        {# Gradient Overlay #}
+                        <div class="speaker-image-gradient"></div>
+                    </div>
+
+                    {# Content #}
+                    <div class="speaker-content">
+                        <h3 class="speaker-name">
+                            {{ speaker.name|title }}
+                        </h3>
+                        <p class="speaker-role">
+                            {{ speaker.title }}
+                        </p>
+                        <p class="speaker-university">
+                            {{ speaker.affiliation }}
+                        </p>
+                    </div>
+
+                    {# Decorative Corner #}
+                    <div class="speaker-decorative-corner"></div>
+                </div>
+
+                {# Hover Glow Effect #}
+                <div class="speaker-hover-glow"></div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+
+    {# Section Separator #}
+    <div class="section-separator"></div>
+</section>

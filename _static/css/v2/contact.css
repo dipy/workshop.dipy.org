@@ -1,0 +1,163 @@
+/* Contact Section Styles */
+.contact-section {
+  position: relative;
+  background-color: black;
+  padding: 4rem 0;
+}
+
+.contact-container {
+  max-width: 64rem;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.contact-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.contact-title {
+  font-size: 2.25rem;
+  font-weight: 700;
+  color: white;
+  margin-bottom: 1rem;
+}
+
+/* Use .title-underline and .title-underline-md from utils.css */
+
+.contact-subtitle {
+  font-size: 1.25rem;
+  color: #9CA3AF;
+  max-width: 48rem;
+  margin: 0 auto;
+}
+
+.contact-cards-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  max-width: 56rem;
+  margin: 0 auto;
+}
+
+.contact-card {
+  position: relative;
+  background: linear-gradient(to bottom right, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.03));
+  backdrop-filter: blur(20px) saturate(150%);
+  -webkit-backdrop-filter: blur(20px) saturate(150%);
+  border-radius: 1rem;
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  transition: all 0.3s;
+  padding: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  text-decoration: none;
+}
+
+.contact-card:hover {
+  border-color: #F58F00;
+  box-shadow: 0 20px 25px -5px rgba(245, 143, 0, 0.2);
+}
+
+.contact-icon-container {
+  width: 4rem;
+  height: 4rem;
+  margin-bottom: 1.5rem;
+  background-color: rgba(245, 143, 0, 0.1);
+  border-radius: 0.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s;
+}
+
+.contact-card:hover .contact-icon-container {
+  background-color: #F58F00;
+}
+
+.contact-icon {
+  width: 2rem;
+  height: 2rem;
+  color: #F58F00;
+  transition: color 0.3s;
+}
+
+.contact-card:hover .contact-icon {
+  color: black;
+}
+
+.contact-card-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: white;
+  margin-bottom: 0.75rem;
+}
+
+.contact-card-description {
+  color: #9CA3AF;
+  margin-bottom: 1rem;
+  font-size: 0.875rem;
+}
+
+.contact-card-link {
+  color: #F58F00;
+  font-weight: 600;
+  font-size: 1.125rem;
+}
+
+.contact-card-link-small {
+  font-size: 0.875rem;
+}
+
+
+/* Responsive Styles */
+@media (min-width: 640px) {
+  .contact-section {
+    padding: 5rem 0;
+  }
+
+  .contact-container {
+    padding: 0 1.5rem;
+  }
+
+  .contact-title {
+    font-size: 3rem;
+  }
+
+  /* Responsive width handled by .title-underline-md in utils.css */
+
+  .contact-subtitle {
+    font-size: 1.5rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .contact-section {
+    padding: 6rem 0;
+  }
+
+  .contact-container {
+    padding: 0 2rem;
+  }
+
+  .contact-header {
+    margin-bottom: 4rem;
+  }
+
+  .contact-title {
+    font-size: 3.75rem;
+  }
+
+  .contact-cards-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .contact-section {
+    padding: 8rem 0;
+  }
+}

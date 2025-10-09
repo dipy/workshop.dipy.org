@@ -1,0 +1,131 @@
+<section class="hero-section" id="home">
+    {# Background Carousel #}
+    <div class="hero-background-container">
+        {% for bg in home_slides %}
+        <div class="hero-background-image {% if loop.index0 == 0 %}active{% endif %}">
+            <img src="{{ bg.image }}" alt="{{ bg.alt }}" />
+        </div>
+        {% endfor %}
+        {# Dark overlay for better text readability #}
+        <div class="hero-overlay"></div>
+    </div>
+
+    {# Content #}
+    <div class="hero-content">
+        {# Top Left - Title and Date #}
+        <div class="hero-title-section">
+            <h1 class="hero-title">
+                DIPY WORKSHOP {{ workshop.year }}
+            </h1>
+            <div class="title-underline-heading"></div>
+            <p class="hero-subtitle">
+                {{ workshop.codename }}
+            </p>
+            <div class="hero-info">
+                <div class="hero-info-item">
+                    <svg class="hero-info-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+                    </svg>
+                    <span>{{ workshop.start_date.strftime('%B %d') }} - {{ workshop.end_date.strftime('%B %d, %Y') }}</span>
+                </div>
+                <div class="hero-info-item">
+                    <svg class="hero-info-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                    </svg>
+                    <span>{{ workshop.team_location }}</span>
+                </div>
+            </div>
+        </div>
+
+        {# Bottom Left - Registration Card #}
+        <div class="hero-registration-container" id="hero-registration-container">
+            <div class="hero-registration-card">
+                <h3 class="hero-registration-title" id="countdown-title">
+                    <b>Registration</b> has been started
+                </h3>
+                <p class="hero-registration-subtitle">Time left to register:</p>
+
+                {# Countdown Timer #}
+                <div class="hero-countdown-grid" id="countdown">
+                    <div class="hero-countdown-item">
+                        <div class="hero-countdown-box">
+                            <span class="hero-countdown-number days time">00</span>
+                        </div>
+                        <span class="hero-countdown-label">DAYS</span>
+                    </div>
+                    <div class="hero-countdown-item">
+                        <div class="hero-countdown-box">
+                            <span class="hero-countdown-number hours time">00</span>
+                        </div>
+                        <span class="hero-countdown-label">HOURS</span>
+                    </div>
+                    <div class="hero-countdown-item">
+                        <div class="hero-countdown-box">
+                            <span class="hero-countdown-number minutes time">00</span>
+                        </div>
+                        <span class="hero-countdown-label">MINS</span>
+                    </div>
+                    <div class="hero-countdown-item">
+                        <div class="hero-countdown-box">
+                            <span class="hero-countdown-number seconds time">00</span>
+                        </div>
+                        <span class="hero-countdown-label">SECS</span>
+                    </div>
+                </div>
+
+                {# Register Button #}
+                <div id="reg-countdown-stop">
+                    <a href="#registration" role="button" class="hero-register-button">
+                        Register Now
+                    </a>
+                </div>
+
+                <small id="reg-countdown-title" style="display: none;">
+                    <b>Registration</b> will start in ...
+                </small>
+
+                <div id="reg-countdown" class="hero-countdown-grid">
+                    <div class="hero-countdown-item">
+                        <div class="hero-countdown-box">
+                            <span class="hero-countdown-number days time">00</span>
+                        </div>
+                        <span class="hero-countdown-label">DAYS</span>
+                    </div>
+                    <div class="hero-countdown-item">
+                        <div class="hero-countdown-box">
+                            <span class="hero-countdown-number hours time">00</span>
+                        </div>
+                        <span class="hero-countdown-label">HOURS</span>
+                    </div>
+                    <div class="hero-countdown-item">
+                        <div class="hero-countdown-box">
+                            <span class="hero-countdown-number minutes time">00</span>
+                        </div>
+                        <span class="hero-countdown-label">MINS</span>
+                    </div>
+                    <div class="hero-countdown-item">
+                        <div class="hero-countdown-box">
+                            <span class="hero-countdown-number seconds time">00</span>
+                        </div>
+                        <span class="hero-countdown-label">SECS</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+        setupHomeCarousel(".hero-background-container", ".hero-background-image");
+        initializeClock("countdown", "{{ workshop.reg_start_date }}", "{{ workshop.iso_start_date }}", []);
+        initializeClock("reg-countdown", 0, "{{ workshop.reg_start_date }}", []);
+        setTimeout(() => {
+            hideAfterDate("{{ workshop.iso_end_date }}", "hero-registration-container");
+            messageAfterDate(
+                "{{ workshop.iso_end_date }}",
+                "countdown-stop",
+                "<b>Workshop</b> has been ended. <br/> See you next year!");
+        }, 1000);
+    </script>
+</section>

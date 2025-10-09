@@ -18,7 +18,12 @@ class PricingListDirective(SphinxDirective):
         "template": directives.path,
         "title": directives.unchanged,
         "subtitle": directives.unchanged,
+        "note": directives.unchanged,
+        "description": directives.unchanged,
         "columns": directives.unchanged,
+        "section_title": directives.unchanged,
+        "section_subtitle": directives.unchanged,
+        "wrap_section": directives.flag,
     }
 
     def run(self):
@@ -39,9 +44,10 @@ class PricingListDirective(SphinxDirective):
                 item = {
                     "name": node.get("name", ""),
                     "currency": node.get("currency", "$"),
-                    "price": node.get("price", "0"),
-                    "discount": node.get("discount", "0"),
+                    "price": float(node.get("price", "0")),
+                    "discount": float(node.get("discount", "0")),
                     "registration_link": node.get("registration_link", "#"),
+                    "popular": node.get("popular", False),
                     "features": [],
                 }
 
@@ -72,8 +78,13 @@ class PricingListDirective(SphinxDirective):
                 pricing_items=pricing_items,
                 title=self.options.get("title", ""),
                 subtitle=self.options.get("subtitle", ""),
+                note=self.options.get("note", ""),
+                description=self.options.get("description", ""),
                 columns=columns,
                 padding=f"p-l-{10 * columns}",
+                section_title=self.options.get("section_title", ""),
+                section_subtitle=self.options.get("section_subtitle", ""),
+                wrap_section="wrap_section" in self.options,
             )
 
             # Create a raw HTML node with the rendered content
@@ -97,6 +108,7 @@ class PricingItemDirective(SphinxDirective):
         "price": directives.unchanged,
         "discount": directives.unchanged,
         "registration_link": directives.unchanged,
+        "popular": directives.flag,
     }
 
     def run(self):
@@ -110,6 +122,7 @@ class PricingItemDirective(SphinxDirective):
         pricing_item["price"] = self.options.get("price", "0")
         pricing_item["discount"] = self.options.get("discount", "0")
         pricing_item["registration_link"] = self.options.get("registration_link", "#")
+        pricing_item["popular"] = "popular" in self.options
 
         # Process the content (features list)
         self.state.nested_parse(self.content, self.content_offset, pricing_item)

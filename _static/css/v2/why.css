@@ -1,0 +1,323 @@
+/* Why Section Styles */
+.why-section {
+  position: relative;
+  background-color: white;
+  padding: 4rem 0;
+  overflow: hidden;
+}
+
+.why-decorative-top {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 24rem;
+  height: 24rem;
+  background-color: rgba(245, 143, 0, 0.05);
+  border-radius: 9999px;
+  filter: blur(64px);
+}
+
+.why-decorative-bottom {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 24rem;
+  height: 24rem;
+  background-color: rgba(245, 143, 0, 0.05);
+  border-radius: 9999px;
+  filter: blur(64px);
+}
+
+.why-container {
+  position: relative;
+  max-width: 80rem;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.why-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.why-title {
+  font-size: 1.875rem;
+  font-weight: 700;
+  color: black;
+  margin-bottom: 1rem;
+}
+
+/* Use .title-underline and .title-underline-sm from utils.css */
+
+.why-subtitle {
+  font-size: 1.125rem;
+  color: #4B5563;
+  max-width: 48rem;
+  margin: 0 auto;
+}
+
+.why-reasons-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.why-reason-row {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+.why-reason-row.reverse {
+  flex-direction: column;
+}
+
+.why-icon-side {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.why-icon-container {
+  position: relative;
+}
+
+.why-number-background {
+  position: absolute;
+  top: -2rem;
+  left: -2rem;
+  font-size: 6rem;
+  font-weight: 700;
+  color: rgba(245, 143, 0, 0.1);
+  user-select: none;
+}
+
+.why-icon-box {
+  position: relative;
+  background: linear-gradient(to bottom right, rgba(245, 143, 0, 0.2), rgba(245, 143, 0, 0.05));
+  border: 2px solid rgba(245, 143, 0, 0.3);
+  border-radius: 1.5rem;
+  padding: 2rem;
+  transition: all 0.3s;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+.why-reason-row:hover .why-icon-box {
+  border-color: rgba(245, 143, 0, 0.6);
+  transform: scale(1.1);
+}
+
+.why-icon {
+  font-size: 3.75rem;
+}
+
+.why-content-side {
+  width: 100%;
+}
+
+.why-content-card {
+  background: linear-gradient(to bottom right, rgba(249, 250, 251, 0.98), rgba(255, 255, 255, 0.95));
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid #E5E7EB;
+  border-radius: 1rem;
+  padding: 1.5rem;
+  transition: all 0.3s;
+}
+
+.why-reason-row:hover .why-content-card {
+  border-color: rgba(245, 143, 0, 0.5);
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+.why-content-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: black;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.why-content-number {
+  color: #F58F00;
+}
+
+.why-content-description {
+  font-size: 1rem;
+  color: #374151;
+  line-height: 1.75;
+  margin-bottom: 1rem;
+}
+
+.why-levels-grid {
+  margin-top: 1.5rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.75rem;
+}
+
+.why-level-item {
+  background-color: rgba(245, 143, 0, 0.1);
+  border: 1px solid rgba(245, 143, 0, 0.3);
+  border-radius: 0.5rem;
+  padding: 0.75rem 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.why-level-letter {
+  color: #F58F00;
+  font-weight: 700;
+  font-size: 1.125rem;
+}
+
+.why-level-text {
+  color: #1F2937;
+  font-weight: 500;
+}
+
+
+/* Responsive Styles */
+@media (min-width: 640px) {
+  .why-section {
+    padding: 5rem 0;
+  }
+
+  .why-container {
+    padding: 0 1.5rem;
+  }
+
+  .why-title {
+    font-size: 2.25rem;
+  }
+
+  /* Responsive width handled by .title-underline-sm in utils.css */
+
+  .why-subtitle {
+    font-size: 1.25rem;
+  }
+
+  .why-icon-box {
+    padding: 2.5rem;
+  }
+
+  .why-icon {
+    font-size: 4.5rem;
+  }
+
+  .why-content-card {
+    padding: 2rem;
+  }
+
+  .why-content-title {
+    font-size: 1.875rem;
+  }
+
+  .why-content-description {
+    font-size: 1.125rem;
+  }
+
+  .why-levels-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .why-number-background {
+    font-size: 7rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .why-section {
+    padding: 6rem 0;
+  }
+
+  .why-container {
+    padding: 0 2rem;
+  }
+
+  .why-header {
+    margin-bottom: 4rem;
+  }
+
+  .why-title {
+    font-size: 3rem;
+  }
+
+  .why-title-underline {
+    margin-bottom: 2rem;
+  }
+
+  .why-subtitle {
+    font-size: 1.5rem;
+  }
+
+  .why-reasons-container {
+    gap: 3rem;
+  }
+
+  .why-reason-row {
+    flex-direction: row;
+    gap: 2rem;
+  }
+
+  .why-reason-row.reverse {
+    flex-direction: row-reverse;
+  }
+
+  .why-icon-side {
+    width: 33.333333%;
+  }
+
+  .why-content-side {
+    width: 66.666667%;
+  }
+
+  .why-icon-box {
+    padding: 3rem;
+  }
+
+  .why-icon {
+    font-size: 5rem;
+  }
+
+  .why-content-card {
+    padding: 2.5rem;
+  }
+
+  .why-content-title {
+    font-size: 2.25rem;
+  }
+
+  .why-content-description {
+    font-size: 1.25rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .why-section {
+    padding: 8rem 0;
+  }
+
+  .why-container {
+    padding: 0 3rem;
+  }
+
+  .why-header {
+    margin-bottom: 5rem;
+  }
+
+  .why-title {
+    font-size: 3.75rem;
+  }
+
+  /* Responsive width handled by .title-underline-sm in utils.css */
+
+  .why-reason-row {
+    gap: 3rem;
+  }
+}

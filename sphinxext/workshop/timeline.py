@@ -1,8 +1,5 @@
-import os
-
 from docutils import nodes
 from docutils.parsers.rst import directives
-from jinja2 import Environment, FileSystemLoader
 from sphinx.util import logging
 from sphinx.util.docutils import SphinxDirective
 
@@ -17,6 +14,7 @@ class TimelineItemDirective(SphinxDirective):
     option_spec = {
         "time": directives.unchanged,
         "title": directives.unchanged,
+        "info": directives.unchanged,
         "speaker": directives.unchanged,
         "image": directives.unchanged,
     }
@@ -38,6 +36,7 @@ class TimelineItemDirective(SphinxDirective):
         item_info = {
             "time": self.options.get("time", ""),
             "title": self.options.get("title", "TBA"),
+            "info": self.options.get("info", ""),
             "speaker": self.options.get("speaker", "TBA"),
             "image": self.options.get("image"),
         }
@@ -56,16 +55,13 @@ class TimelineDirective(SphinxDirective):
         "title": directives.unchanged_required,
         "subtitle": directives.unchanged,
         "date": directives.unchanged,
-        "template": directives.unchanged_required,
+        "template": directives.unchanged,  # Optional, for backwards compatibility
     }
 
     def run(self):
         env = self.env
-        app = env.app
 
-        # --- Initialize context for nested items ---
-        # Store previous context if exists (for nested timelines, though unlikely here)
-        # prev_items_context = getattr(env, 'current_timeline_items', None)
+        # Initialize collection for this timeline's items
         env.current_timeline_items = []
 
         # Parse the content to run nested TimelineItemDirectives
@@ -75,16 +71,7 @@ class TimelineDirective(SphinxDirective):
         # Data collected by TimelineItemDirective is now in env.current_timeline_items
         collected_items = env.current_timeline_items
 
-        # Restore previous context if needed
-        # env.current_timeline_items = prev_items_context
-
-        # --- Prepare data for template ---
-        template_name = self.options.get("template")
-        if not template_name:
-            msg = "Timeline directive requires a :template: option."
-            logger.error(msg, location=self.get_location())
-            return [nodes.error(None, nodes.paragraph(text=msg))]
-
+        # Prepare timeline data
         timeline_data = {
             "title": self.options.get("title", ""),
             "subtitle": self.options.get("subtitle", ""),
@@ -92,39 +79,12 @@ class TimelineDirective(SphinxDirective):
             "timeline_entries": collected_items,
         }
 
-        # --- Render Jinja Template ---
-        if template_name.startswith("/"):
-            template_abs_path = os.path.join(env.srcdir, template_name[1:])
-        else:
-            doc_dir = os.path.dirname(env.doc2path(env.docname, base=None))
-            template_abs_path = os.path.join(doc_dir, template_name)
+        # Add this timeline to the workshop_timelines collection
+        if not hasattr(env, "workshop_timelines"):
+            env.workshop_timelines = []
 
-        template_dir = os.path.dirname(template_abs_path)
-        template_basename = os.path.basename(template_abs_path)
+        env.workshop_timelines.append(timeline_data)
 
-        # Need HTML builder for pathto helper
-        if app.builder.format != "html":
-            html_builder = app.env.app.registry.create_builder(app, "html")
-        else:
-            html_builder = app.builder
-
-        try:
-            jinja_loader = FileSystemLoader(template_dir)
-            jinja_env = Environment(loader=jinja_loader, autoescape=True)
-            jinja_env.globals["pathto"] = (
-                lambda filename, *args: html_builder.get_relative_uri(
-                    env.docname, filename
-                )
-            )
-            template = jinja_env.get_template(template_basename)
-            rendered_html = template.render(timeline=timeline_data)
-        except Exception as e:
-            err_msg = f'Error rendering timeline template "{template_name}": {e}'
-            logger.error(err_msg, location=self.get_location())
-            return [nodes.error(None, nodes.paragraph(text=err_msg))]
-
-        # Create a raw HTML node
-        html_node = nodes.raw(text=rendered_html, format="html")
-
-        # Return the rendered HTML (could wrap in a container if needed)
-        return [html_node]
+        # This directive doesn't render anything itself
+        # The parent ScheduleDirective will render all timelines
+        return []

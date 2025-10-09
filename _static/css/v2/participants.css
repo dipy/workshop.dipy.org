@@ -1,0 +1,146 @@
+/* Participants Section Styles */
+.participants-section {
+  position: relative;
+  background-color: white;
+  padding: 4rem 0;
+  overflow: hidden;
+}
+
+.participants-container {
+  position: relative;
+  max-width: 80rem;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.participants-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.participants-title {
+  font-size: 1.875rem;
+  font-weight: 700;
+  color: black;
+  margin-bottom: 1rem;
+}
+
+/* Use .title-underline and .title-underline-sm from utils.css */
+
+.participants-subtitle {
+  font-size: 1.125rem;
+  color: #4B5563;
+  max-width: 48rem;
+  margin: 0 auto;
+}
+
+.participants-carousel-container {
+  position: relative;
+}
+
+.participants-slide-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 0.5rem;
+}
+
+.participants-logo-wrapper {
+  position: relative;
+  width: 100%;
+  height: 8rem;
+  background-color: white;
+  border: 2px solid #E5E7EB;
+  border-radius: 0.75rem;
+  padding: 1.5rem;
+  transition: all 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.participants-logo-wrapper:hover {
+  border-color: #F58F00;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  transform: scale(1.1);
+}
+
+.participants-logo-image {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  filter: grayscale(100%);
+  transition: filter 0.3s;
+}
+
+.participants-logo-wrapper:hover .participants-logo-image {
+  filter: grayscale(0%);
+}
+
+
+/* Responsive Styles */
+@media (min-width: 640px) {
+  .participants-section {
+    padding: 5rem 0;
+  }
+
+  .participants-container {
+    padding: 0 1.5rem;
+  }
+
+  .participants-title {
+    font-size: 2.25rem;
+  }
+
+  /* Responsive width handled by .title-underline-sm in utils.css */
+
+  .participants-subtitle {
+    font-size: 1.25rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .participants-section {
+    padding: 6rem 0;
+  }
+
+  .participants-container {
+    padding: 0 2rem;
+  }
+
+  .participants-header {
+    margin-bottom: 4rem;
+  }
+
+  .participants-title {
+    font-size: 3rem;
+  }
+
+  .participants-title-underline {
+    margin-bottom: 2rem;
+  }
+
+  .participants-subtitle {
+    font-size: 1.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .participants-section {
+    padding: 8rem 0;
+  }
+
+  .participants-container {
+    padding: 0 3rem;
+  }
+
+  .participants-header {
+    margin-bottom: 5rem;
+  }
+
+  .participants-title {
+    font-size: 3.75rem;
+  }
+
+  /* Responsive width handled by .title-underline-sm in utils.css */
+}

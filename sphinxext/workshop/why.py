@@ -45,6 +45,7 @@ class WhyDirective(SphinxDirective):
     final_argument_whitespace = True
     option_spec = {
         "template": directives.unchanged_required,  # Template path is required
+        "title": directives.unchanged,
         "subtitle": directives.unchanged,  # Optional subtitle for the section
     }
 
@@ -86,7 +87,9 @@ class WhyDirective(SphinxDirective):
             )
             template = jinja_env.get_template(template_basename)
             rendered_html = template.render(
-                why_items=env.workshop_why, subtitle=self.options.get("subtitle", "")
+                why_items=env.workshop_why,
+                title=self.options.get("title", "Why Attend?"),
+                subtitle=self.options.get("subtitle", ""),
             )
         except Exception as e:
             err_msg = f'Error rendering timeline template "{template_name}": {e}'

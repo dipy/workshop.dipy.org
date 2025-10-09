@@ -2,11 +2,13 @@ from sphinx.application import Sphinx
 
 from .about import AboutDirective
 from .carousel import CarouselDirective, CarouselItemDirective
+from .contact import ContactDirective, ContactItemDirective
 from .home import HomeDirective, HomeSlideDirective
 from .participants import ParticipantItemDirective, ParticipantsDirective
 from .pricing import PricingItemDirective, PricingListDirective
 from .schedule import ScheduleDirective
 from .speakers import SpeakerItemDirective, SpeakersDirective
+from .thanks import ThanksDirective, ThanksItemDirective
 from .timeline import TimelineDirective, TimelineItemDirective
 from .why import WhyDirective, WhyItemDirective
 
@@ -32,9 +34,10 @@ def setup(app: Sphinx):
     app.add_directive("carousel-item", CarouselItemDirective)
     app.add_directive("workshop-why", WhyDirective)
     app.add_directive("workshop-why-item", WhyItemDirective)
-    # app.add_directive("workshop-registration", RegistrationDirective)
-    # app.add_directive("workshop-contact", ContactDirective)
-    # app.add_directive("workshop-why", WhyDirective)
+    app.add_directive("workshop-contact", ContactDirective)
+    app.add_directive("workshop-contact-item", ContactItemDirective)
+    app.add_directive("workshop-thanks", ThanksDirective)
+    app.add_directive("workshop-thanks-item", ThanksItemDirective)
     # app.add_directive(
     #     "workshop-highlights", HighlightsDirective
     # ) # May need splitting (desktop/mobile) or CSS handling

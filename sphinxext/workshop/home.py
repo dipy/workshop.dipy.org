@@ -118,9 +118,11 @@ class HomeDirective(SphinxDirective):
             "location": self.options.get("location", ""),
             "team_location": self.options.get("team_location", ""),
             "year": self.options.get("year", ""),
-            "start_date": iso_start_date,
-            "end_date": end_date.isoformat(),
-            "reg_start_date": iso_reg_start_date,
+            "start_date": start_date,  # Pass datetime object
+            "end_date": end_date,  # Pass datetime object
+            "iso_start_date": iso_start_date,  # Keep ISO for JS
+            "iso_end_date": end_date.isoformat(),  # Keep ISO for JS
+            "reg_start_date": iso_reg_start_date,  # Keep ISO for JS
         }
 
         try:

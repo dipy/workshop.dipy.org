@@ -2,7 +2,14 @@
 
 {% block header %}
 {{ super() }}
+{% endblock %}
 
+{% block docs_navbar%}
+{% if pagename.isdigit() and pagename|int < 2026 %}
+{{ super() }}
+{% else %}
+{% include "v2/navbar.html" %}
+{% endif %}
 {% endblock %}
 
 {% block footer %}
