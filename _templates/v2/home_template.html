@@ -76,7 +76,11 @@
 
                 {# Register Button #}
                 <div id="reg-countdown-stop">
+                    {% if workshop.registration_link %}
+                    <a href={{ workshop.registration_link }} role="button" class="hero-register-button">
+                    {% else %}
                     <a href="#registration" role="button" class="hero-register-button">
+                    {% endif %}
                         Register Now
                     </a>
                 </div>

@@ -154,7 +154,9 @@
   font-weight: 500;
 }
 
-.hero-register-button {
+.hero-register-button,
+.hero-register-button:link,
+.hero-register-button:visited {
   display: block;
   width: 100%;
   background-color: #F58F00;

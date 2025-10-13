@@ -17,6 +17,7 @@
    :end_date: 2026-03-20 17:00
    :location: Online
    :team_location: Bloomington, IN
+   :registration_link: https://iubgrg-fireform.eas.iu.edu/online/form/index/grgdw2026
 
    .. workshop-home-slide:: _static/images/background/bg1-min.png
       :alt: dw_2026_bg_1

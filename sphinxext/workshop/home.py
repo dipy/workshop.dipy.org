@@ -53,6 +53,7 @@ class HomeSlideDirective(SphinxDirective):
         "location": directives.unchanged,  # Optional location
         "team_location": directives.unchanged,  # Optional team location
         "year": directives.unchanged,  # Optional year for the workshop
+        "registration_link": directives.unchanged,  # Optional registration link
     }
 
     def run(self):
@@ -85,6 +86,7 @@ class HomeDirective(SphinxDirective):
         "location": directives.unchanged,  # Optional location
         "team_location": directives.unchanged,  # Optional team location
         "year": directives.unchanged,  # Optional year for the workshop
+        "registration_link": directives.unchanged,  # Optional registration link
     }
 
     def run(self):
@@ -123,6 +125,7 @@ class HomeDirective(SphinxDirective):
             "iso_start_date": iso_start_date,  # Keep ISO for JS
             "iso_end_date": end_date.isoformat(),  # Keep ISO for JS
             "reg_start_date": iso_reg_start_date,  # Keep ISO for JS
+            "registration_link": self.options.get("registration_link", ""),
         }
 
         try:
