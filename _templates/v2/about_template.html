@@ -21,47 +21,21 @@
 
             {# Stats Cards #}
             <div class="about-stats-grid">
+                {% for card in stat_cards %}
                 <div class="about-stat-card">
                     <div class="about-stat-content">
                         <div class="about-stat-icon">
-                            🏆
+                            {{ card.icon }}
                         </div>
                         <div class="about-stat-number">
-                            17
+                            {{ card.number }}
                         </div>
                         <div class="about-stat-label">
-                            Years of Excellence
+                            {{ card.label }}
                         </div>
                     </div>
                 </div>
-
-                <div class="about-stat-card">
-                    <div class="about-stat-content">
-                        <div class="about-stat-icon">
-                            👤
-                        </div>
-                        <div class="about-stat-number">
-                            2000+
-                        </div>
-                        <div class="about-stat-label">
-                            Participants Worldwide
-                        </div>
-                    </div>
-                </div>
-
-                <div class="about-stat-card">
-                    <div class="about-stat-content">
-                        <div class="about-stat-icon">
-                            🎤
-                        </div>
-                        <div class="about-stat-number">
-                            100+
-                        </div>
-                        <div class="about-stat-label">
-                            Distinguished Speakers
-                        </div>
-                    </div>
-                </div>
+                {% endfor %}
             </div>
         </div>
 

@@ -9,6 +9,34 @@ from sphinx.util.docutils import SphinxDirective
 logger = logging.getLogger(__name__)
 
 
+class AboutStatCardDirective(SphinxDirective):
+    """Directive for individual stat cards within the about section."""
+
+    has_content = False
+    required_arguments = 0
+    optional_arguments = 0
+    option_spec = {
+        "icon": directives.unchanged_required,  # Icon/emoji for the stat
+        "number": directives.unchanged_required,  # The stat number
+        "label": directives.unchanged_required,  # Description label
+    }
+
+    def run(self):
+        # Store stat card data in environment
+        if not hasattr(self.env, "about_stat_cards"):
+            self.env.about_stat_cards = []
+
+        stat_card = {
+            "icon": self.options.get("icon", ""),
+            "number": self.options.get("number", ""),
+            "label": self.options.get("label", ""),
+        }
+        self.env.about_stat_cards.append(stat_card)
+
+        # Return empty node as the parent directive will render everything
+        return []
+
+
 class AboutDirective(SphinxDirective):
     has_content = True
     required_arguments = 0
@@ -22,6 +50,35 @@ class AboutDirective(SphinxDirective):
     def run(self):
         env = self.env
         app = env.app
+
+        # Initialize stat cards storage
+        env.about_stat_cards = []
+
+        # Parse nested content to collect stat cards
+        node = nodes.container()
+        self.state.nested_parse(self.content, self.content_offset, node)
+
+        # Extract text content (non-directive lines)
+        # Simpler approach: just filter out directive-related lines
+        note_content = []
+        skip_until_blank = False
+        for line in self.content:
+            stripped = line.strip()
+            # If we encounter a directive, skip it and its options
+            if stripped.startswith(".. about-stat-card::"):
+                skip_until_blank = True
+                continue
+            # Skip option lines that start with ":"
+            if skip_until_blank and (stripped.startswith(":") or not stripped):
+                if not stripped:  # Empty line ends the directive
+                    skip_until_blank = False
+                continue
+            # Reset skip flag if we hit non-option content
+            if skip_until_blank and stripped and not stripped.startswith(":"):
+                skip_until_blank = False
+            # Add content lines
+            if not skip_until_blank:
+                note_content.append(line)
 
         template_name = self.options.get("template", "_templates/about_template.html")
 
@@ -52,7 +109,8 @@ class AboutDirective(SphinxDirective):
             rendered_html = template.render(
                 watermark_image_url=self.options.get("watermark_image_url", ""),
                 note_name=self.options.get("note_name", ""),
-                note_content=self.content,
+                note_content=note_content,
+                stat_cards=env.about_stat_cards,
             )
         except Exception as e:
             err_msg = f'Error rendering timeline template "{template_name}": {e}'

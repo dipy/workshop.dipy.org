@@ -19,12 +19,6 @@
    :team_location: Bloomington, IN
    :registration_link: https://iubgrg-fireform.eas.iu.edu/online/form/index/grgdw2026
 
-   .. workshop-home-slide:: _static/images/background/bg1-min.png
-      :alt: dw_2026_bg_1
-
-   .. workshop-home-slide:: _static/images/background/bg2-min.jpeg
-      :alt: dw_2026_bg_2
-
    .. workshop-home-slide:: _static/images/background/bg3-min.jpeg
       :alt: dw_2026_bg_3
 
@@ -41,6 +35,21 @@ About
    Our team of expert instructors will guide you through the fundamentals of diffusion theory, data pre-processing, fiber tracking, and much more. You'll have the opportunity to learn from industry-leading professionals, ask questions, and network with like-minded peers.
    Whether you're new to diffusion imaging or an experienced practitioner, this workshop is perfect for you. Our curriculum is tailored to meet the needs of individuals at all levels of expertise. Don't miss this chance to enhance your skills and advance your career.
    Register today to secure your spot in this highly anticipated event. We can't wait to see you in the event!
+
+   .. about-stat-card::
+      :icon: 🏆
+      :number: 18
+      :label: Years of Excellence
+
+   .. about-stat-card::
+      :icon: 👤
+      :number: 2000+
+      :label: Participants Worldwide
+
+   .. about-stat-card::
+      :icon: 🎤
+      :number: 100+
+      :label: Distinguished Speakers
 
 ####
 Why?
@@ -105,14 +114,14 @@ Speakers
    .. workshop-speaker::
       :name: Rafael Neto Henriques
       :image: henriques.jpeg
-      :title: Postdoctoral Researcher
-      :affiliation: Champalimaud Centre for the Unknown, PT
+      :title: Assistant Professor
+      :affiliation: Institute of Biophysics and Biomedical Engineering, Department of Physics, Faculty of Science, University of Lisbon
 
    .. workshop-speaker::
       :name: Wei Tang
       :image: wei.jpeg
-      :title: Research Scientist
-      :affiliation: Indiana University
+      :title: Assistant Professor
+      :affiliation: Department of Psychological and Brain Sciences, Indiana University
 
    .. workshop-speaker::
       :name: Serge Koudoro
@@ -123,8 +132,8 @@ Speakers
    .. workshop-speaker::
       :name: Bramsh Qamar Chandio
       :image: Chandio.jpeg
-      :title: Postdoctoral Scholar
-      :affiliation: University of Southern California
+      :title: Associate Professor
+      :affiliation: West Virginia University
 
    .. workshop-speaker::
       :name: Maharshi Gor
@@ -637,7 +646,7 @@ Registration
    :description: Get the most of the workshop with easy pricing, no hidden fees.
 
    .. pricing-item::
-      :name: Students, Academic, Professionals
+      :name: Students, Academics, Professionals
       :currency: $
       :price: 500
       :discount: 650
