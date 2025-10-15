@@ -8,6 +8,12 @@ function setupHomeCarousel(containerSelector, itemSelector) {
 
   if (!container || items.length === 0) return;
 
+  // If there's only one item, just make it active and skip carousel logic
+  if (items.length === 1) {
+    items[0].classList.add('active');
+    return;
+  }
+
   let currentIndex = 0;
 
   function showSlide(index) {

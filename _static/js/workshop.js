@@ -258,6 +258,7 @@ document.addEventListener("DOMContentLoaded", function () {
     handleScroll();
 });
 
+// Helper functions for legacy carousel (v1 templates)
 const fadeOut = (element, duration = 500) => {
     element.style.transition = `opacity ${duration}ms ease-in-out`;
     element.style.opacity = 0;
@@ -275,7 +276,8 @@ const fadeIn = (element, duration = 500) => {
     element.style.opacity = 1;
 };
 
-const setupHomeCarousel = (carousel_holder_class, carousel_item_class) => {
+// Legacy carousel implementation for v1 templates (uses display/fade approach)
+const setupHomeCarouselLegacy = (carousel_holder_class, carousel_item_class) => {
     var speed = 2000;
     var delay = 7000;
 
@@ -284,6 +286,13 @@ const setupHomeCarousel = (carousel_holder_class, carousel_item_class) => {
     carousel_holders.forEach((holder) => {
         let itemSlides = holder.querySelectorAll(carousel_item_class);
         let currSlide = 0;
+
+        // If only one slide, just show it and skip carousel logic
+        if (itemSlides.length === 1) {
+            itemSlides[0].style.display = "block";
+            itemSlides[0].style.opacity = 1;
+            return;
+        }
 
         itemSlides.forEach((slide, index) => {
             slide.style.display = index === currSlide ? "block" : "none";
