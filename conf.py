@@ -39,6 +39,7 @@ html_js_files = [
     "js/workshop.js",
     "js/countdown.js",
     "js/carousel.js",
+    "js/schedule-carousel.js",
     "js/hero-carousel.js",
     "js/navbar.js",
 ]
