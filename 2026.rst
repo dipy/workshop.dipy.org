@@ -394,7 +394,7 @@ Schedule
 .. workshop-schedule::
    :template: _templates/v2/schedule_template.html
    :title: Workshop Schedule
-   :subtitle: Five days of intensive learning and networking
+   :subtitle: Five Days of Life Transforming Learning and Networking
 
    .. workshop-timeline::
       :title: Day 1
@@ -410,15 +410,15 @@ Schedule
 
       .. workshop-timeline-item::
          :time: 10:00 - 10:50
-         :title: DIPY Auto & Cajal
-         :info: Explore automated preprocessing pipelines and Cajal tools for streamlined diffusion MRI data processing.
+         :title: DIPY AUTO
+         :info: Explore our new graphical user interface and automated pipelines.
          :speaker: Serge Koudoro
          :image: serge.png
 
       .. workshop-timeline-item::
          :time: 11:00 - 11:50
          :title: SUCOR
-         :info: Unbending the Magnetic Truth: The World’s Most Advanced Susceptibility Distortion Correction.
+         :info: Learn about the World's Most Advanced Susceptibility Distortion Correction.
          :speaker: Sreekar Chigurupati
          :image: sreekar.jpeg
 
@@ -444,7 +444,7 @@ Schedule
    .. workshop-timeline::
       :title: Day 2
       :subtitle: Reconstruction
-      :date: 2025-03-17
+      :date: 2026-03-17
 
       .. workshop-timeline-item::
          :time: 09:00 - 09:50
@@ -463,7 +463,7 @@ Schedule
       .. workshop-timeline-item::
          :time: 11:00 - 11:50
          :title: FORCE
-         :info: The Pinnacle of Neuroimaging Innovation: The World’s Most Advanced Fiber Orientation Reconstruction, Setting an Unprecedented Standard for Brain Connectivity Mapping.
+         :info: Introducing the Most Advanced Reconstruction Model, setting an unprecedented standard for medical imaging (One solves All).
          :speaker: Atharva Shah
          :image: atharva.png
 
@@ -495,7 +495,7 @@ Schedule
    .. workshop-timeline::
       :title: Day 3
       :subtitle: Tractography
-      :date: 2025-03-18
+      :date: 2026-03-18
 
       .. workshop-timeline-item::
          :time: 09:00 - 09:50
@@ -507,7 +507,7 @@ Schedule
       .. workshop-timeline-item::
          :time: 10:00 - 10:50
          :title: GLIDE
-         :info: Most optimized tractography algorithm.
+         :info: The most optimized tractography algorithm.
          :speaker: TBA
          :image: dipy-all.svg
 
@@ -538,8 +538,8 @@ Schedule
 
    .. workshop-timeline::
       :title: Day 4
-      :subtitle: Tractometry
-      :date: 2025-03-19
+      :subtitle: Analytics
+      :date: 2026-03-19
 
       .. workshop-timeline-item::
          :time: 09:00 - 09:50
@@ -550,7 +550,7 @@ Schedule
 
       .. workshop-timeline-item::
          :time: 10:00 - 10:50
-         :title: BUAN3 - Continued
+         :title: BUAN3 (Continued)
          :info: Advanced BUAN features including multi-metric analysis, visualization, and statistical interpretation.
          :speaker: Bramsh Qamar Chandio
          :image: Chandio.jpeg
@@ -558,7 +558,7 @@ Schedule
       .. workshop-timeline-item::
          :time: 11:00 - 11:50
          :title: PUMBA
-         :info: Probabilistic Unsupervised Multi-Bundle Atlas - automated bundle segmentation using machine learning.
+         :info: PUrely synthetic Multimodal/species invariant Brain extrAction
          :speaker: Jong Sung Park
          :image: jspark.jpeg
 
@@ -575,8 +575,8 @@ Schedule
 
       .. workshop-timeline-item::
          :time: 14:00 - 14:50
-         :title: Round Table: Best Practices in Tractometry
-         :info: Best practices for reproducible tractometry studies and interpreting tract-specific measures.
+         :title: Round Table: Best Practices in Analytics
+         :info: Best practices for reproducible analytics studies and interpreting tract-specific measures.
          :speaker: Everyone
          :image: dipy-all.svg
 
@@ -584,26 +584,26 @@ Schedule
    .. workshop-timeline::
       :title: Day 5
       :subtitle: Mixed Topics
-      :date: 2025-03-20
+      :date: 2026-03-20
 
       .. workshop-timeline-item::
          :time: 09:00 - 09:50
          :title: Thetan
-         :info: Unmatched Precision. Unprecedented Power. The Definitive Clustering Algorithm for a New Era of Data Intelligence.
+         :info: Introducing a new theoretical AI framework for the new Era of Data Intelligence.
          :speaker: Eleftherios Garyfallidis
          :image: garyfallidis.jpg
 
       .. workshop-timeline-item::
          :time: 10:00 - 10:50
-         :title: Thetan - Continued
-         :info: Deep dive into Thetan implementation, use cases.
+         :title: Thetan (Continued)
+         :info: Deep dive into Thetan implementation and use cases.
          :speaker: Eleftherios Garyfallidis
          :image: garyfallidis.jpg
 
       .. workshop-timeline-item::
          :time: 11:00 - 11:50
          :title: DIPY Skyline
-         :info: The Crown Jewel of Insight: The World’s Most Advanced Modern Visualization Platform for Immersive Data Exploration.
+         :info: The Crown Jewel of Insight: The World's Most Exquisite Visualization Platform for Immersive Data Exploration.
          :speaker: Maharshi Gor
          :image: maharshi.jpeg
 
@@ -628,7 +628,7 @@ Schedule
       .. workshop-timeline-item::
          :time: 15:00 - 15:30
          :title: Final Assembly
-         :info: Workshop wrap-up, certificate distribution, group photo, and farewell remarks. See you next year!
+         :info: Workshop wrap-up, certificate distribution, group photo, and farewell remarks.
          :speaker: DIPY Team
          :image: dipy-all.svg
 
