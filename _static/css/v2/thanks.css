@@ -14,11 +14,12 @@
 }
 
 .thanks-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  display: flex;
+  flex-wrap: wrap;
   gap: 2rem;
   max-width: 60rem;
   margin: 0 auto;
+  justify-content: center;
 }
 
 .thanks-card {
@@ -92,7 +93,6 @@
   }
 
   .thanks-grid {
-    grid-template-columns: repeat(2, 1fr);
     gap: 2.5rem;
   }
 

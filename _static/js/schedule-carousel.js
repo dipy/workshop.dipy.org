@@ -13,6 +13,10 @@
     let currentX = 0;
     let isDragging = false;
 
+    function isMobile() {
+        return window.innerWidth <= 768;
+    }
+
     function initCarousel() {
         scheduleGrid = document.querySelector('.schedule-grid');
         prevButton = document.querySelector('.schedule-nav-prev');
@@ -36,16 +40,19 @@
         scheduleGrid.addEventListener('touchmove', handleTouchMove, { passive: true });
         scheduleGrid.addEventListener('touchend', handleTouchEnd);
 
-        scheduleGrid.addEventListener('mousedown', handleMouseDown);
-        scheduleGrid.addEventListener('mousemove', handleMouseMove);
-        scheduleGrid.addEventListener('mouseup', handleMouseUp);
-        scheduleGrid.addEventListener('mouseleave', handleMouseUp);
+        // Only add mouse drag events on mobile
+        if (isMobile()) {
+            scheduleGrid.addEventListener('mousedown', handleMouseDown);
+            scheduleGrid.addEventListener('mousemove', handleMouseMove);
+            scheduleGrid.addEventListener('mouseup', handleMouseUp);
+            scheduleGrid.addEventListener('mouseleave', handleMouseUp);
+        }
 
         updateCarousel();
     }
 
     function goToSlide(index) {
-        if (index < 0 || index >= totalSlides) {
+        if (!isMobile() || index < 0 || index >= totalSlides) {
             return;
         }
         currentSlide = index;
@@ -53,6 +60,7 @@
     }
 
     function nextSlide() {
+        if (!isMobile()) return;
         if (currentSlide < totalSlides - 1) {
             currentSlide++;
             updateCarousel();
@@ -60,6 +68,7 @@
     }
 
     function prevSlide() {
+        if (!isMobile()) return;
         if (currentSlide > 0) {
             currentSlide--;
             updateCarousel();
@@ -67,6 +76,11 @@
     }
 
     function updateCarousel() {
+        if (!isMobile()) {
+            scheduleGrid.style.transform = '';
+            return;
+        }
+
         const offset = -currentSlide * 100;
         scheduleGrid.style.transform = `translateX(${offset}%)`;
 
@@ -89,17 +103,18 @@
     }
 
     function handleTouchStart(e) {
+        if (!isMobile()) return;
         startX = e.touches[0].clientX;
         isDragging = true;
     }
 
     function handleTouchMove(e) {
-        if (!isDragging) return;
+        if (!isMobile() || !isDragging) return;
         currentX = e.touches[0].clientX;
     }
 
     function handleTouchEnd() {
-        if (!isDragging) return;
+        if (!isMobile() || !isDragging) return;
         isDragging = false;
 
         const diff = startX - currentX;
@@ -115,18 +130,19 @@
     }
 
     function handleMouseDown(e) {
+        if (!isMobile()) return;
         startX = e.clientX;
         isDragging = true;
         scheduleGrid.style.cursor = 'grabbing';
     }
 
     function handleMouseMove(e) {
-        if (!isDragging) return;
+        if (!isMobile() || !isDragging) return;
         currentX = e.clientX;
     }
 
     function handleMouseUp() {
-        if (!isDragging) return;
+        if (!isMobile() || !isDragging) return;
         isDragging = false;
         scheduleGrid.style.cursor = 'grab';
 
@@ -143,7 +159,7 @@
     }
 
     function handleKeyDown(e) {
-        if (window.innerWidth > 768) return;
+        if (!isMobile()) return;
 
         if (e.key === 'ArrowLeft') {
             prevSlide();
@@ -164,11 +180,12 @@
     window.addEventListener('resize', () => {
         clearTimeout(resizeTimeout);
         resizeTimeout = setTimeout(() => {
-            if (window.innerWidth <= 768) {
+            if (isMobile()) {
                 updateCarousel();
             } else {
                 if (scheduleGrid) {
                     scheduleGrid.style.transform = '';
+                    currentSlide = 0;
                 }
             }
         }, 250);
