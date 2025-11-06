@@ -29,27 +29,24 @@ About
 .. workshop-about::
    :template: _templates/v2/about_template.html
    :watermark_image_url: _static/images/dipy-watermark.svg
-   :note_name: DIPY Team
+   :note_name: Learn Diffusion MRI
 
-   Attention grads, researchers, physicists, radiologists, doctors and technicians interested in medical imaging! Join us for an exciting online workshop hosted by DIPY. Our comprehensive program is designed to equip you with the skills and knowledge needed to master the latest techniques and tools in structural and diffusion imaging.
-   Our team of expert instructors will guide you through the fundamentals of diffusion theory, data pre-processing, fiber tracking, and much more. You'll have the opportunity to learn from industry-leading professionals, ask questions, and network with like-minded peers.
-   Whether you're new to diffusion imaging or an experienced practitioner, this workshop is perfect for you. Our curriculum is tailored to meet the needs of individuals at all levels of expertise. Don't miss this chance to enhance your skills and advance your career.
-   Register today to secure your spot in this highly anticipated event. We can't wait to see you in the event!
+   A 5-day workshop covering the fundamentals of structural and diffusion MRI analysis. No coding experience needed. You'll learn everything from preprocessing to tractography and analytics through practical, hands-on sessions. Whether you're a student, researcher, or clinician, our curriculum meets you at your level. Complete the workshop to earn your certificate and connect with neuroimaging professionals worldwide.
 
    .. about-stat-card::
-      :icon: 🏆
+      :icon: ⏳
       :number: 18
-      :label: Years of Excellence
+      :label: Years in development
 
    .. about-stat-card::
-      :icon: 👤
-      :number: 2000+
-      :label: Participants Worldwide
+      :icon: 🏛️
+      :number: 40+
+      :label: Contributing Universities
 
    .. about-stat-card::
-      :icon: 🎤
-      :number: 100+
-      :label: Distinguished Speakers
+      :icon: 🔬
+      :number: 1500+
+      :label: Projects Powered by DIPY
 
 ####
 Why?
@@ -112,16 +109,16 @@ Speakers
       :affiliation: Research Associate Professor, University of Washington, Seattle
 
    .. workshop-speaker::
+    :name: Jaroslaw Harezlak
+    :image: jarek.jpeg
+    :title: DIPY Advisor on Statistics
+    :affiliation: Professor, Indiana University
+
+   .. workshop-speaker::
       :name: Rafael Neto Henriques
       :image: henriques.jpeg
       :title: Assistant Professor
       :affiliation: Institute of Biophysics and Biomedical Engineering, Department of Physics, Faculty of Science, University of Lisbon
-
-   .. workshop-speaker::
-      :name: Wei Tang
-      :image: wei.jpeg
-      :title: Assistant Professor
-      :affiliation: Department of Psychological and Brain Sciences, Indiana University
 
    .. workshop-speaker::
       :name: Serge Koudoro
@@ -132,7 +129,7 @@ Speakers
    .. workshop-speaker::
       :name: Bramsh Qamar Chandio
       :image: Chandio.jpeg
-      :title: Associate Professor
+      :title: Assistant Professor
       :affiliation: West Virginia University
 
    .. workshop-speaker::
@@ -171,27 +168,12 @@ Speakers
       :title: PhD Student
       :affiliation: Indiana University
 
-
----------------------
-Conference Management
----------------------
-
-.. workshop-speakers::
-   :template: _templates/v2/speaker_template.html
-   :title: Conference Management
-   :subtitle: Our dedicated team
-
    .. workshop-speaker::
       :name: Sai Prajwal Reddy
       :image: Prajwal.jpeg
       :title: PhD Student
       :affiliation: Indiana University
 
-   .. workshop-speaker::
-      :name: Kaustav Deka
-      :image: Kaustav.png
-      :title: Graduate Student
-      :affiliation: Indiana University
 
 -----------------
 Participants from
@@ -335,12 +317,7 @@ Special Thanks
 .. workshop-thanks::
    :template: _templates/v2/thanks_template.html
    :title: Special Thanks
-   :note: Multiple speakers including <b>Garyfallidis, Landman and Harezlak</b> are funded by the <br/><a href="https://www.nih.gov/">National Institutes of Health</a>.<br/> In addition, <b>Koudoro, Rokem and Girard</b> are funded froman EOSS grant through the <br/><a href="https://chanzuckerberg.com/eoss/proposals/strengthening-computational-neuroanatomy-using-dipy/">Chan Zuckerberg Initiative</a>.
-
-   .. workshop-thanks-item::
-      :name: Garyfallidis Research Group (GRG)
-      :image: _static/images/universities/GRG.png
-      :url: https://grg.luddy.indiana.edu/
+   :note: Multiple speakers including <b>Garyfallidis and Harezlak</b> are funded by the <br/><a href="https://www.nih.gov/">National Institutes of Health</a>.<br/> In addition, <b>Koudoro and Rokem</b> are funded from an EOSS grant through the <br/><a href="https://chanzuckerberg.com/eoss/proposals/strengthening-computational-neuroanatomy-using-dipy/">Chan Zuckerberg Initiative</a>.
 
    .. workshop-thanks-item::
       :name: Intelligent Systems Engineering (IU)
@@ -353,6 +330,11 @@ Highlights
 
 .. carousel::
    :template: _templates/v2/swipe_carousel.html
+
+   .. carousel-item::
+      :image: _static/images/carousel/trct.png
+      :title: Interactive visualizer
+      :description: DIPY's intuitive graphical interface for advanced visualization and analysis
 
    .. carousel-item::
       :image: https://raw.githubusercontent.com/dipy/dipy_data/master/tractometry.png?raw=true
@@ -455,7 +437,7 @@ Schedule
 
       .. workshop-timeline-item::
          :time: 10:00 - 10:50
-         :title: DIPY Reconstruction Overview
+         :title: Reconstruction Overview
          :info: Comprehensive overview of reconstruction methods including DTI, DKI, CSD, and advanced multi-shell techniques.
          :speaker: TBA
          :image: dipy-all.svg
@@ -499,7 +481,7 @@ Schedule
 
       .. workshop-timeline-item::
          :time: 09:00 - 09:50
-         :title: DIPY Tractography Overview
+         :title: Tractography Overview
          :info: Comprehensive introduction to fiber tracking algorithms including deterministic and probabilistic methods.
          :speaker: TBA
          :image: dipy-all.svg
@@ -513,7 +495,7 @@ Schedule
 
       .. workshop-timeline-item::
          :time: 11:00 - 11:50
-         :title: DIPY Registration Overview
+         :title: Registration Overview
          :info: Image registration techniques for aligning diffusion data across subjects and to anatomical templates.
          :speaker: TBA
          :image: dipy-all.svg
@@ -588,21 +570,21 @@ Schedule
 
       .. workshop-timeline-item::
          :time: 09:00 - 09:50
-         :title: Thetan
+         :title: THETAN
          :info: Introducing a new theoretical AI framework for the new Era of Data Intelligence.
          :speaker: Eleftherios Garyfallidis
          :image: garyfallidis.jpg
 
       .. workshop-timeline-item::
          :time: 10:00 - 10:50
-         :title: Thetan (Continued)
-         :info: Deep dive into Thetan implementation and use cases.
+         :title: THETAN (Continued)
+         :info: Deep dive into THETAN implementation and use cases.
          :speaker: Eleftherios Garyfallidis
          :image: garyfallidis.jpg
 
       .. workshop-timeline-item::
          :time: 11:00 - 11:50
-         :title: DIPY Skyline
+         :title: SKYLINE
          :info: The Crown Jewel of Insight: The World's Most Exquisite Visualization Platform for Immersive Data Exploration.
          :speaker: Maharshi Gor
          :image: maharshi.jpeg

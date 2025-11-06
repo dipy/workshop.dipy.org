@@ -25,10 +25,6 @@
                     {# Icon and Number Side #}
                     <div class="why-icon-side">
                         <div class="why-icon-container">
-                            {# Number Background #}
-                            <div class="why-number-background">
-                                {{ "%02d"|format(loop.index) }}
-                            </div>
                             {# Icon #}
                             <div class="why-icon-box">
                                 <div class="why-icon">
@@ -46,7 +42,6 @@
                     <div class="why-content-side">
                         <div class="why-content-card">
                             <h3 class="why-content-title">
-                                <span class="why-content-number">{{ "%02d"|format(loop.index) }}.</span>
                                 {{ item.title }}
                             </h3>
                             <p class="why-content-description">
