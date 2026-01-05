@@ -630,8 +630,7 @@ Registration
    .. pricing-item::
       :name: Students, Academics, Professionals
       :currency: $
-      :price: 500
-      :discount: 650
+      :price: 650
       :registration_link: https://iubgrg-fireform.eas.iu.edu/online/form/index/grgdw2026
       :popular:
 
@@ -647,8 +646,7 @@ Registration
    .. pricing-item::
       :name: Returning Participants
       :currency: $
-      :price: 250
-      :discount: 300
+      :price: 300
       :registration_link: https://iubgrg-fireform.eas.iu.edu/online/form/index/grgdw2026
 
       - Listen to the talks live.
@@ -668,8 +666,7 @@ Registration
    .. pricing-item::
       :name: Recording Access
       :currency: $
-      :price: 250
-      :discount: 350
+      :price: 350
       :registration_link: https://iubgrg-fireform.eas.iu.edu/online/form/index/grgdw2026
 
       - Only accessible if you register for the workshop.
@@ -679,8 +676,7 @@ Registration
    .. pricing-item::
       :name: Coaching Package
       :currency: $
-      :price: 500
-      :discount: 750
+      :price: 750
       :registration_link: https://iubgrg-fireform.eas.iu.edu/online/form/index/grgdw2026
 
       - Only accessible if you register for the workshop.
