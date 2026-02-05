@@ -80,10 +80,8 @@ class WhyDirective(SphinxDirective):
         try:
             jinja_loader = FileSystemLoader(template_dir)
             jinja_env = Environment(loader=jinja_loader, autoescape=True)
-            jinja_env.globals["pathto"] = (
-                lambda filename, *args: html_builder.get_relative_uri(
-                    env.docname, filename
-                )
+            jinja_env.globals["pathto"] = lambda filename, *args: (
+                html_builder.get_relative_uri(env.docname, filename)
             )
             template = jinja_env.get_template(template_basename)
             rendered_html = template.render(
