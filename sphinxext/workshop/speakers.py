@@ -119,10 +119,8 @@ class SpeakersDirective(SphinxDirective):
             jinja_loader = FileSystemLoader(template_dir)
             jinja_env = Environment(loader=jinja_loader, autoescape=True)
             # Provide pathto helper function
-            jinja_env.globals["pathto"] = (
-                lambda filename, *args: html_builder.get_relative_uri(
-                    env.docname, filename
-                )
+            jinja_env.globals["pathto"] = lambda filename, *args: (
+                html_builder.get_relative_uri(env.docname, filename)
             )
 
             # Template expects raw RST in 'bio_rst' variable

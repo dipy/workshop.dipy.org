@@ -174,6 +174,12 @@ Speakers
       :title: PhD Student
       :affiliation: Indiana University
 
+   .. workshop-speaker::
+      :name:  Kaustav Deka
+      :image: Kaustav.png
+      :title: Graduate Student
+      :affiliation: Indiana University
+
 
 -----------------
 Participants from
@@ -334,7 +340,7 @@ Highlights
    .. carousel-item::
       :image: _static/images/carousel/trct.png
       :title: Interactive visualizer
-      :description: DIPY's intuitive graphical interface for advanced visualization and analysis
+      :description: Intuitive graphical interface for advanced visualization and analysis
 
    .. carousel-item::
       :image: https://raw.githubusercontent.com/dipy/dipy_data/master/tractometry.png?raw=true
@@ -432,7 +438,7 @@ Schedule
          :time: 09:00 - 09:50
          :title: Patch2Self3
          :info: Advanced self-supervised denoising techniques for diffusion MRI using the latest Patch2Self algorithms.
-         :speaker: TBA
+         :speaker: Sai Prajwal Reddy
          :image: dipy-all.svg
 
       .. workshop-timeline-item::
@@ -483,21 +489,21 @@ Schedule
          :time: 09:00 - 09:50
          :title: Tractography Overview
          :info: Comprehensive introduction to fiber tracking algorithms including deterministic and probabilistic methods.
-         :speaker: TBA
+         :speaker: Kaustav Deka
          :image: dipy-all.svg
 
       .. workshop-timeline-item::
          :time: 10:00 - 10:50
          :title: GLIDE
          :info: The most optimized tractography algorithm.
-         :speaker: TBA
+         :speaker: Kaustav Deka
          :image: dipy-all.svg
 
       .. workshop-timeline-item::
          :time: 11:00 - 11:50
          :title: Registration Overview
          :info: Image registration techniques for aligning diffusion data across subjects and to anatomical templates.
-         :speaker: TBA
+         :speaker: Serge Koudoro
          :image: dipy-all.svg
 
       .. workshop-timeline-item::
