@@ -157,6 +157,12 @@ Speakers
       :affiliation: Indiana University
 
    .. workshop-speaker::
+      :name: Mohamed Abouagour
+      :image: Mohamed.jpg
+      :title: PhD Student
+      :affiliation: Indiana University
+
+   .. workshop-speaker::
       :name: Atharva Shah
       :image: atharva.png
       :title: PhD Student
