@@ -627,7 +627,7 @@ Schedule
          :time: 11:00 - 11:50
          :title: SKYLINE
          :info: The Crown Jewel of Insight: The World's Most Exquisite Visualization Platform for Immersive Data Exploration.
-         :speaker: Maharshi Gor
+         :speaker: Maharshi Gor and Mohamed Abouagour
          :image: maharshi.jpeg
 
       .. workshop-timeline-item::
