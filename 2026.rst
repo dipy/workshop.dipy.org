@@ -121,12 +121,6 @@ Speakers
       :affiliation: University of Leeds
 
    .. workshop-speaker::
-    :name: Jaroslaw Harezlak
-    :image: jarek.jpeg
-    :title: DIPY Advisor on Statistics
-    :affiliation: Professor, Indiana University
-
-   .. workshop-speaker::
       :name: Rafael Neto Henriques
       :image: henriques.jpeg
       :title: Assistant Professor
@@ -159,12 +153,6 @@ Speakers
    .. workshop-speaker::
       :name: Jong Sung Park
       :image: jspark.jpeg
-      :title: PhD Student
-      :affiliation: Indiana University
-
-   .. workshop-speaker::
-      :name: Mohamed Abouagour
-      :image: Mohamed.jpg
       :title: PhD Student
       :affiliation: Indiana University
 

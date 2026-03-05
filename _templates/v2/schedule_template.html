@@ -67,11 +67,11 @@
                             </div>
 
                             {# Session Title #}
-                            <h4 class="schedule-card-title">{{ item.title }}</h4>
+                            <h4 class="schedule-card-title" title="{{ item.title }}">{{ item.title }}</h4>
 
                             {# Session Description #}
                             {% if item.info %}
-                            <p class="schedule-card-info">{{ item.info }}</p>
+                            <p class="schedule-card-info" title="{{ item.info }}">{{ item.info }}</p>
                             {% endif %}
 
                             {# Speaker #}
