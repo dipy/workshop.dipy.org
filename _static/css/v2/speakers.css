@@ -172,6 +172,17 @@
   overflow: hidden;
 }
 
+.speaker-card:hover .speaker-name,
+.speaker-card:hover .speaker-role,
+.speaker-card:hover .speaker-university,
+.speaker-card:focus-within .speaker-name,
+.speaker-card:focus-within .speaker-role,
+.speaker-card:focus-within .speaker-university {
+  -webkit-line-clamp: unset;
+  line-clamp: unset;
+  overflow: visible;
+}
+
 .speaker-decorative-corner {
   position: absolute;
   top: 0;

@@ -188,6 +188,14 @@
   min-height: 3.9rem; /* 3 lines * 1.5 line-height * 0.875rem */
 }
 
+.schedule-card:hover .schedule-card-info,
+.schedule-card:focus-within .schedule-card-info {
+  -webkit-line-clamp: unset;
+  line-clamp: unset;
+  overflow: visible;
+  text-overflow: clip;
+}
+
 /* Card Speaker */
 .schedule-card-speaker {
   font-size: 0.75rem;

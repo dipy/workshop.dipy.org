@@ -109,10 +109,16 @@ Speakers
       :affiliation: Research Associate Professor, University of Washington, Seattle
 
    .. workshop-speaker::
-    :name: Jaroslaw Harezlak
-    :image: jarek.jpeg
-    :title: DIPY Advisor on Statistics
-    :affiliation: Professor, Indiana University
+      :name: Wei Tang
+      :image: wei.jpeg
+      :title: Research Scientist
+      :affiliation: Indiana University
+
+   .. workshop-speaker::
+      :name: Sam Coveney
+      :image: sam_cov.png
+      :title: Research Fellow
+      :affiliation: University of Leeds
 
    .. workshop-speaker::
       :name: Rafael Neto Henriques
@@ -151,12 +157,6 @@ Speakers
       :affiliation: Indiana University
 
    .. workshop-speaker::
-      :name: Aziza Saber Jabdaragh
-      :image: Aziza.jpeg
-      :title: PhD Student
-      :affiliation: Indiana University
-
-   .. workshop-speaker::
       :name: Mohamed Abouagour
       :image: Mohamed.jpg
       :title: PhD Student
@@ -178,6 +178,27 @@ Speakers
       :name:  Kaustav Deka
       :image: Kaustav.png
       :title: Graduate Student
+      :affiliation: Indiana University
+
+----------
+Organizers
+----------
+
+.. workshop-speakers::
+   :template: _templates/v2/speaker_template.html
+   :title: Organizers
+   :subtitle: Our workshop organizers
+
+   .. workshop-speaker::
+      :name: Aziza Saber Jabdaragh
+      :image: Aziza.jpeg
+      :title: PhD Student
+      :affiliation: Indiana University
+
+   .. workshop-speaker::
+      :name: Sukrut Akolkar
+      :image: Sukrut.jpg
+      :title: Research Assistant
       :affiliation: Indiana University
 
 
@@ -416,13 +437,20 @@ Schedule
 
       .. workshop-timeline-item::
          :time: 13:00 - 13:50
+         :title: Intro to Neuroanatomy
+         :info: Foundational introduction to computational neuroanatomy concepts for diffusion MRI workflows.
+         :speaker: Wei Tang
+         :image: wei.jpeg
+
+      .. workshop-timeline-item::
+         :time: 14:00 - 16:00
          :title: Guided Practice
-         :info: Hands-on session applying preprocessing techniques learned in the morning sessions with expert guidance.
+         :info: Two-hour hands-on session applying preprocessing techniques learned in the morning sessions with expert guidance.
          :speaker: DIPY Team
          :image: dipy-all.svg
 
       .. workshop-timeline-item::
-         :time: 14:00 - 14:50
+         :time: 16:00 - 16:50
          :title: Round Table: Best Practices in Preprocessing
          :info: Interactive discussion sharing experiences, challenges, and solutions in diffusion MRI preprocessing.
          :speaker: Everyone
@@ -460,21 +488,21 @@ Schedule
          :title: Lunch Break
 
       .. workshop-timeline-item::
-         :time: 13:00 - 13:50
+         :time: 13:00 - 15:00
          :title: Guided Practice
-         :info: Hands-on implementation of reconstruction algorithms with real diffusion MRI datasets and parameter optimization.
+         :info: Two-hour hands-on implementation of reconstruction algorithms with real diffusion MRI datasets and parameter optimization.
          :speaker: DIPY Team
          :image: dipy-all.svg
 
       .. workshop-timeline-item::
-         :time: 14:00 - 14:50
+         :time: 15:00 - 15:50
          :title: Round Table: Best Practices in Reconstruction
          :info: Collaborative discussion on choosing appropriate reconstruction methods for different research scenarios.
          :speaker: Everyone
          :image: dipy-all.svg
 
       .. workshop-timeline-item::
-         :time: 15:00 - 15:50
+         :time: 16:00 - 16:50
          :title: Presentations by Participants
          :info: Participants showcase their research, methodologies, and challenges in diffusion MRI analysis.
          :speaker: Participants
@@ -512,13 +540,20 @@ Schedule
 
       .. workshop-timeline-item::
          :time: 13:00 - 13:50
+         :title: New Frontiers in Bundle Analytics
+         :info: New bundle analytics methods spanning statistical inference, supervised learning, and unsupervised learning, with applications to glaucoma and schizophrenia.
+         :speaker: Ariel Rokem
+         :image: rokem.jpg
+
+      .. workshop-timeline-item::
+         :time: 14:00 - 16:00
          :title: Guided Practice
-         :info: Practical tractography session generating fiber bundles and visualizing white matter pathways.
+         :info: Two-hour practical tractography session generating fiber bundles and visualizing white matter pathways.
          :speaker: DIPY Team
          :image: dipy-all.svg
 
       .. workshop-timeline-item::
-         :time: 14:00 - 14:50
+         :time: 16:00 - 16:50
          :title: Round Table: Best Practices in Tractography
          :info: Discussion on parameter selection, validation methods, and common pitfalls in tractography analysis.
          :speaker: Everyone
@@ -555,14 +590,14 @@ Schedule
          :title: Lunch Break
 
       .. workshop-timeline-item::
-         :time: 13:00 - 13:50
+         :time: 13:00 - 15:00
          :title: Guided Practice
-         :info: Hands-on tractometry analysis extracting and analyzing diffusion metrics along major white matter pathways.
+         :info: Two-hour hands-on tractometry analysis extracting and analyzing diffusion metrics along major white matter pathways.
          :speaker: DIPY Team
          :image: dipy-all.svg
 
       .. workshop-timeline-item::
-         :time: 14:00 - 14:50
+         :time: 15:00 - 15:50
          :title: Round Table: Best Practices in Analytics
          :info: Best practices for reproducible analytics studies and interpreting tract-specific measures.
          :speaker: Everyone
@@ -583,16 +618,16 @@ Schedule
 
       .. workshop-timeline-item::
          :time: 10:00 - 10:50
-         :title: THETAN (Continued)
-         :info: Deep dive into THETAN implementation and use cases.
-         :speaker: Eleftherios Garyfallidis
-         :image: garyfallidis.jpg
+         :title: Cardiac Diffusion Weighted Imaging: Robust fitting, Constrained fitting, and Uncertainty Quantification methods for DTI, DKI, and QTI
+         :info: Practical comparison of robust and constrained fitting strategies, and how uncertainty quantification improves reliability assessment in cardiac DWI.
+         :speaker: Sam Coveney
+         :image: sam_cov.png
 
       .. workshop-timeline-item::
          :time: 11:00 - 11:50
          :title: SKYLINE
          :info: The Crown Jewel of Insight: The World's Most Exquisite Visualization Platform for Immersive Data Exploration.
-         :speaker: Maharshi Gor
+         :speaker: Maharshi Gor and Mohamed Abouagour
          :image: maharshi.jpeg
 
       .. workshop-timeline-item::
@@ -600,21 +635,21 @@ Schedule
          :title: Lunch Break
 
       .. workshop-timeline-item::
-         :time: 13:00 - 13:50
+         :time: 13:00 - 15:00
          :title: Guided Practice
-         :info: Final hands-on session integrating all learned techniques into a complete analysis pipeline.
+         :info: Final two-hour hands-on session integrating all learned techniques into a complete analysis pipeline.
          :speaker: DIPY Team
          :image: dipy-all.svg
 
       .. workshop-timeline-item::
-         :time: 14:00 - 14:50
-         :title: Round Table: Best Practices in General
-         :info: Open forum discussing overall best practices, future directions, and Q&A for all workshop topics.
+         :time: 15:00 - 15:50
+         :title: Round Table: AI Paper Discussion
+         :info: Group discussion on selected AI papers, methods, and implications for diffusion MRI analysis.
          :speaker: Everyone
          :image: dipy-all.svg
 
       .. workshop-timeline-item::
-         :time: 15:00 - 15:30
+         :time: 16:00 - 16:30
          :title: Final Assembly
          :info: Workshop wrap-up, certificate distribution, group photo, and farewell remarks.
          :speaker: DIPY Team

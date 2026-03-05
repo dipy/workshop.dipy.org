@@ -40,13 +40,13 @@
 
                     {# Content #}
                     <div class="speaker-content">
-                        <h3 class="speaker-name">
+                        <h3 class="speaker-name" title="{{ speaker.name|title }}">
                             {{ speaker.name|title }}
                         </h3>
-                        <p class="speaker-role">
+                        <p class="speaker-role" title="{{ speaker.title }}">
                             {{ speaker.title }}
                         </p>
-                        <p class="speaker-university">
+                        <p class="speaker-university" title="{{ speaker.affiliation }}">
                             {{ speaker.affiliation }}
                         </p>
                     </div>
