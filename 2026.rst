@@ -103,6 +103,18 @@ Speakers
       :affiliation: Associate Professor, Indiana University
 
    .. workshop-speaker::
+      :name: Serge Koudoro
+      :image: serge.png
+      :title: DIPY Release Manager
+      :affiliation: Indiana University
+
+   .. workshop-speaker::
+      :name: Bramsh Qamar Chandio
+      :image: Chandio.jpeg
+      :title: Assistant Professor
+      :affiliation: West Virginia University
+
+   .. workshop-speaker::
       :name: Ariel Rokem
       :image: rokem.jpg
       :title: Associate DIPY Lead, eScience Institute
@@ -111,8 +123,8 @@ Speakers
    .. workshop-speaker::
       :name: Wei Tang
       :image: wei.jpeg
-      :title: Research Scientist
-      :affiliation: Indiana University
+      :title: Assistant Professor
+      :affiliation: Department of Psychological & Brain Sciences, Indiana University
 
    .. workshop-speaker::
       :name: Sam Coveney
@@ -125,18 +137,6 @@ Speakers
       :image: henriques.jpeg
       :title: Assistant Professor
       :affiliation: Institute of Biophysics and Biomedical Engineering, Department of Physics, Faculty of Science, University of Lisbon
-
-   .. workshop-speaker::
-      :name: Serge Koudoro
-      :image: serge.png
-      :title: DIPY Release Manager
-      :affiliation: Indiana University
-
-   .. workshop-speaker::
-      :name: Bramsh Qamar Chandio
-      :image: Chandio.jpeg
-      :title: Assistant Professor
-      :affiliation: West Virginia University
 
    .. workshop-speaker::
       :name: Maharshi Gor
