@@ -540,8 +540,8 @@ Schedule
 
       .. workshop-timeline-item::
          :time: 13:00 - 13:50
-         :title: New Frontiers in Bundle Analytics
-         :info: New bundle analytics methods spanning statistical inference, supervised learning, and unsupervised learning, with applications to glaucoma and schizophrenia.
+         :title: GPU Acceleration
+         :info: Accelerating tractography computations using GPU technology for faster processing of large cohorts.
          :speaker: Ariel Rokem
          :image: rokem.jpg
 
