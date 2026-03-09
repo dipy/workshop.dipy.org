@@ -344,7 +344,6 @@ Special Thanks
 .. workshop-thanks::
    :template: _templates/v2/thanks_template.html
    :title: Special Thanks
-   :note: Multiple speakers including <b>Garyfallidis and Harezlak</b> are funded by the <br/><a href="https://www.nih.gov/">National Institutes of Health</a>.<br/> In addition, <b>Koudoro and Rokem</b> are funded from an EOSS grant through the <br/><a href="https://chanzuckerberg.com/eoss/proposals/strengthening-computational-neuroanatomy-using-dipy/">Chan Zuckerberg Initiative</a>.
 
    .. workshop-thanks-item::
       :name: Intelligent Systems Engineering (IU)
@@ -473,7 +472,7 @@ Schedule
          :time: 10:00 - 10:50
          :title: Reconstruction Overview
          :info: Comprehensive overview of reconstruction methods including DTI, DKI, CSD, and advanced multi-shell techniques.
-         :speaker: TBA
+         :speaker: Eleftherios Garyfallidis
          :image: dipy-all.svg
 
       .. workshop-timeline-item::
@@ -566,22 +565,22 @@ Schedule
 
       .. workshop-timeline-item::
          :time: 09:00 - 09:50
-         :title: BUAN3
+         :title: BUAN
          :info: Bundle Analytics - Statistical analysis of diffusion metrics along white matter bundles for group studies.
          :speaker: Bramsh Qamar Chandio
          :image: Chandio.jpeg
 
       .. workshop-timeline-item::
          :time: 10:00 - 10:50
-         :title: BUAN3 (Continued)
-         :info: Advanced BUAN features including multi-metric analysis, visualization, and statistical interpretation.
+         :title: BundleWarp
+         :info: Nonrigid registration for bundles to assist statistical analysis with harmonization.
          :speaker: Bramsh Qamar Chandio
          :image: Chandio.jpeg
 
       .. workshop-timeline-item::
          :time: 11:00 - 11:50
          :title: PUMBA
-         :info: PUrely synthetic Multimodal/species invariant Brain extrAction
+         :info: PUrely synthetic Multimodal/species invariant Brain extrAction.
          :speaker: Jong Sung Park
          :image: jspark.jpeg
 
@@ -618,8 +617,8 @@ Schedule
 
       .. workshop-timeline-item::
          :time: 10:00 - 10:50
-         :title: Cardiac Diffusion Weighted Imaging: Robust fitting, Constrained fitting, and Uncertainty Quantification methods for DTI, DKI, and QTI
-         :info: Practical comparison of robust and constrained fitting strategies, and how uncertainty quantification improves reliability assessment in cardiac DWI.
+         :title: Cardiac Diffusion Weighted Imaging
+         :info: Robust fitting, Constrained fitting, and Uncertainty Quantification methods for DTI, DKI, and QTI
          :speaker: Sam Coveney
          :image: sam_cov.png
 
