@@ -88,6 +88,23 @@
   text-decoration: none !important;
 }
 
+.navbar-lms-link {
+  background: linear-gradient(135deg, #F58F00, #e07800) !important;
+  color: #fff !important;
+  padding: 0.35rem 0.85rem !important;
+  border-radius: 9999px !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.05em !important;
+  box-shadow: 0 0 10px rgba(245, 143, 0, 0.5) !important;
+  transition: box-shadow 0.2s, transform 0.2s !important;
+}
+
+.navbar-lms-link:hover {
+  color: #fff !important;
+  box-shadow: 0 0 18px rgba(245, 143, 0, 0.85) !important;
+  transform: scale(1.05) !important;
+}
+
 .navbar-mobile-button {
   display: block;
   color: #F58F00;
