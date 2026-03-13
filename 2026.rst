@@ -186,8 +186,8 @@ Organizers
 
 .. workshop-speakers::
    :template: _templates/v2/speaker_template.html
-   :title: Organizers
-   :subtitle: Our workshop organizers
+   :title: Conference Managers
+   :subtitle: Our workshop conference management team
 
    .. workshop-speaker::
       :name: Aziza Saber Jabdaragh
