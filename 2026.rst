@@ -612,7 +612,7 @@ Schedule
          :time: 09:00 - 09:50
          :title: THETAN
          :info: Introducing a new theoretical AI framework for the new Era of Data Intelligence.
-         :speaker: Eleftherios Garyfallidis
+         :speaker: Sai Prajwal Reddy
          :image: garyfallidis.jpg
 
       .. workshop-timeline-item::
@@ -626,7 +626,7 @@ Schedule
          :time: 11:00 - 11:50
          :title: SKYLINE
          :info: The Crown Jewel of Insight: The World's Most Exquisite Visualization Platform for Immersive Data Exploration.
-         :speaker: Maharshi Gor and Mohamed Abouagour
+         :speaker: Maharshi Gor
          :image: maharshi.jpeg
 
       .. workshop-timeline-item::
