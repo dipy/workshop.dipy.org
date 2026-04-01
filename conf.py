@@ -10,7 +10,7 @@ import sys
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#project-information
 
 project = "workshop.dipy.org"
-copyright = "2025, DIPY Team"
+copyright = "2026, DIPY Team"
 author = "DIPY Team"
 
 # -- General configuration ---------------------------------------------------
