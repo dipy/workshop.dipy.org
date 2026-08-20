@@ -78,7 +78,7 @@
           <h1 class="hero-title">DIPY WORKSHOP 2027</h1>
           <h4 class="hero-date">March 15<sup>th</sup> - March 19<sup>th</sup></h4>
           <div class="countdown-wrap">
-            <p class="countdown-label">Workshop begins in</p>
+            <p class="countdown-label">Registration opens in</p>
             <div class="countdown" id="countdown" role="timer">
               <div><span class="cd-reels" id="cd-days">--</span><small>Days</small></div>
               <div><span class="cd-reels" id="cd-hours">--</span><small>Hours</small></div>
@@ -193,7 +193,7 @@
     <footer>© 2026 DIPY. All rights reserved.</footer>
     <script>
       (function () {
-        var target = new Date("2027-03-15T00:00:00").getTime();
+        var target = new Date("2026-09-11T00:00:00").getTime();
         var out = {
           days: document.getElementById("cd-days"),
           hours: document.getElementById("cd-hours"),
@@ -244,7 +244,7 @@
           if (left <= 0) {
             var wrap = document.querySelector(".countdown-wrap");
             wrap.className = "hero-subtitle";
-            wrap.textContent = "The workshop is here";
+            wrap.textContent = "Registration is open";
             clearInterval(timer);
             return;
           }
