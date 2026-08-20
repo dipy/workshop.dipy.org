@@ -77,7 +77,15 @@
         <div>
           <h1 class="hero-title">DIPY WORKSHOP 2027</h1>
           <h4 class="hero-date">March 15<sup>th</sup> - March 19<sup>th</sup></h4>
-          <h2 class="hero-subtitle">Coming Soon</h2>
+          <div class="countdown-wrap">
+            <p class="countdown-label">Workshop begins in</p>
+            <div class="countdown" id="countdown" role="timer">
+              <div><span class="cd-reels" id="cd-days">--</span><small>Days</small></div>
+              <div><span class="cd-reels" id="cd-hours">--</span><small>Hours</small></div>
+              <div><span class="cd-reels" id="cd-mins">--</span><small>Minutes</small></div>
+              <div><span class="cd-reels" id="cd-secs">--</span><small>Seconds</small></div>
+            </div>
+          </div>
           <p class="hero-description">
             Join us for an immersive experience in the world of diffusion MRI.
           </p>
@@ -183,5 +191,73 @@
     </div>
     </main>
     <footer>© 2026 DIPY. All rights reserved.</footer>
+    <script>
+      (function () {
+        var target = new Date("2027-03-15T00:00:00").getTime();
+        var out = {
+          days: document.getElementById("cd-days"),
+          hours: document.getElementById("cd-hours"),
+          mins: document.getElementById("cd-mins"),
+          secs: document.getElementById("cd-secs"),
+        };
+
+        function makeReel() {
+          var slot = document.createElement("span");
+          slot.className = "cd-digit";
+          var reel = document.createElement("span");
+          reel.className = "cd-reel";
+          for (var i = 0; i <= 10; i++) {
+            var n = document.createElement("span");
+            n.textContent = i % 10;
+            reel.appendChild(n);
+          }
+          slot.appendChild(reel);
+          return slot;
+        }
+
+        function setDigit(reel, d) {
+          if (d > (reel.dataset.d || 0)) {
+            reel.style.transition = "none";
+            reel.style.setProperty("--i", 10);
+            void reel.offsetHeight;
+            reel.style.transition = "";
+          }
+          reel.dataset.d = d;
+          reel.style.setProperty("--i", d);
+        }
+
+        function render(el, str) {
+          if (el.childElementCount !== str.length) {
+            el.textContent = "";
+            for (var i = 0; i < str.length; i++) el.appendChild(makeReel());
+          }
+          for (var i = 0; i < str.length; i++)
+            setDigit(el.children[i].firstChild, +str[i]);
+        }
+
+        function pad(n) {
+          return String(n).padStart(2, "0");
+        }
+
+        function tick() {
+          var left = target - Date.now();
+          if (left <= 0) {
+            var wrap = document.querySelector(".countdown-wrap");
+            wrap.className = "hero-subtitle";
+            wrap.textContent = "The workshop is here";
+            clearInterval(timer);
+            return;
+          }
+          var s = Math.floor(left / 1000);
+          render(out.days, String(Math.floor(s / 86400)));
+          render(out.hours, pad(Math.floor(s / 3600) % 24));
+          render(out.mins, pad(Math.floor(s / 60) % 60));
+          render(out.secs, pad(s % 60));
+        }
+
+        var timer = setInterval(tick, 1000);
+        tick();
+      })();
+    </script>
   </body>
 </html>
