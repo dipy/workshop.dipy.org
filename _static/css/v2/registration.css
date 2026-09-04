@@ -208,6 +208,10 @@
   background: linear-gradient(to right, #1F2937, #111827);
 }
 
+.registration-cta-button.disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
 
 /* Responsive Styles */
 @media (min-width: 640px) {

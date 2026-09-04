@@ -71,6 +71,7 @@ class PricingListDirective(SphinxDirective):
             return []
 
         columns = int(12 / int(self.options.get("columns", 2)))
+        registration_state = getattr(self.env, "workshop_registration_state", "open")
         # Render the template
         try:
             template = Template(template_content)
@@ -85,6 +86,7 @@ class PricingListDirective(SphinxDirective):
                 section_title=self.options.get("section_title", ""),
                 section_subtitle=self.options.get("section_subtitle", ""),
                 wrap_section="wrap_section" in self.options,
+                registration_state=registration_state,
             )
 
             # Create a raw HTML node with the rendered content
