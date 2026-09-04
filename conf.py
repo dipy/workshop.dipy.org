@@ -48,7 +48,7 @@ html_favicon = "_static/images/icons/favicon.ico"
 html_baseurl = "https://workshop.dipy.org/"
 
 html_additional_pages = {
-    "index": "coming_soon.html",
+    # "index": "coming_soon.html",
     "2019": "dw_2019.html",
     "2020": "dw_2020.html",
 }
@@ -91,6 +91,7 @@ redirects = {
     "workshops/dipy-workshop-2024": "../2024.html",
     "workshops/dipy-workshop-2025": "../2025.html",
     "workshops/dipy-workshop-2026": "../2026.html",
+    "workshops/dipy-workshop-2027": "../2027.html",
     "dipy-workshop-2019": "2019.html",
     "dipy-workshop-2020": "2020.html",
     "dipy-workshop-2021": "2021.html",
@@ -99,6 +100,7 @@ redirects = {
     "dipy-workshop-2024": "2024.html",
     "dipy-workshop-2025": "2025.html",
     "dipy-workshop-2026": "2026.html",
+    "dipy-workshop-2027": "2027.html",
 }
 
 

@@ -114,6 +114,18 @@ class HomeDirective(SphinxDirective):
         iso_start_date = convert_to_iso(self.options.get("start_date", ""))
         iso_reg_start_date = convert_to_iso(self.options.get("reg_start_date", ""))
 
+        from datetime import datetime
+
+        now = datetime.now()
+        reg_start = parse_date(self.options.get("reg_start_date", ""))
+        registration_state = "open"
+        if reg_start and now < reg_start:
+            registration_state = "pre-registration"
+        elif end_date and now > end_date:
+            registration_state = "ended"
+
+        env.workshop_registration_state = registration_state
+
         workshop_info = {
             "codename": self.options.get("codename", ""),
             "dates": format_date_range(start_date, end_date),

@@ -59,10 +59,13 @@ function createNavbarFromElements(h1Elements) {
         ".sidebar-header-items__center .navbar-item"
     );
 
+    if (!navbarCenter) return;
+
     // Create navbar navigation list
     const navList = navbarCenter.querySelector(".navbar-nav");
+    if (!navList) return;
     navList.innerHTML = ""; // Clear existing items
-    const sidebarNavList = sidebarCenter.querySelector(".navbar-nav");
+    const sidebarNavList = sidebarCenter ? sidebarCenter.querySelector(".navbar-nav") : null;
     h1Elements.forEach((h1) => {
         // Create ID for the section if it doesn't exist
         if (!h1.id) {
@@ -94,14 +97,18 @@ function createNavbarFromElements(h1Elements) {
 
         navItem.appendChild(navLink);
         navList.appendChild(navItem);
-        sidebarNavList.appendChild(navItem.cloneNode(true)); // Clone for sidebar
+        if (sidebarNavList) {
+            sidebarNavList.appendChild(navItem.cloneNode(true));
+        }
     });
 
     // Clear existing content and add our custom nav
     navbarCenter.innerHTML = "";
     navbarCenter.appendChild(navList);
-    sidebarCenter.innerHTML = "";
-    sidebarCenter.appendChild(sidebarNavList);
+    if (sidebarCenter && sidebarNavList) {
+        sidebarCenter.innerHTML = "";
+        sidebarCenter.appendChild(sidebarNavList);
+    }
 }
 
 function createNavbarContainer() {
@@ -234,28 +241,25 @@ document.addEventListener("DOMContentLoaded", function () {
     }, 100);
 
     const header = document.querySelector(".bd-header");
-    const scrollThreshold = 100; // Show navbar after scrolling this many pixels
+    const scrollThreshold = 100;
 
-    // Function to handle scroll events
-    function handleScroll() {
-        const currentScroll =
-            window.pageYOffset || document.documentElement.scrollTop;
+    if (header) {
+        function handleScroll() {
+            const currentScroll =
+                window.pageYOffset || document.documentElement.scrollTop;
 
-        // Show navbar when scrolling down past threshold
-        if (currentScroll > scrollThreshold) {
-            header.classList.add("show");
-        } else {
-            header.classList.remove("show");
+            if (currentScroll > scrollThreshold) {
+                header.classList.add("show");
+            } else {
+                header.classList.remove("show");
+            }
+
+            lastScrollTop = currentScroll;
         }
 
-        lastScrollTop = currentScroll;
+        window.addEventListener("scroll", handleScroll);
+        handleScroll();
     }
-
-    // Add scroll event listener
-    window.addEventListener("scroll", handleScroll);
-
-    // Initial check for scroll position
-    handleScroll();
 });
 
 // Helper functions for legacy carousel (v1 templates)
