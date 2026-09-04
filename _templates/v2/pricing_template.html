@@ -81,7 +81,8 @@
                             {% endfor %}
                         </ul>
 
-                        {# CTA Button - Always at bottom #}
+                        {# CTA Button - Changes based on registration state #}
+                        {% if registration_state == "open" %}
                         <a
                             href="{{ item.registration_link }}"
                             target="_blank"
@@ -90,6 +91,15 @@
                         >
                             Register Now
                         </a>
+                        {% elif registration_state == "pre-registration" %}
+                        <span class="registration-cta-button disabled">
+                            Registration Opens Soon
+                        </span>
+                        {% else %}
+                        <span class="registration-cta-button disabled">
+                            Registration Closed
+                        </span>
+                        {% endif %}
                     </div>
                 </div>
                 {% endfor %}
