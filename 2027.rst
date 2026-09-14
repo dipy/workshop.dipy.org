@@ -12,7 +12,7 @@
    :template: _templates/v2/home_template.html
    :year: 2027
    :codename: 100% Online Event
-   :reg_start_date: 2026-09-11 00:00
+   :reg_start_date: 2026-09-14 09:00
    :start_date: 2027-03-15 09:00
    :end_date: 2027-03-19 17:00
    :location: Online
@@ -631,6 +631,7 @@ Registration
       :name: Students, Academics, Professionals
       :currency: $
       :price: 500
+      :discount: 650
       :registration_link: https://iubgrg-fireform.eas.iu.edu/online/form/index/grgdw2027
       :popular:
 
@@ -647,6 +648,7 @@ Registration
       :name: Returning Participants
       :currency: $
       :price: 250
+      :discount: 300
       :registration_link: https://iubgrg-fireform.eas.iu.edu/online/form/index/grgdw2027
 
       - Listen to the talks live.
@@ -667,6 +669,7 @@ Registration
       :name: Recording Access
       :currency: $
       :price: 250
+      :discount: 350
       :registration_link: https://iubgrg-fireform.eas.iu.edu/online/form/index/grgdw2027
 
       - Only accessible if you register for the workshop.
@@ -677,6 +680,7 @@ Registration
       :name: Coaching Package
       :currency: $
       :price: 500
+      :discount: 750
       :registration_link: https://iubgrg-fireform.eas.iu.edu/online/form/index/grgdw2027
 
       - Only accessible if you register for the workshop.
