@@ -81,25 +81,16 @@
                             {% endfor %}
                         </ul>
 
-                        {# CTA Button - Changes based on registration state #}
-                        {% if registration_state == "open" %}
+                        {# CTA Button - always rendered as a link, JS controls state at runtime #}
                         <a
                             href="{{ item.registration_link }}"
                             target="_blank"
                             rel="noopener noreferrer"
                             class="registration-cta-button {% if item.popular %}popular{% endif %}"
+                            data-reg-link="{{ item.registration_link }}"
                         >
                             Register Now
                         </a>
-                        {% elif registration_state == "pre-registration" %}
-                        <span class="registration-cta-button disabled">
-                            Registration Opens Soon
-                        </span>
-                        {% else %}
-                        <span class="registration-cta-button disabled">
-                            Registration Closed
-                        </span>
-                        {% endif %}
                     </div>
                 </div>
                 {% endfor %}
@@ -110,4 +101,28 @@
     </div>
     <div class="section-separator"></div>
 </section>
+<script>
+(function() {
+    var d = window.workshopDates;
+    if (!d) return;
+    var now = new Date().getTime();
+    var regStarted = new Date(d.regStart).getTime() <= now;
+    var workshopEnded = new Date(d.workshopEnd).getTime() <= now;
+    var btns = document.querySelectorAll(".registration-cta-button");
+
+    if (workshopEnded) {
+        for (var i = 0; i < btns.length; i++) {
+            btns[i].textContent = "Registration Closed";
+            btns[i].classList.add("disabled");
+            btns[i].removeAttribute("href");
+        }
+    } else if (!regStarted) {
+        for (var i = 0; i < btns.length; i++) {
+            btns[i].textContent = "Registration Opens Soon";
+            btns[i].classList.add("disabled");
+            btns[i].removeAttribute("href");
+        }
+    }
+})();
+</script>
 {% endif %}
