@@ -392,7 +392,7 @@ Schedule
 
       .. workshop-timeline-item::
          :time: 10:00 - 10:50
-         :title: DIPY AUTO
+         :title: DIPY SEIRA
          :info: Explore our new graphical user interface and automated pipelines.
          :speaker: Serge Koudoro
          :image: serge.png
@@ -411,7 +411,7 @@ Schedule
       .. workshop-timeline-item::
          :time: 13:00 - 13:50
          :title: Guided Practice
-         :info: Hands-on session applying preprocessing techniques learned in the morning sessions with expert guidance.
+         :info: Hands-on session applying preprocessing techniques learned in the morning sessions with expert guidance, including an introduction to Skyline as part of DIPY Auto.
          :speaker: DIPY Team
          :image: dipy-all.svg
 
@@ -430,8 +430,8 @@ Schedule
 
       .. workshop-timeline-item::
          :time: 09:00 - 09:50
-         :title: Patch2Self3
-         :info: Advanced self-supervised denoising techniques for diffusion MRI using the latest Patch2Self algorithms.
+         :title: Denoising
+         :info: Denoising methods and artifact correction techniques for diffusion MRI.
          :speaker: TBA
          :image: dipy-all.svg
 
@@ -488,8 +488,8 @@ Schedule
 
       .. workshop-timeline-item::
          :time: 10:00 - 10:50
-         :title: GLIDE
-         :info: The most optimized tractography algorithm.
+         :title: Advanced Tractography and Targeted Tractography
+         :info: Advanced fiber tracking methods and targeted tractography for pathways of interest.
          :speaker: TBA
          :image: dipy-all.svg
 
@@ -539,10 +539,10 @@ Schedule
 
       .. workshop-timeline-item::
          :time: 11:00 - 11:50
-         :title: PUMBA
-         :info: PUrely synthetic Multimodal/species invariant Brain extrAction
-         :speaker: Jong Sung Park
-         :image: jspark.jpeg
+         :title: Guest Lecture (Topic TBA)
+         :info: Guest lecture by Julio Ernesto Villalon Reina. Topic to be announced.
+         :speaker: Julio Ernesto Villalon Reina
+         :image: dipy-all.svg
 
       .. workshop-timeline-item::
          :time: 12:00 - 13:00
@@ -562,6 +562,13 @@ Schedule
          :speaker: Everyone
          :image: dipy-all.svg
 
+      .. workshop-timeline-item::
+         :time: 15:00 - 15:50
+         :title: Connecting Neurology and Psychiatry: Clinical Perspectives
+         :info: Clinical perspectives connecting neurology and psychiatry, with a focus on diffusion MRI applications.
+         :speaker: TBA
+         :image: dipy-all.svg
+
 
    .. workshop-timeline::
       :title: Day 5
@@ -577,15 +584,15 @@ Schedule
 
       .. workshop-timeline-item::
          :time: 10:00 - 10:50
-         :title: THETAN (Continued)
-         :info: Deep dive into THETAN implementation and use cases.
-         :speaker: Eleftherios Garyfallidis
-         :image: garyfallidis.jpg
+         :title: Unsupervised Segmentation
+         :info: Introduction to unsupervised segmentation methods for diffusion MRI analysis.
+         :speaker: TBA
+         :image: dipy-all.svg
 
       .. workshop-timeline-item::
          :time: 11:00 - 11:50
-         :title: SKYLINE
-         :info: The Crown Jewel of Insight: The World's Most Exquisite Visualization Platform for Immersive Data Exploration.
+         :title: Tractome
+         :info: Introduction to Tractome and its applications in diffusion MRI analysis.
          :speaker: Maharshi Gor
          :image: maharshi.jpeg
 
