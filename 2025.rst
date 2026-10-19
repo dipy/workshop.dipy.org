@@ -199,7 +199,7 @@ Speakers
 
    .. workshop-speaker::
       :name: Atharva Shah
-      :image: atharva.png
+      :image: atharva.jpeg
       :title: PhD Student
       :affiliation: Indiana University
 
@@ -552,7 +552,7 @@ Schedule
          :time: 11:00 - 11:45
          :title: Diffusion Tensor and Kurtosis Imaging
          :speaker: Atharva Shah
-         :image: atharva.png
+         :image: atharva.jpeg
 
       .. workshop-timeline-item::
          :time: 12:00 - 12:45

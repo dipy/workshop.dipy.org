@@ -164,7 +164,7 @@ Speakers
 
    .. workshop-speaker::
       :name: Atharva Shah
-      :image: atharva.png
+      :image: atharva.jpeg
       :title: PhD Student
       :affiliation: Indiana University
 
@@ -480,7 +480,7 @@ Schedule
          :title: FORCE
          :info: Introducing the Most Advanced Reconstruction Model, setting an unprecedented standard for medical imaging (One solves All).
          :speaker: Atharva Shah
-         :image: atharva.png
+         :image: atharva.jpeg
 
       .. workshop-timeline-item::
          :time: 12:00 - 13:00

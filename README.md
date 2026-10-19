@@ -50,6 +50,9 @@ When you are happy with any changes you have made to the website.
 We recommend building the website and making sure that everything is building fine.
 You should see no warnings for the build.
 
+Run `pre-commit run --all-files` without skipping hooks, as CI runs the complete hook suite.
+The `pre-commit-update` hook can update versions in `.pre-commit-config.yaml`. If it changes the file, review the update and rerun the checks before committing it.
+
 Once you are sure everything is in order, you can send a PR to this repository.
 If you are unfamiliar with this, please see this guide from [GitHub.](https://help.github.com/articles/about-pull-requests/)
 
