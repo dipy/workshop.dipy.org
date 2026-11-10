@@ -35,7 +35,9 @@ def convert_to_iso(date_str, format="%Y-%m-%d %H:%M"):
     """Convert a date string to UTC timezone."""
     local_date = parse_date(date_str, format)
     if local_date:
-        local_tz = ZoneInfo("America/Indianapolis")  # Adjust to your local timezone
+        # Canonical name: the "America/Indianapolis" alias needs tzdata-legacy
+        # on newer Ubuntu (CI runners), where the build otherwise fails.
+        local_tz = ZoneInfo("America/Indiana/Indianapolis")
         local_date = local_date.replace(tzinfo=local_tz)
         return local_date.isoformat()
     return None
