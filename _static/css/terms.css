@@ -1,0 +1,31 @@
+/* Terms & Conditions page. Heading text uses a darker brand orange (#B35F00, 4.6:1 on white);
+   the bright brand orange (#F58F00) is only used for decoration. */
+
+/* No breadcrumbs on a one-level site (v2/utils.css hides them on the homepage) */
+.header-article-items {
+  display: none !important;
+}
+
+/* Clear the fixed v2 navbar */
+.bd-main {
+  padding-top: 6rem;
+}
+
+.bd-article h1 {
+  border-bottom: 3px solid #F58F00;
+  padding-bottom: 0.5rem;
+}
+
+.bd-article h2 {
+  color: #B35F00;
+  margin-top: 2.5rem;
+}
+
+.bd-article ul li::marker {
+  color: #F58F00;
+}
+
+.bd-article table thead th {
+  background-color: #FFF4E5;
+  color: #B35F00;
+}

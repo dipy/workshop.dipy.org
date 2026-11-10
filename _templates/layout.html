@@ -5,10 +5,11 @@
 {% endblock %}
 
 {% block docs_navbar%}
-{% if pagename.isdigit() and pagename|int < 2026 %}
-{{ super() }}
-{% else %}
+{# v2 navbar: one-page workshop sites, plus pages listed here (navbar.html points their links home) #}
+{% if pagename in ("index", "terms") or (pagename.isdigit() and pagename|int >= 2026) %}
 {% include "v2/navbar.html" %}
+{% else %}
+{{ super() }}
 {% endif %}
 {% endblock %}
 
