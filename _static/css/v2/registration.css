@@ -269,3 +269,16 @@
     grid-template-columns: repeat(2, 1fr);
   }
 }
+
+/* Terms line under the last package grid */
+.registration-footer {
+  margin-top: 3rem;
+  text-align: center;
+  font-size: 1rem;
+  color: #4B5563;
+}
+
+.registration-footer a {
+  color: #F58F00;
+  text-decoration: underline;
+}

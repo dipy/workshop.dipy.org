@@ -665,6 +665,7 @@ Registration
    :wrap_section:
    :title: Optional Packages
    :subtitle: Need more flexibility? Check out our optional packages.
+   :footer: By registering, you agree to our <a href="terms.html">Terms &amp; Conditions</a>, including the cancellation and refund policy.
 
    .. pricing-item::
       :name: Recording Access

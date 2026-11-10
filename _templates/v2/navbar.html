@@ -1,3 +1,5 @@
+{# Off the one-page sites (e.g. terms), the #anchors must point back to the homepage #}
+{% set home = "" if pagename == "index" or pagename.isdigit() else "index.html" %}
 <nav class="navbar">
     <div class="navbar-container">
         {# Logo and Name #}
@@ -29,42 +31,42 @@
         {# Navigation Links #}
         <ul class="navbar-nav">
             <li>
-                <a href="#home" class="navbar-nav-item">
+                <a href="{{ home }}#home" class="navbar-nav-item">
                     Home
                 </a>
             </li>
             <li>
-                <a href="#about" class="navbar-nav-item">
+                <a href="{{ home }}#about" class="navbar-nav-item">
                     About
                 </a>
             </li>
             <li>
-                <a href="#speakers" class="navbar-nav-item">
+                <a href="{{ home }}#speakers" class="navbar-nav-item">
                     Speakers
                 </a>
             </li>
             <li>
-                <a href="#why" class="navbar-nav-item">
+                <a href="{{ home }}#why" class="navbar-nav-item">
                     Why?
                 </a>
             </li>
             <li>
-                <a href="#highlights" class="navbar-nav-item">
+                <a href="{{ home }}#highlights" class="navbar-nav-item">
                     Highlights
                 </a>
             </li>
             <li>
-                <a href="#schedule" class="navbar-nav-item">
+                <a href="{{ home }}#schedule" class="navbar-nav-item">
                     Schedule
                 </a>
             </li>
             <li>
-                <a href="#registration" class="navbar-nav-item">
+                <a href="{{ home }}#registration" class="navbar-nav-item">
                     Registration
                 </a>
             </li>
             <li>
-                <a href="#contact" class="navbar-nav-item">
+                <a href="{{ home }}#contact" class="navbar-nav-item">
                     Contact
                 </a>
             </li>

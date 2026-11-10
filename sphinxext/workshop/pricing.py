@@ -24,6 +24,7 @@ class PricingListDirective(SphinxDirective):
         "section_title": directives.unchanged,
         "section_subtitle": directives.unchanged,
         "wrap_section": directives.flag,
+        "footer": directives.unchanged,
     }
 
     def run(self):
@@ -86,6 +87,7 @@ class PricingListDirective(SphinxDirective):
                 section_title=self.options.get("section_title", ""),
                 section_subtitle=self.options.get("section_subtitle", ""),
                 wrap_section="wrap_section" in self.options,
+                footer=self.options.get("footer", ""),
                 registration_state=registration_state,
             )
 
